@@ -1,5 +1,4 @@
 package it.univr.controller;
-//funziono sono collegato
 
 import it.univr.bean.UserBean;
 import it.univr.model.UserDAO;
