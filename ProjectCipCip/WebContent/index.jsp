@@ -6,30 +6,7 @@
         <title>Index</title>
     </head>
     <body>
-        <form method="post" action="login.jsp">
-            <center>
-            <table border="1" width="30%" >
-                <thead>
-                    <tr>
-                        <th colspan="2">Login Here</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>User Name</td>
-                        <td><input type="text" name="uname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="pass" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Login" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Non sei ancora registrato <a href="reg.jsp">Register Here</a></td>
-                    </tr>
+        <!-- da implementare per la home  -->
                 </tbody>
             </table>
             </center>
