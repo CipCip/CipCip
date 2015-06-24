@@ -100,5 +100,39 @@ public static UserBean registrazione(UserBean user){
 		
 		return user;
 	}
+public static UserBean indexHome(UserBean user){
+	String d=user.getFirstName();
+	String e=user.getLastName();
+	
+	Statement stmt= null;
+	String indexQuery="select * from utente where nome='"+d+"' and cognome='"+e+"'";
+	
+	try{
+		try{
+			String url="jdbc:postgresql://dbserver.scienze.univr.it/dblab38";
+			Class.forName("org.postgresql.Driver");
+			conn=DriverManager.getConnection(url, "userlab38", "trentottoDH");
+		}
+		catch(SQLException ex){
+			ex.printStackTrace();			
+		}
+		stmt=conn.createStatement();
+		rs=stmt.executeQuery(indexQuery);
+		boolean ok=rs.next();
+		if(ok){
+			user.setValid(true);
+		}
+		else{
+			user.setValid(false);
+		}
+		rs.close();
+		stmt.close();
+	}
+	catch(Exception ex){
+		ex.printStackTrace();			
+	}
+	
+	return user;
+}
 
 }

@@ -5,6 +5,7 @@ import it.univr.model.UserDAO;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,35 +14,33 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class loginServlet
+ * Servlet implementation class indexServlet
  */
-@WebServlet("/loginServlet")
-public class loginServlet extends HttpServlet {
+@WebServlet("/indexServlet")
+public class indexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
- 
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		   
 		UserBean user=UserBean.getInstance();
-		user.setUsername(request.getParameter("username"));
-		user.setPassword(request.getParameter("pwd"));
 		
-
-		user=UserDAO.logIn(user);
+		user=UserDAO.indexHome(user);
 		
+		/*HttpSession session=request.getSession(true);
+		session.setAttribute("nome", user.getFirstName());
+		session.setAttribute("cognome", user.getLastName());
+		response.sendRedirect("index.jsp");*/
+	
+		 
+		 
+		 
 		
-		if(user.isValid()){
-			//HttpSession session=request.getSession(true);
-			//session.setAttribute("username",user);
-			response.sendRedirect("index.jsp");
-		}
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	
 
 }
