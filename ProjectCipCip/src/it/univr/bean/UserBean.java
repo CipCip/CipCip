@@ -6,9 +6,10 @@ public class UserBean
 	private static UserBean userIstance;
 	private String username;
 	private String password;
-	private String firstName;
-	private String lastName;
+	private String nome;
+	private String cognome;
 	private String email;
+	private char amministratore;
 	private boolean valid;
 
 	private UserBean() {
@@ -44,23 +45,24 @@ public class UserBean
 	}
 
 
-	public String getFirstName() {
-		return firstName;
+	public String getNome() {
+		return nome;
 	}
 
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setNome(String nome) {
+		this.nome=nome;
 	}
 
 
-	public String getLastName() {
-		return lastName;
+
+	public String getCognome() {
+		return cognome;
 	}
 
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
 	}
 
 
@@ -73,6 +75,17 @@ public class UserBean
 		this.email = email;
 	}
 	
+	
+	public char getAmministratore() {
+		return amministratore;
+	}
+
+
+	public void setAmministratore(char amministratore) {
+		this.amministratore = amministratore;
+	}
+
+
 	public boolean isValid() {
 		return valid;
 	}

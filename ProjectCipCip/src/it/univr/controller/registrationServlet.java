@@ -23,8 +23,8 @@ public class registrationServlet extends HttpServlet {
 		UserBean user=UserBean.getInstance();
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("pwd"));
-		user.setFirstName(request.getParameter("nome"));
-		user.setLastName(request.getParameter("cognome"));
+		user.setNome(request.getParameter("nome"));
+		user.setCognome(request.getParameter("cognome"));
 		user.setEmail(request.getParameter("email"));
 
 		user=UserDAO.registrazione(user);

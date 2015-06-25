@@ -16,6 +16,9 @@ static ResultSet rs=null;
 public static UserBean logIn(UserBean user){
 	String a=user.getUsername();
 	String b=user.getPassword();
+	String c=user.getNome();
+	String d=user.getCognome();
+	String e=user.getEmail();
 	
 	Statement stmt= null;
 	String logInQuery="select * from utente where username='"+a+"' and password='"+b+"'";
@@ -36,8 +39,8 @@ public static UserBean logIn(UserBean user){
 			//setto all'user 
 			//tutte gli altri attributi 
 			//con 
-			user.setFirstName(rs.getString("nome"));
-			user.setLastName(rs.getString("cognome"));
+			user.setNome(rs.getString("nome"));
+			user.setCognome(rs.getString("cognome"));
 			user.setEmail(rs.getString("email"));
 			user.setValid(true);
 		}
@@ -57,8 +60,8 @@ public static UserBean registrazione(UserBean user){
 		String a=user.getUsername();
 		String b=user.getPassword();
 		String c=user.getEmail();
-		String d=user.getFirstName();
-		String e=user.getLastName();
+		String d=user.getNome();
+		String e=user.getCognome();
 		
 		Statement stmt= null;
 		String registrationQuery="insert into utente(username, password, nome, cognome, email) values ('"
@@ -101,8 +104,8 @@ public static UserBean registrazione(UserBean user){
 		return user;
 	}
 public static UserBean indexHome(UserBean user){
-	String d=user.getFirstName();
-	String e=user.getLastName();
+	String d=user.getNome();
+	String e=user.getCognome();
 	
 	Statement stmt= null;
 	String indexQuery="select * from utente where nome='"+d+"' and cognome='"+e+"'";
