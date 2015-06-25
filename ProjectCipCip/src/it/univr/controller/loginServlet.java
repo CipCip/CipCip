@@ -5,6 +5,7 @@ import it.univr.model.UserDAO;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +37,10 @@ public class loginServlet extends HttpServlet {
 		
 		if(user.isValid()){
 			HttpSession session=request.getSession(true);
-			session.setAttribute("nome",user);
-			session.setAttribute("cognome", user);
+			//RequestDispatcher rd = request.getRequestDispatcher("Welcome.html");
+            //rd.forward(request, response);
+			session.setAttribute("nome",user.getNome());
+			session.setAttribute("cognome", user.getCognome());
 			response.sendRedirect("index.jsp");
 		}
 		

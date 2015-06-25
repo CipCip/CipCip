@@ -89,7 +89,14 @@ public static UserBean registrazione(UserBean user){
 			}
 			stmt=conn.createStatement();
 			int quante=stmt.executeUpdate(registrationQuery);
-			user.setValid(true);
+			//user.setValid(true);
+			
+			 
+	            if(quante>0)
+	            {
+	                System.out.println("Succesfully Registered");
+	                
+	            }
 			
 			if(rs.next()){
 				//setto all'user tutti gli altri attributi con 
