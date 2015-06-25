@@ -9,7 +9,7 @@ public class UserBean
 	private String nome;
 	private String cognome;
 	private String email;
-	private char amministratore;
+	private int amministratore;
 	private boolean valid;
 
 	private UserBean() {
@@ -76,12 +76,13 @@ public class UserBean
 	}
 	
 	
-	public char getAmministratore() {
+	public int getAmministratore() {
+		//intanto lo lascio così poi penserò ad un modo più funzionale
 		return amministratore;
 	}
 
 
-	public void setAmministratore(char amministratore) {
+	public void setAmministratore(int amministratore) {
 		this.amministratore = amministratore;
 	}
 

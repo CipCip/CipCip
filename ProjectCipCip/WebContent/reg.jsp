@@ -42,6 +42,8 @@
                     <tr>
                         <td colspan="2">Already registered!! <a href="login.jsp">Login Here</a></td>
                     </tr>
+                    <td>Una volta registrato tornerai al login </td>
+                    <tr>
                 </tbody>
             </table>
             </center>

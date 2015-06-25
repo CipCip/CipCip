@@ -14,14 +14,14 @@ static Connection conn=null;
 static ResultSet rs=null;
  
 public static UserBean logIn(UserBean user){
-	String a=user.getUsername();
-	String b=user.getPassword();
-	String c=user.getNome();
-	String d=user.getCognome();
-	String e=user.getEmail();
+	//String a=user.getNome();
+	//String b=user.getCognome();
+	//String c=user.getEmail();
+	String d=user.getUsername();
+	String e=user.getPassword();
 	
 	Statement stmt= null;
-	String logInQuery="select * from utente where username='"+a+"' and password='"+b+"'";
+	String logInQuery="select * from utente where username='"+d+"' and password='"+e+"'";
 	
 	try{
 		try{
@@ -36,11 +36,11 @@ public static UserBean logIn(UserBean user){
 		rs=stmt.executeQuery(logInQuery);
 		boolean db=rs.next();
 		if(db==true){
-			//setto all'user 
-			//tutte gli altri attributi 
-			//con 
+			//setto all'user tutte gli altri attributi con 
 			user.setNome(rs.getString("nome"));
 			user.setCognome(rs.getString("cognome"));
+			//user.setUsername(rs.getString("username"));
+			//user.setPassword(rs.getString("password"));
 			user.setEmail(rs.getString("email"));
 			user.setValid(true);
 		}
@@ -57,25 +57,27 @@ public static UserBean logIn(UserBean user){
 }
 
 public static UserBean registrazione(UserBean user){
-		String a=user.getUsername();
-		String b=user.getPassword();
+		String a=user.getNome();
+		String b=user.getCognome();
 		String c=user.getEmail();
-		String d=user.getNome();
-		String e=user.getCognome();
+		String d=user.getUsername();
+		String e=user.getPassword();
+		int f=user.getAmministratore();
 		
 		Statement stmt= null;
-		String registrationQuery="insert into utente(username, password, nome, cognome, email) values ('"
+		String registrationQuery="insert into utente(nome, cognome, email, username, password, amministratore) values ('"
 								+a
 								+"','"
 								+b
+								+"','"
+								+c
 								+"','"
 								+d
 								+"','"
 								+e
 								+"','"
-								+c
+								+f
 								+"')";
-		
 		try{
 			try{
 				String url="jdbc:postgresql://dbserver.scienze.univr.it/dblab38";
@@ -86,20 +88,30 @@ public static UserBean registrazione(UserBean user){
 				ex.printStackTrace();			
 			}
 			stmt=conn.createStatement();
-			rs=stmt.executeQuery(registrationQuery);
-			boolean ok=rs.next();
-			if(ok){
+			int quante=stmt.executeUpdate(registrationQuery);
+			user.setValid(true);
+			
+			if(rs.next()){
+				//setto all'user tutti gli altri attributi con 
+				user.setNome(rs.getString("nome"));
+				user.setCognome(rs.getString("cognome"));
+				user.setUsername(rs.getString("username"));
+				//user.setPassword(rs.getString("password"));
+				user.setEmail(rs.getString("email"));
+				//user.setAmministratore(rs.getString("amministratore").toString());
 				user.setValid(true);
 			}
 			else{
 				user.setValid(false);
-			}
+				}
 			rs.close();
 			stmt.close();
+			conn.close();
 		}
 		catch(Exception ex){
 			ex.printStackTrace();			
 		}
+		
 		
 		return user;
 	}

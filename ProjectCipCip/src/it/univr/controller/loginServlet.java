@@ -26,14 +26,18 @@ public class loginServlet extends HttpServlet {
 		UserBean user=UserBean.getInstance();
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("pwd"));
+		user.setNome(request.getParameter("nome"));
+		user.setCognome(request.getParameter("cognome"));
+		user.setEmail(request.getParameter("email"));
 		
 
 		user=UserDAO.logIn(user);
 		
 		
 		if(user.isValid()){
-			//HttpSession session=request.getSession(true);
-			//session.setAttribute("username",user);
+			HttpSession session=request.getSession(true);
+			session.setAttribute("nome",user);
+			session.setAttribute("cognome", user);
 			response.sendRedirect("index.jsp");
 		}
 		

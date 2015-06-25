@@ -11,9 +11,9 @@
         Benvenuto utente
         
         <!--  Sto cercando di far vedere il nome e cognome dell' utente -->
-        <!-- <%UserBean user=UserBean.getInstance();
-        user=UserBean.class.cast(session.getAttribute("username"));
-        out.println(user.getUsername());
+        <!-- <%
+  		String nome=session.getAttribute("nome");
+        String cognome=request.getParameter("cognome");
         %>-->
        
       
