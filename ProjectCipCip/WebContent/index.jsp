@@ -7,10 +7,9 @@
     </head>
     <body>
     <form action="indexServlet">
-        <!-- da implementare per la home  -->
-        
-        
-        <!--  Sto cercando di far vedere il nome e cognome dell' utente -->
+       
+        <!--  Sto cercando di far vedere il nome e cognome dell' utente
+        adesso funziona -->
         <%
   		String nome=(String)session.getAttribute("nome");
         String cognome=(String)session.getAttribute("cognome");
