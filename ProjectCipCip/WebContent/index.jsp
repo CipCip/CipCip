@@ -1,50 +1,98 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" import="it.univr.bean.*"%>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Index</title>
-    </head>
-    <body>
-    <form action="indexServlet">
-       
-        <!--  Sto cercando di far vedere il nome e cognome dell' utente
-        adesso funziona -->
-        <%
-  		String nome=(String)session.getAttribute("nome");
-        String cognome=(String)session.getAttribute("cognome");
-        %>
-        
-        
-      <table class="skin_tbl" align="center"  border=1 cellpadding="0" cellspacing="0"><tr><td class="mleft_top"></td>
-      <td><table class="mback" width="100%" cellpadding="0" cellspacing="0"><tr><td class="mback_left"></td><td class="mback_center">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
 
-<div class="mtitle">Benvenuto utente <%=nome%> <%=cognome%></div>
+<title>CipCip - Benvenuto</title>
 
-</td><td class="mback_right"></td></tr></table></td><td class="mright_top"></td></tr><tr><td class="mleft"></td><td><table class="mainbg" style="text-align:center;width:100%" cellpadding="4" cellspacing="1">
+<!-- Bootstrap core CSS -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 
+<!-- Custom styles for this template -->
+<link href="style/style.css" rel="stylesheet">
 
-<tr title="RIGA1">
-<td class="ww" rowspan="5">mappa</td>
-<td class="aa"><a href="targa.jsf">Inserimento targa</a></td>
-</tr>
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-<tr title="RIGA2">
-<td class="ww"><a href="notifiche.jsf">Parametri-notifiche</a></td>
-</tr>
-<tr title="RIGA3">
-<td class="ww"><a href="avvisi.jsf">Avvisi</a></td>
-</tr>
-<tr title="RIGA4">
-<td class="ww"><a href="foto.jsf">Foto</a></td>
-</tr>
-<tr title="RIGA5">
-<td class="ww"><a href="help.jsf">Help-desk</a></td>
-</tr>
-      
-                </tbody>
-            </table>
-            </center>
-        </form>
-    </body>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="site-wrapper">
+
+		<div class="site-wrapper-inner">
+
+			<div class="cover-container">
+
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">Cip Cip</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Chi siamo</a></li>
+								<li><a href="#">Contattaci</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="inner cover">
+
+					<h1 class="cover-heading">Benvenuto su cip cip</h1>
+					<p class="lead">It's a chip and it's cheap</p>
+					<p class="lead">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>Email</label> <input type="email"
+								class="form-control" id="exampleInputName2">
+						</div>
+						<div class="form-group">
+							<label>Password</label> <input type="password"
+								class="form-control" id="exampleInputEmail2"
+								>
+						</div>
+						<button type="submit" class="btn btn-default">Accedi</button>
+					</form>
+					<br/><br/>
+					
+					<a class="btn btn-primary btn-lg" href="registrazione.jsp" role="button">Registrati</a>
+				</div>
+
+				<div class="mastfoot">
+					<div class="inner">
+						<p>Progetto di Ingegneria del Software AA 2014/2015 -
+							Università degli Studi di Verona</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>
