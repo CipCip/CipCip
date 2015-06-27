@@ -1,27 +1,16 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
 
 <title>CipCip - Benvenuto</title>
 
 <!-- Bootstrap core CSS -->
-<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-
-<!-- Custom styles for this template -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -75,8 +64,8 @@
 
 				<div class="mastfoot">
 					<div class="inner">
-						<p>Progetto di Ingegneria del Software AA 2014/2015 -
-							Universit‡ degli Studi di Verona</p>
+						<p class="testoFooter">Progetto di Ingegneria del Software AA 2014/2015 -
+							Universit√† degli Studi di Verona</p>
 					</div>
 				</div>
 
