@@ -25,10 +25,10 @@ public class registrationServlet extends HttpServlet {
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));
 		user.setEmail(request.getParameter("email"));
-		user.setUsername(request.getParameter("username"));
+		user.setCellulare(request.getParameter("cellulare"));
 		user.setPassword(request.getParameter("pwd"));
-		//intanto lo lascio così
-		user.setAmministratore(0);
+		//intanto lo lascio cosï¿½
+		//user.setAmministratore(0);
 		
 		user=UserDAO.registrazione(user);
 		//non riesce ad entrare qui

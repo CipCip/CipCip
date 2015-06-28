@@ -42,17 +42,17 @@
 
 				<div class="inner cover">
 
-					<h1 class="cover-heading">Benvenuto su cip cip</h1>
+					<h1 class="cover-heading">Benvenuto in cip cip</h1>
 					<p class="lead">It's a chip and it's cheap</p>
 					<p class="lead">
 					<form class="form-inline">
 						<div class="form-group">
 							<label>Email</label> <input type="email"
-								class="form-control" id="exampleInputName2">
+								class="form-control" id="inputLoginMail">
 						</div>
 						<div class="form-group">
 							<label>Password</label> <input type="password"
-								class="form-control" id="exampleInputEmail2"
+								class="form-control" id="inputLoginPwd"
 								>
 						</div>
 						<button type="submit" class="btn btn-default">Accedi</button>

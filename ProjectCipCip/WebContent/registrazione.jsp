@@ -93,7 +93,7 @@
 		<div class="col-md-3 col-sm-12">
 			<label for="inputModello">Immatricolazione</label> <input type="text"
 				class="form-control" id="inputImmatricolazione"
-				placeholder="Immatricolazione">
+				placeholder="mm/aaaa">
 		</div>
 		<div class="col-md-3 col-sm-12"></div>
 	</div>
@@ -136,7 +136,8 @@
 	<div class="row">
 		<div class="col-md-3 col-sm-12"></div>
 		<div class="col-md-3 col-sm-12">
-			<a href="http://localhost:8080/ProgettoIngegneria" class="btn btn-primary btn-lg btn-danger" role="button">Torna indietro</a>
+			
+			<a href="index.jsp" class="btn btn-primary btn-lg btn-danger" role="button">Torna indietro</a>
 		</div>
 		<div class="col-md-3 col-sm-12">
 			<a href="#" class="btn btn-primary btn-lg btn-success" role="button">Conferma registrazione</a>

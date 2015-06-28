@@ -25,7 +25,7 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserBean user=UserBean.getInstance();
-		user.setUsername(request.getParameter("username"));
+		user.setCellulare(request.getParameter("cellulare"));
 		user.setPassword(request.getParameter("pwd"));
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));

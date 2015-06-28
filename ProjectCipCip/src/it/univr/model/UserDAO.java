@@ -17,7 +17,7 @@ public static UserBean logIn(UserBean user){
 	//String a=user.getNome();
 	//String b=user.getCognome();
 	//String c=user.getEmail();
-	String d=user.getUsername();
+	String d=user.getEmail();
 	String e=user.getPassword();
 	
 	Statement stmt= null;
@@ -60,9 +60,9 @@ public static UserBean registrazione(UserBean user){
 		String a=user.getNome();
 		String b=user.getCognome();
 		String c=user.getEmail();
-		String d=user.getUsername();
+		String d=user.getCellulare();
 		String e=user.getPassword();
-		int f=user.getAmministratore();
+		//int f=user.getAmministratore();
 		
 		Statement stmt= null;
 		String registrationQuery="insert into utente(nome, cognome, email, username, password, amministratore) values ('"
@@ -76,7 +76,7 @@ public static UserBean registrazione(UserBean user){
 								+"','"
 								+e
 								+"','"
-								+f
+								//+f
 								+"')";
 		try{
 			try{
@@ -102,7 +102,7 @@ public static UserBean registrazione(UserBean user){
 				//setto all'user tutti gli altri attributi con 
 				user.setNome(rs.getString("nome"));
 				user.setCognome(rs.getString("cognome"));
-				user.setUsername(rs.getString("username"));
+				user.setCellulare(rs.getString("cellulare"));
 				//user.setPassword(rs.getString("password"));
 				user.setEmail(rs.getString("email"));
 				//user.setAmministratore(rs.getString("amministratore").toString());
