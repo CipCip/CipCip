@@ -25,11 +25,14 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserBean user=UserBean.getInstance();
-		user.setCellulare(request.getParameter("cellulare"));
+		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("pwd"));
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));
-		user.setEmail(request.getParameter("email"));
+		user.setCellulare(request.getParameter("cellulare"));
+		
+		
+		
 		
 
 		user=UserDAO.logIn(user);
@@ -41,7 +44,7 @@ public class loginServlet extends HttpServlet {
             //rd.forward(request, response);
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("home.jsp");
 		}
 		
 	}

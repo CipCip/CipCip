@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<form action="loginServlet">
 	<div class="site-wrapper">
 
 		<div class="site-wrapper-inner">
