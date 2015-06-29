@@ -20,133 +20,145 @@
     <![endif]-->
 </head>
 <body>
-<form action="registrationServlet">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>Registrati</h1>
-		</div>
-	</div>
-	<hr />
-	<div class="row">
-		<div class="col-sm-12">
-			<h3>Utente</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputEmail1">Email</label> <input type="email"
-				class="form-control" id="inputEmail1" placeholder="Email">
-		</div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputPassword1">Password</label> <input type="password"
-				class="form-control" id="inputPassword1" placeholder="Password">
-		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputNome">Nome</label> <input type="text"
-				class="form-control" id="inputNome" placeholder="Nome">
-		</div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputNome">Cognome</label> <input type="text"
-				class="form-control" id="inputCognome" placeholder="Cognome">
-		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputCellulare">Cellulare</label> <input type="text"
-				class="form-control" id="inputCellulare" placeholder="Cellulare">
-		</div>
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<hr />
 
-	<div class="row">
-		<div class="col-sm-12">
-			<h3>Veicolo</h3>
+	<form action="registrationServlet">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Registrati</h1>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputMarca">Marca</label> <input type="text"
-				class="form-control" id="inputMarca" placeholder="Marca">
+		<hr />
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Utente</h3>
+			</div>
 		</div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputModello">Modello</label> <input type="text"
-				class="form-control" id="inputModello" placeholder="Modello">
+					
+		<div class="row">
+  			<div class="col-md-4"></div>
+  			<div class="col-md-4">
+				<label for="inputNome">Nome</label>
+				<input type="text" class="form-control" id="inputNome" required="required" placeholder="Nome" />
+			</div>
+			<div class="col-md-4"></div>
 		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputTarga">Targa</label> <input type="text"
-				class="form-control" id="inputTarga" placeholder="Targa">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 col-sm-12">
+				<label for="inputNome">Cognome</label>
+				<input type="text" class="form-control" id="inputCognome" required="required" placeholder="Cognome" />
+			</div>
+			<div class="col-md-4 col-sm-12"></div>
 		</div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputModello">Immatricolazione</label> <input type="text"
-				class="form-control" id="inputImmatricolazione"
-				placeholder="mm/aaaa">
+		
+		
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 col-sm-12">
+				<label for="inputCellulare">Cellulare</label>
+				<input type="text" class="form-control" id="inputCellulare" required="required" placeholder="Cellulare"/>
+			</div>
+			<div class="col-md-4 col-sm-12"></div>
 		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<hr />
-	<div class="row">
-		<div class="col-sm-12">
-			<h3>Impostazioni soglia</h3>
+		<div class="row">
+  			<div class="col-md-4"></div>
+  			<div class="col-md-4">
+				<label for="inputEmail1">Email</label>
+				<input type="email" class="form-control" id="inputEmail1" required="required" placeholder="Email" />
+			</div>
+			<div class="col-md-4"></div>
 		</div>
-	</div>	
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputSogliaEmail">Soglia email</label>
-			<form class="form-inline">
-				<div class="form-group">
-					<div class="input-group">
-						<input type="text" class="form-control" id="inputSogliaEmail"
-							placeholder="Soglia email">
-						<div class="input-group-addon">km/h</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 col-sm-12">
+				<label for="inputPassword1">Password</label>
+				<input type="password" class="form-control" id="inputPassword1" required="required" placeholder="Password" />
+			</div>
+			<div class="col-md-4 col-sm-12"></div>
+		</div>
+		
+		<hr />
+
+		<!-- <div class="row">
+			<div class="col-sm-12">
+				<h3>Veicolo</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-12"></div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputMarca">Marca</label>
+				<input type="text" class="form-control" id="inputMarca" required="required" placeholder="Marca" />
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputModello">Modello</label>
+				<input type="text" class="form-control" id="inputModello" required="required" placeholder="Modello" />
+			</div>
+			<div class="col-md-3 col-sm-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-12"></div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputTarga">Targa</label>
+				<input type="text" class="form-control" id="inputTarga" required="required" placeholder="Targa" />
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputModello">Immatricolazione</label>
+				<input type="text" class="form-control" id="inputImmatricolazione" required="required" placeholder="mm/aaaa"/>
+			</div>
+			<div class="col-md-3 col-sm-12"></div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Impostazioni soglia</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-12"></div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputSogliaEmail">Soglia email</label>
+				<form class="form-inline">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="inputSogliaEmail" placeholder="Soglia email" />
+							<div class="input-group-addon">km/h</div>
+						</div>
 					</div>
-				</div>
-			</form>
-		</div>
-		<div class="col-md-3 col-sm-12">
-			<label for="inputSogliaSms">Soglia sms</label>
-			<form class="form-inline">
-				<div class="form-group">
-					<div class="input-group">
-						<input type="text" class="form-control" id="inputSogliaSms"
-							placeholder="Soglia SMS">
-						<div class="input-group-addon">km/h</div>
+				</form>
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<label for="inputSogliaSms">Soglia sms</label>
+				<form class="form-inline">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="inputSogliaSms" placeholder="Soglia SMS" />
+							<div class="input-group-addon">km/h</div>
+						</div>
 					</div>
-				</div>
-			</form>
+				</form>
 
-		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<hr />
-	<div class="row">
-		<div class="col-md-3 col-sm-12"></div>
-		<div class="col-md-3 col-sm-12">
-			
-			<a href="index.jsp" class="btn btn-primary btn-lg btn-danger" role="button">Torna indietro</a>
-		</div>
-		<div class="col-md-3 col-sm-12">
-			<a href="#" class="btn btn-primary btn-lg btn-success" role="button">Conferma registrazione</a>
-		</div>
-		<div class="col-md-3 col-sm-12"></div>
-	</div>
-	<hr/>
-	
+			</div>
+			<div class="col-md-3 col-sm-12"></div>
+		</div> 
+		<hr /> -->
+		<div class="row">
+			<div class="col-md-3 col-sm-12"></div>
+			<div class="col-md-3 col-sm-12">
 
-</form>
+				<a href="index.jsp" class="btn btn-primary btn-lg btn-danger"
+					role="button">Torna indietro</a>
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<!-- <a href="#" class="btn btn-primary btn-lg btn-success" role="button">Conferma registrazione</a> -->
+				<button type="submit" class="btn btn-primary btn-lg btn-success">Conferma
+					registrazione</button>
+			</div>
+			<div class="col-md-3 col-sm-12"></div>
+		</div>
+		<hr />
+	</form>
+
+
 </body>
 </html>
