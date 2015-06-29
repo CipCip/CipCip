@@ -33,7 +33,7 @@
 						<nav>
 							<ul class="nav masthead-nav">
 								<li class="active"><a href="#">Home</a></li>
-								<li><a href="#">Chi siamo</a></li>
+								<li><a href="whoweare.jsp">Chi siamo</a></li>
 								<li><a href="#">Contattaci</a></li>
 							</ul>
 						</nav>
