@@ -5,6 +5,7 @@ import it.univr.model.UserDAO;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-@WebServlet("/registrationServlet")
-public class registrationServlet extends HttpServlet {
+/**
+ * Servlet implementation class loginServlet
+ */
+@WebServlet("/IndexServlet")
+public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
 	/**
@@ -28,17 +31,27 @@ public class registrationServlet extends HttpServlet {
 		user.setCognome(request.getParameter("cognome"));
 		user.setCellulare(request.getParameter("cellulare"));
 		
-		//intanto lo lascio cos�
-		//user.setAmministratore(0);
 		
-		user=UserDAO.registrazione(user);
-		//non riesce ad entrare qui
+		
+		
+
+		user=UserDAO.logIn(user);
+		
+		
 		if(user.isValid()){
-			response.sendRedirect("regwelcome.jsp");			
+			HttpSession session=request.getSession(true);
+			//RequestDispatcher rd = request.getRequestDispatcher("Welcome.html");
+            //rd.forward(request, response);
+			session.setAttribute("nome",user.getNome());
+			session.setAttribute("cognome", user.getCognome());
+			response.sendRedirect("welcome.jsp");
 		}
 		
-		
-		
 	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
 
 }

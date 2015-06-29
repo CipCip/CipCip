@@ -20,7 +20,7 @@
     <![endif]-->
 </head>
 <body>
-
+<form action="registrationServlet">
 	<div class="row">
 		<div class="col-sm-12">
 			<h1>Registrati</h1>
@@ -147,6 +147,6 @@
 	<hr/>
 	
 
-
+</form>
 </body>
 </html>

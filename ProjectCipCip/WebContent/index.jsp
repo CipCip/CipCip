@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<form action="loginServlet">
+
 	<div class="site-wrapper">
 
 		<div class="site-wrapper-inner">
@@ -41,18 +41,18 @@
 				</div>
 
 				<div class="inner cover">
-
+				<form action="IndexServlet">
 					<h1 class="cover-heading">Benvenuto in cip cip</h1>
 					<p class="lead">It's a chip and it's cheap</p>
 					<p class="lead">
 					<form class="form-inline">
 						<div class="form-group">
 							<label>Email</label> <input type="email"
-								class="form-control" id="inputLoginMail">
+								class="form-control" name="email" id="inputLoginMail">
 						</div>
 						<div class="form-group">
 							<label>Password</label> <input type="password"
-								class="form-control" id="inputLoginPwd"
+								class="form-control" name="password" id="inputLoginPwd"
 								>
 						</div>
 						<button type="submit" class="btn btn-default">Accedi</button>
