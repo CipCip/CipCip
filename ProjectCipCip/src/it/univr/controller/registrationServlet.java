@@ -34,7 +34,7 @@ public class registrationServlet extends HttpServlet {
 		user=UserDAO.registrazione(user);
 		//non riesce ad entrare qui
 		if(user.isValid()){
-			response.sendRedirect("regwelcome.jsp");			
+			response.sendRedirect("areariservata.jsp");			
 		}
 		
 		

@@ -21,7 +21,7 @@ public static UserBean logIn(UserBean user){
 	String e=user.getPassword();
 	
 	Statement stmt= null;
-	String logInQuery="select * from utente where username='"+d+"' and password='"+e+"'";
+	String logInQuery="select * from utente where email='"+d+"' and password='"+e+"'";
 	
 	try{
 		try{
@@ -37,11 +37,11 @@ public static UserBean logIn(UserBean user){
 		boolean db=rs.next();
 		if(db==true){
 			//setto all'user tutte gli altri attributi con 
+			user.setEmail(rs.getString("email"));
 			user.setNome(rs.getString("nome"));
 			user.setCognome(rs.getString("cognome"));
-			//user.setUsername(rs.getString("username"));
 			//user.setPassword(rs.getString("password"));
-			user.setEmail(rs.getString("email"));
+			user.setCellulare(rs.getString("cellulare"));
 			user.setValid(true);
 		}
 		else{user.setValid(false);}
@@ -65,7 +65,7 @@ public static UserBean registrazione(UserBean user){
 		//int f=user.getAmministratore();
 		
 		Statement stmt= null;
-		String registrationQuery="insert into utente(nome, cognome, email, username, password, amministratore) values ('"
+		String registrationQuery="insert into utente(email, password, nome, cognome, cellulare, amministratore) values ('"
 								+a
 								+"','"
 								+b
@@ -122,7 +122,7 @@ public static UserBean registrazione(UserBean user){
 		
 		return user;
 	}
-public static UserBean indexHome(UserBean user){
+/*public static UserBean indexHome(UserBean user){
 	String d=user.getNome();
 	String e=user.getCognome();
 	
@@ -155,6 +155,6 @@ public static UserBean indexHome(UserBean user){
 	}
 	
 	return user;
-}
+}*/
 
 }

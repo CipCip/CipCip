@@ -44,7 +44,7 @@ public class IndexServlet extends HttpServlet {
             //rd.forward(request, response);
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
-			response.sendRedirect("welcome.jsp");
+			response.sendRedirect("areariservata.jsp");
 		}
 		
 	}
