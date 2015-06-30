@@ -1,25 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-<title>Chi siamo</title>
-
-<!-- Bootstrap core CSS -->
-<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-<link href="style/style.css" rel="stylesheet">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" type="image/png" href="http://www.mammagallo.com/wp-content/uploads/2015/02/Twitter-logo.jpg"/>
-</head>
+<%@ include file="head.jsp" %>
 
 <body>
 
@@ -52,7 +31,7 @@
 						</div>
 						<br />
 						<div align="center">
-							Anno 2012: rubate 316 automobili al giorno, 3.583 vetture in pi√π
+							Anno 2012: rubate 316 automobili al giorno, 3.583 vetture in pi˘
 							rispetto al 2011. <br /> Recuperi anno 2012: 49.000, 51.000 nel
 							2011, i 58.000 nel 2010.
 						</div>
@@ -60,7 +39,7 @@
 						<div align="center">
 							La nostra organizzazione sta lottando contro questi dati.<br />
 							Con noi potrai tenere controllata la tua auto.<br /> Saprai in
-							tempo reale dove si trova e se a guidarla √® tuo marito, tua
+							tempo reale dove si trova e se a guidarla Ë tuo marito, tua
 							moglie i tuoi figli oppure un ladro.
 						</div>
 
@@ -68,14 +47,14 @@
 							<h3>Scegli Project CIPCIP!</h3>
 						</div>
 						<div align="center">
-							<h3>La tua macchina sar√† sempre sotto controllo.</h3>
+							<h3>La tua macchina sar‡ sempre sotto controllo.</h3>
 						</div>
 				</div>
 
 				<div class="mastfoot">
 					<div class="inner">
 						<p class="testoFooter">Progetto di Ingegneria del Software AA
-							2014/2015 - Universit√† degli Studi di Verona</p>
+							2014/2015 - Universit‡ degli Studi di Verona</p>
 					</div>
 				</div>
 
