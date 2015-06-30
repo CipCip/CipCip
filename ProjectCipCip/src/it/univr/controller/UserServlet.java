@@ -40,8 +40,8 @@ public class UserServlet extends javax.servlet.http.HttpServlet implements javax
     
     user.setUsername(username);
     user.setPassword(password);
-    user.setNome(nome);
-    user.setCognome(cognome);
+    user.setFirstName(nome);
+    user.setLastName(cognome);
     user.setEmail(email);
     
     // Ricordarsi di creare la directory etc specificata!

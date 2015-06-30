@@ -1,2 +1,2 @@
-Login andato a buon fine!
-<a href='index.jsp'>Redirect a pagina principale</a>
+Registration is Successful.
+Please Login Here <a href='index.jsp'>Go to Login</a>

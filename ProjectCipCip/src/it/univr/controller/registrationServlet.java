@@ -10,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/registrationServlet")
@@ -22,19 +21,15 @@ public class registrationServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserBean user=UserBean.getInstance();
+		user.setUsername(request.getParameter("username"));
+		user.setPassword(request.getParameter("pwd"));
+		user.setFirstName(request.getParameter("nome"));
+		user.setLastName(request.getParameter("cognome"));
 		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("password"));
-		user.setNome(request.getParameter("nome"));
-		user.setCognome(request.getParameter("cognome"));
-		user.setCellulare(request.getParameter("cellulare"));
-		
-		//intanto lo lascio cos�
-		//user.setAmministratore(0);
-		
+
 		user=UserDAO.registrazione(user);
-		//non riesce ad entrare qui
 		if(user.isValid()){
-			response.sendRedirect("areariservata.jsp");			
+			response.sendRedirect("login.jsp");			
 		}
 		
 		
