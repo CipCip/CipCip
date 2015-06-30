@@ -32,8 +32,8 @@
 						<h3 class="masthead-brand">Cip Cip</h3>
 						<nav>
 							<ul class="nav masthead-nav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="whoweare.jsp">Chi siamo</a></li>
+								<li class="active"><a href="index.jsp">Home</a></li>
+								<li><a href="chisiamo.jsp">Chi siamo</a></li>
 								<li><a href="#">Contattaci</a></li>
 							</ul>
 						</nav>
