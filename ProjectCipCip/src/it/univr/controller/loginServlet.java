@@ -5,11 +5,13 @@ import it.univr.model.UserDAO;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class loginServlet
@@ -23,14 +25,26 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserBean user=UserBean.getInstance();
-		user.setUsername(request.getParameter("username"));
+		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("pwd"));
+		user.setNome(request.getParameter("nome"));
+		user.setCognome(request.getParameter("cognome"));
+		user.setCellulare(request.getParameter("cellulare"));
+		
+		
+		
 		
 
 		user=UserDAO.logIn(user);
 		
+		
 		if(user.isValid()){
-			response.sendRedirect("welcome.jsp");
+			HttpSession session=request.getSession(true);
+			//RequestDispatcher rd = request.getRequestDispatcher("Welcome.html");
+            //rd.forward(request, response);
+			session.setAttribute("nome",user.getNome());
+			session.setAttribute("cognome", user.getCognome());
+			response.sendRedirect("home.jsp");
 		}
 		
 	}
