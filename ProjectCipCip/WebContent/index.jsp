@@ -6,10 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<title>CipCip - Benvenuto</title>
+<title>Contattaci</title>
 
 <!-- Bootstrap core CSS -->
-<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,65 +24,59 @@
 
 	<div class="site-wrapper">
 
-		<div class="site-wrapper-inner">
+		<!-- <div class="site-wrapper-inner"> -->
 
-			<div class="cover-container">
+		<div class="cover-container">
 
-				<div class="masthead clearfix">
-					<div class="inner">
-						<h3 class="masthead-brand">Cip Cip</h3>
-						<nav>
-							<ul class="nav masthead-nav">
-								<li class="active"><a href="index.jsp">Home</a></li>
-								<li><a href="chisiamo.jsp">Chi siamo</a></li>
-								<li><a href="#">Contattaci</a></li>
-							</ul>
-						</nav>
-					</div>
+			<div class="masthead clearfix">
+				<div class="inner">
+					<h3 class="masthead-brand">Cip Cip</h3>
+					<nav>
+						<ul class="nav masthead-nav">
+							<li class="active"><a href="index.jsp">Home</a></li>
+							<li><a href="chisiamo.jsp">Chi siamo</a></li>
+							<li><a href="contattaci.jsp">Contattaci</a></li>
+						</ul>
+					</nav>
 				</div>
-
-				<div class="inner cover">
-				<form action="IndexServlet">
-					<h1 class="cover-heading">Benvenuto in cip cip</h1>
-					<p class="lead">It's a chip and it's cheap</p>
-					<p class="lead">
-					<form class="form-inline">
-						<div class="form-group">
-							<label>Email</label> <input type="email"
-								class="form-control" name="email" id="inputLoginMail">
-						</div>
-						<div class="form-group">
-							<label>Password</label> <input type="password"
-								class="form-control" name="password" id="inputLoginPwd"
-								>
-						</div>
-						<button type="submit" class="btn btn-default">Accedi</button>
-					</form>
-					<br/><br/>
-					
-					<a class="btn btn-primary btn-lg" href="registrazione.jsp" role="button">Registrati</a>
-				</div>
-
-				<div class="mastfoot">
-					<div class="inner">
-						<p class="testoFooter">Progetto di Ingegneria del Software AA 2014/2015 -
-							Università degli Studi di Verona</p>
-					</div>
-				</div>
-
 			</div>
 
+
+
+
+
+			<div id="form-main">
+				<div id="form-div">
+					<form class="form" id="form1">
+						<h3>ACCEDI</h3>					
+
+						<p class="email">
+							<input name="email" type="text"
+								class="validate[required,custom[email]] feedback-input"
+								id="email" placeholder="Email" required="required"/>
+						</p>
+
+						<p class="password">
+							<input type="password" name="text"
+								class="validate[required,length[6,300]] feedback-input"
+								id="password" placeholder="Password"></textarea>
+						</p>
+
+
+						<div class="submit">
+							<input type="submit" value="accedi" id="button-blue" />
+							<div class="ease"></div>
+						</div>
+						
+						<div class="submit">
+							<input type="submit" value="registrati" id="button-blue" />
+							<div class="ease"></div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 
 	</div>
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../../dist/js/bootstrap.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
