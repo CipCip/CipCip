@@ -1,5 +1,8 @@
 package it.univr.bean;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class UserBean {
 	private String email;
 	private String password;
@@ -8,8 +11,33 @@ public class UserBean {
 	private String cellulare;
 	private int amministratore;
 	private boolean valid;
-	//private static UserBean userIstance;
 	
+
+	public UserBean(String email, String password, String nome, String cognome, 
+			String cellulare, int amministratore, boolean valid) {
+		this.email = email;
+		this.password = password;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.cellulare = cellulare;
+		this.amministratore = amministratore;
+		this.valid=valid;
+	}
+	
+	public UserBean(){
+		new UserBean(email, password, nome, cognome, 
+				cellulare, amministratore, valid); 
+	}
+	
+	public UserBean(ResultSet rs) throws SQLException {
+		this.email = rs.getString("email");
+		this.nome = rs.getString("nome");
+		this.password = rs.getString("password");
+		this.cognome = rs.getString("cognome");
+		this.amministratore = rs.getInt("amministratore");
+		this.valid = true;
+		
+	}
 	
 	
 	public String getEmail() {

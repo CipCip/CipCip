@@ -17,23 +17,28 @@ import javax.servlet.http.HttpSession;
 public class registrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserBean user=UserBean.getInstance();
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		UserBean user=new UserBean();
 		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("password"));
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));
 		user.setCellulare(request.getParameter("cellulare"));
 		
-		//intanto lo lascio cos�
-		//user.setAmministratore(0);
+		user.setAmministratore(0);
+		
 		
 		user=UserDAO.registrazione(user);
-		//non riesce ad entrare qui
+	
+		System.out.println("qui arrivo");
+		
 		if(user.isValid()){
+			HttpSession session=request.getSession(true);
+			System.out.println("qui arrivo");
+			session.setAttribute("nome",user.getNome());
+			session.setAttribute("cognome", user.getCognome());
 			response.sendRedirect("areariservata.jsp");			
 		}
 		

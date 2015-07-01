@@ -4,112 +4,111 @@ import it.univr.bean.UserBean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Connection;
 import java.sql.Statement;
 
 //DAO responsabile delle query
 public class UserDAO {
-	static Connection conn = null;
-	static ResultSet rs = null;
+	
+
+    static ResultSet rs = null;
+    static Connection connessione = null;
 
 	public static UserBean logIn(UserBean user) {
-		// String a=user.getNome();
-		// String b=user.getCognome();
-		// String c=user.getEmail();
+		
+		Statement stmt = null;
+	    
 		String d = user.getEmail();
 		String e = user.getPassword();
-
-		Statement stmt = null;
-		String logInQuery = "select * from utente where email='" + d
+		
+		String logInQuery="select * from utente where email='" + d
 				+ "' and password='" + e + "'";
-
+		try{
 		try {
-			try {
-				String url = "jdbc:postgresql://dbserver.scienze.univr.it/dblab38";
-				Class.forName("org.postgresql.Driver");
-				conn = DriverManager.getConnection(url, "userlab38",
-						"trentottoDH");
-			} catch (SQLException ex) {
-				ex.printStackTrace();
-			}
-			stmt = conn.createStatement();
+			connessione = ConnectionManager.getConnection(); //il problema è qui
+			stmt= connessione.createStatement();//problema vuole prendere una connessione aspe
 			rs = stmt.executeQuery(logInQuery);
-			boolean db = rs.next();
-			if (db == true) {
-				// setto all'user tutte gli altri attributi con
-				user.setEmail(rs.getString("email"));
-				user.setNome(rs.getString("nome"));
-				user.setCognome(rs.getString("cognome"));
-				// user.setPassword(rs.getString("password"));
-				user.setCellulare(rs.getString("cellulare"));
-				user.setValid(true);
-			} else {
-				user.setValid(false);
+			boolean more = rs.next();
+			if (more){
+				user = new UserBean(rs); 
+				
 			}
-			rs.close();
-			stmt.close();
+		
+			else
+				user.setValid(false);
+			
+			
+		} catch (SQLException a) {
+			System.out
+					.println("Selezione fallita " + a);
 		}
-
+		rs.close();
+		stmt.close();
+		}
 		catch (Exception ex) {
 			ex.printStackTrace();
 		}
-
 		return user;
-	}
-
+		
+	
+}
+		
 	public static UserBean registrazione(UserBean user) {
-		String a = user.getNome();
-		String b = user.getCognome();
-		String c = user.getEmail();
-		String d = user.getCellulare();
-		String e = user.getPassword();
-		// int f=user.getAmministratore();
-
 		Statement stmt = null;
-		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) values ('"
-				+ a + "','" + b + "','" + c + "','" + d + "','" + e + "','"
-				// +f
+	
+		String a = user.getEmail();
+		String b = user.getPassword();
+		String c = user.getNome();
+		String d = user.getCognome();
+		String e = user.getCellulare();
+		int f = user.getAmministratore();
+
+		
+		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
+				+ "values ('"
+				+ a 
+				+ "','" 
+				+ b 
+				+ "','" 
+				+ c 
+				+ "','" 
+				+ d 
+				+ "','" 
+				+ e 
+				+ "','"
+				+ f
 				+ "')";
-		try {
+		try{
 			try {
-				String url = "jdbc:postgresql://dbserver.scienze.univr.it/dblab38";
-				Class.forName("org.postgresql.Driver");
-				conn = DriverManager.getConnection(url, "userlab38",
-						"trentottoDH");
-			} catch (SQLException ex) {
-				ex.printStackTrace();
-			}
-			stmt = conn.createStatement();
-			int quante = stmt.executeUpdate(registrationQuery);
-			// user.setValid(true);
-
-			if (quante > 0) {
-				System.out.println("Succesfully Registered");
-
-			}
-
-			if (rs.next()) {
-				// setto all'user tutti gli altri attributi con
-				user.setNome(rs.getString("nome"));
-				user.setCognome(rs.getString("cognome"));
-				user.setCellulare(rs.getString("cellulare"));
-				// user.setPassword(rs.getString("password"));
-				user.setEmail(rs.getString("email"));
-				// user.setAmministratore(rs.getString("amministratore").toString());
-				user.setValid(true);
-			} else {
-				user.setValid(false);
+				connessione = ConnectionManager.getConnection(); 
+				stmt= connessione.createStatement();
+				stmt.execute(registrationQuery);
+				int more = stmt.getUpdateCount();
+				if (more!=0){
+					user.setValid(true);
+				}
+				else
+					user.setValid(false);
+				
+				
+				
+			} catch (SQLException b1) {
+				System.out
+						.println("Inserimento fallito " + b1);
 			}
 			rs.close();
 			stmt.close();
-			conn.close();
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-
-		return user;
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			return user;
 	}
+}
 	/*
 	 * public static UserBean indexHome(UserBean user){ String d=user.getNome();
 	 * String e=user.getCognome();
@@ -128,6 +127,6 @@ public class UserDAO {
 	 * }
 	 * 
 	 * return user; }
-	 */
+	 
 
-}
+}*/
