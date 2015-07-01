@@ -39,11 +39,9 @@ public class registrationServlet extends HttpServlet {
 			System.out.println("qui arrivo");
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
-<<<<<<< HEAD
-			response.sendRedirect("areariservata.jsp");			
-=======
+
 			response.sendRedirect("dashboard.jsp");			
->>>>>>> origin/master
+
 		}
 		
 		
