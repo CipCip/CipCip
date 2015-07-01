@@ -32,11 +32,11 @@ public class registrationServlet extends HttpServlet {
 		
 		user=UserDAO.registrazione(user);
 	
-		System.out.println("qui arrivo");
+	
 		
 		if(user.isValid()){
 			HttpSession session=request.getSession(true);
-			System.out.println("qui arrivo");
+		
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
 			response.sendRedirect("dashboard.jsp");			
