@@ -31,6 +31,8 @@
 						</div>
 						<br />
 						<div align="center">
+							
+							
 							Anno 2012: rubate 316 automobili al giorno, 3.583 vetture in più
 							rispetto al 2011. <br /> Recuperi anno 2012: 49.000, 51.000 nel
 							2011, i 58.000 nel 2010.
