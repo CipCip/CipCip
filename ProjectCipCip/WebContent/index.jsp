@@ -35,7 +35,7 @@
 
 			<div id="form-main">
 				<div id="form-div">
-					<form  action="loginServlet" class="form" id="form1">
+					<form  method="POST" action="loginServlet" class="form" id="form1">
 						<h3>ACCEDI</h3>
 
 						<p class="email">
