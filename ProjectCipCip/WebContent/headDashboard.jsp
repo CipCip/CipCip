@@ -23,7 +23,7 @@
 </head>
 
   <body>
-
+	<form  method="POST" action="LogoutServlet" class="form" id="form1">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -37,8 +37,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Logout</a></li>
+            <input type="submit" name="Logout" value="Logout">
           </ul>          
         </div>
       </div>
     </nav>
+    </form>
