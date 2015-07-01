@@ -23,10 +23,11 @@ public class loginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserBean user=UserBean.getInstance();
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//UserBean user=UserBean.getInstance();
+		UserBean user = new UserBean();
 		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("pwd"));
+		user.setPassword(request.getParameter("password"));
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));
 		user.setCellulare(request.getParameter("cellulare"));
@@ -44,13 +45,13 @@ public class loginServlet extends HttpServlet {
             //rd.forward(request, response);
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
-			response.sendRedirect("home.jsp");
+			response.sendRedirect("areariservata.jsp");
 		}
 		
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	
 
