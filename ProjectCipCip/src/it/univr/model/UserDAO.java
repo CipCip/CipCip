@@ -67,7 +67,7 @@ public class UserDAO {
 		String e = user.getCellulare();
 		int f = user.getAmministratore();
 
-		
+		//String registrationQuery="insert into utente(email, password, nome, cognome, cellulare, amministratore) values (?,?,?,?,?,?)";
 		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
 				+ "values ('"
 				+ a 
@@ -82,17 +82,18 @@ public class UserDAO {
 				+ "','"
 				+ f
 				+ "')";
+		//String inserimentoEff = "select * from utente where email='"+a+"'";*/
 		try{
 			try {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
-				stmt.execute(registrationQuery);
-				int more = stmt.getUpdateCount();
-				if (more!=0){
-					user.setValid(true);
-				}
-				else
-					user.setValid(false);
+				stmt.executeUpdate(registrationQuery);
+				//int more = stmt.getUpdateCount();
+				//rs = stmt.executeQuery(inserimentoEff);
+				//boolean more=rs.next();
+				
+				user.setValid(true);
+				
 				
 				
 				
@@ -100,7 +101,7 @@ public class UserDAO {
 				System.out
 						.println("Inserimento fallito " + b1);
 			}
-			rs.close();
+			//rs.close();
 			stmt.close();
 			}
 			catch (Exception ex) {
