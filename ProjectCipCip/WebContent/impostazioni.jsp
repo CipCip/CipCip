@@ -7,8 +7,8 @@
 				<li><a href="dashboard.jsp">Dashboard</a></li>
 				<li class="active"><a href="#">Impostazioni <span
 						class="sr-only">(current)</span></a></li>
-				<li><a href="#">Avvisi</a></li>
-				<li><a href="#">Media</a></li>
+				<li><a href="avvisi.jsp">Avvisi</a></li>
+				<li><a href="gallery.jsp">Gallery</a></li>
 				<li><a href="#">Help</a></li>
 			</ul>
 
@@ -28,29 +28,30 @@
 						<p class="email">
 							<input name="email" type="text"
 								class="feedback-input"
-								id="email" placeholder="Email" />
+								id="email" placeholder="aggiorna email" />
+								
 						</p>
 
 						<p class="phone">
 							<input name="phone" type="text"
 								class="feedback-input"
-								id="phone" placeholder="Telefono" />
+								id="phone" placeholder="aggiorna numero di telefono" />
 						</p>
 						
 						<p class="email">
 							<input name="phone" type="number"
 								class="feedback-input"
-								id="email" placeholder="Avviso email" />
+								id="email" min="1" max="450" placeholder="aggiorna soglia email" />
 						</p>
 						
 						<p class="phone">
 							<input name="phone" type="number"
 								class="feedback-input"
-								id="phone" placeholder="Avviso SMS" />
+								id="phone" min="1" max="450" placeholder="aggiorna soglia SMS" />
 						</p>
 						
 						<p class="targa">
-							<input name="email" type="text"
+							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
 								class="feedback-input"
 								id="targa" placeholder="Cambia targa" />
 						</p>
