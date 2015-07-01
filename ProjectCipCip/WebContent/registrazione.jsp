@@ -26,7 +26,7 @@
 
 	<div id="form-main">
 		<div id="form-div">
-			<form method="post" action="registration.jsp" class="form" id="form1">
+			<form method="post" action="registrationServlet" class="form" id="form1">
 				<h3>REGISTRATI</h3>
 
 				<!-- NOME -->

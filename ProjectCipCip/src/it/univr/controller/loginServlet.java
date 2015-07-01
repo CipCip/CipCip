@@ -24,34 +24,24 @@ public class loginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//UserBean user=UserBean.getInstance();
-		UserBean user = new UserBean();
-		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("password"));
-		user.setNome(request.getParameter("nome"));
-		user.setCognome(request.getParameter("cognome"));
-		user.setCellulare(request.getParameter("cellulare"));
+	
+		UserBean utente=new UserBean();
+		utente.setEmail(request.getParameter("email"));
+		utente.setPassword(request.getParameter("password"));
+		utente=UserDAO.logIn(utente);
 		
 		
-		
-		
-
-		user=UserDAO.logIn(user);
-		
-		
-		if(user.isValid()){
+		if(utente.isValid()){
 			HttpSession session=request.getSession(true);
-			//RequestDispatcher rd = request.getRequestDispatcher("Welcome.html");
-            //rd.forward(request, response);
-			session.setAttribute("nome",user.getNome());
-			session.setAttribute("cognome", user.getCognome());
+			session.setAttribute("nome",utente.getNome());
+			session.setAttribute("cognome", utente.getCognome());
 			response.sendRedirect("areariservata.jsp");
 		}
 		
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	
 
