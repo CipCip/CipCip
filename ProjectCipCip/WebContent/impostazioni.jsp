@@ -29,32 +29,32 @@
 						<p class="email">
 							<input name="email" type="text"
 								class="feedback-input"
-								id="email" placeholder="conferma email" />
+								id="password" placeholder="Modifica password" />
 								
 						</p>
 
 						<p class="phone">
 							<input name="phone" type="text"
 								class="feedback-input"
-								id="phone" placeholder="conferma numero di telefono" />
+								id="cellulare" placeholder="Modifica numero di telefono" />
 						</p>
 						
 						<p class="email">
 							<input name="phone" type="number"
 								class="feedback-input"
-								id="email" min="1" max="450" placeholder="inserisci soglia velocità per email" />
+								id="soglia_email" min="1" max="450" placeholder="Modifica soglia velocità per email" />
 						</p>
 						
 						<p class="phone">
 							<input name="phone" type="number"
 								class="feedback-input"
-								id="phone" min="1" max="450" placeholder="inserisci soglia velocità per SMS" />
+								id="soglia_sms" min="1" max="450" placeholder="Modifica soglia velocità per SMS" />
 						</p>
 						
 						<p class="targa">
 							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
 								class="feedback-input"
-								id="targa" placeholder="Cambia targa" />
+								id="targa" placeholder="Conferma targa" />
 						</p>
 						
 						

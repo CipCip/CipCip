@@ -10,15 +10,17 @@ public class VeicoloBean {
 	private String targa;
 	private String marca;
 	private String modello;
-	private java.sql.Date data_immatricolazione;
+	private String data_immatricolazione;
 	private float soglia_email;
 	private float soglia_sms;
 	private String email_utente;
 	private int codposizione;
+	private boolean valid;
 	
+
 	public VeicoloBean(String targa, String marca, String modello,
-			java.sql.Date data_immatricolazione, float soglia_email, float soglia_sms,
-			String email_utente, int codposizione) {
+			String data_immatricolazione, float soglia_email, float soglia_sms,
+			String email_utente, int codposizione, boolean valid) {
 		super();
 		this.targa = targa;
 		this.marca = marca;
@@ -28,21 +30,28 @@ public class VeicoloBean {
 		this.soglia_sms = soglia_sms;
 		this.email_utente = email_utente;
 		this.codposizione = codposizione;
+		this.valid=valid;
 	}
 	
 	public VeicoloBean(ResultSet rs) throws SQLException {
 		this.targa = rs.getString("targa");
 		this.marca = rs.getString("marca");
 		this.modello = rs.getString("modello");
-		this.data_immatricolazione = rs.getDate("data_immatricolazione");
+		this.data_immatricolazione = rs.getString("data_immatricolazione");
 		this.soglia_email = rs.getInt("soglia_email");
 		this.soglia_sms = rs.getInt("soglia_sms");
 		this.email_utente =rs.getString("email_utente");
 		this.codposizione =rs.getInt("codposizione");
+		this.valid=true;
 		
 	}
 	
 	
+	public VeicoloBean() {
+		new VeicoloBean(targa, marca, modello, data_immatricolazione, soglia_email, soglia_sms,
+			email_utente, codposizione, valid);
+	}
+
 	public String getTarga() {
 		return targa;
 	}
@@ -61,12 +70,14 @@ public class VeicoloBean {
 	public void setModello(String modello) {
 		this.modello = modello;
 	}
-	public java.sql.Date getData_immatricolazione() {
+	public String getData_immatricolazione() {
 		return data_immatricolazione;
 	}
-	public void setData_immatricolazione(java.sql.Date data_immatricolazione) {
-		this.data_immatricolazione = data_immatricolazione;
+	
+	public void setData_immatricolazione(String data_immatricolazione){
+		this.data_immatricolazione=data_immatricolazione;
 	}
+	
 	public float getSoglia_email() {
 		return soglia_email;
 	}
@@ -92,5 +103,12 @@ public class VeicoloBean {
 		this.codposizione = codposizione;
 	}
 	
+	public boolean isValid() {
+		return valid;
+	}
+
+	public void setValid(boolean valid) {
+		this.valid = valid;
+	}
 	
 }

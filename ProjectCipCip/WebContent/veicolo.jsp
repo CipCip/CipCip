@@ -28,7 +28,7 @@
 						<!-- Mauri targa -->
 						<p class="targa">
 							<input name="targa" type="text"
-								class="feedback-input"
+								class="feedback-input" minlength="6" maxlength="7" 
 								id="targa" placeholder="Inserisci targa" />
 								
 						</p>
@@ -52,13 +52,13 @@
 						</p>
 						<!-- Mauri Soglia velocità email -->
 						<p class="velocità">
-							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
+							<input style="text-transform:uppercase"  name="email" type="text"
 								class="feedback-input"
 								id="soglia_email" placeholder="Soglia velocità per email" />
 						</p>
 						<!-- Mauri Soglia velocità sms -->
 						<p class="velocità">
-							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
+							<input style="text-transform:uppercase"  name="email" type="text"
 								class="feedback-input"
 								id="soglia_sms" placeholder="Soglia velocità per sms" />
 						</p>

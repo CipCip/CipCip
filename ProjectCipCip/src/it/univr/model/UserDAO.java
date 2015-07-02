@@ -109,25 +109,40 @@ public class UserDAO {
 			}
 			return user;
 	}
-}
-	/*
-	 * public static UserBean indexHome(UserBean user){ String d=user.getNome();
-	 * String e=user.getCognome();
-	 * 
-	 * Statement stmt= null; String
-	 * indexQuery="select * from utente where nome='"+d+"' and cognome='"+e+"'";
-	 * 
-	 * try{ try{ String
-	 * url="jdbc:postgresql://dbserver.scienze.univr.it/dblab38";
-	 * Class.forName("org.postgresql.Driver");
-	 * conn=DriverManager.getConnection(url, "userlab38", "trentottoDH"); }
-	 * catch(SQLException ex){ ex.printStackTrace(); }
-	 * stmt=conn.createStatement(); rs=stmt.executeQuery(indexQuery); boolean
-	 * ok=rs.next(); if(ok){ user.setValid(true); } else{ user.setValid(false);
-	 * } rs.close(); stmt.close(); } catch(Exception ex){ ex.printStackTrace();
-	 * }
-	 * 
-	 * return user; }
-	 
+	
+	public static UserBean modifica(UserBean user) {
+		Statement stmt = null;
+		
+		String a = user.getEmail();
+		String b= user.getPassword();
+		String e = user.getCellulare();
+		//String vecchiaMail = request.getSession().getAttribute("modalita").toString();
+		//UPDATE impiegato SET stipendio = stipendio + 100 WHERE nome_dipartimento = ‘Vendite’;
+		String modificaUser="update utente set password='"+b+"', cellulare='"+e+"' where email='"+a+"'";
+		
+		try{
+			try {
+				connessione = ConnectionManager.getConnection(); 
+				stmt= connessione.createStatement();
+				stmt.executeUpdate(modificaUser);
+				//int more = stmt.getUpdateCount();
+				//rs = stmt.executeQuery(inserimentoEff);
+				//boolean more=rs.next();
+				
+				user.setValid(true);
+				
+				
+			} catch (SQLException b1) {
+				System.out
+						.println("Modifica fallita " + b1);
+			}
+			//rs.close();
+			stmt.close();
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			return user;
+	}
 
-}*/
+}

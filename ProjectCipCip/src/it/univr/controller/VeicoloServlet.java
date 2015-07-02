@@ -1,8 +1,6 @@
 package it.univr.controller;
 
-import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
-import it.univr.model.UserDAO;
 import it.univr.model.VeicoloDAO;
 
 import java.io.IOException;
@@ -12,29 +10,32 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ImpostazioniServlet
+ * Servlet implementation class VeicoloServlet
  */
-@WebServlet("/ImpostazioniServlet")
-public class ImpostazioniServlet extends HttpServlet {
+@WebServlet("/VeicoloServlet")
+public class VeicoloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserBean user=new UserBean();
+		
+		HttpSession session=request.getSession(true);
+		String emailUtente=(String)session.getAttribute("email");
+		
 		VeicoloBean car=new VeicoloBean();
 		
-		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("password"));
-		user.setCellulare(request.getParameter("cellulare"));
+		car.setTarga(request.getParameter("targa"));
+		car.setMarca(request.getParameter("marca"));
+		car.setModello(request.getParameter("modello"));
+		car.setData_immatricolazione(request.getParameter("data_immatricolazione"));
 		car.setSoglia_email(Float.parseFloat(request.getParameter("soglia_email")));
 		car.setSoglia_sms(Float.parseFloat(request.getParameter("soglia_sms")));
 		car.setTarga(request.getParameter("targa"));
 		
-		user=UserDAO.modifica(user);
-		car=VeicoloDAO.modifica(car);
-		//stampare un messaggio di successo è a livello front??
+		car=VeicoloDAO.inserimento(car, emailUtente);
 		response.sendRedirect("dashboard.jsp");
 	}
 
