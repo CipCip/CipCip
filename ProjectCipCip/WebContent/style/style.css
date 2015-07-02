@@ -242,14 +242,30 @@ body {
 }
 
 /* Icons ---------------------------------- */
-#name{
+#nome{
 	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
-#name:focus{
+#nome:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#cognome{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#cognome:focus{
 	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
 	background-size: 30px 30px;
 	background-position: 8px 5px;
@@ -286,19 +302,7 @@ body {
 	background-repeat: no-repeat;
 }
 
-#phone{
-	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
 
-#phone:focus{
-	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
-	background-size: 30px 30px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
 
 #comment{
 	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
@@ -394,4 +398,19 @@ input:focus, textarea:focus {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+}
+
+
+#cellulare{
+	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#cellulare:focus{
+	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
 }

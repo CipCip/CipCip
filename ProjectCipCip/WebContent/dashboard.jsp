@@ -7,7 +7,8 @@
 				<li class="active"><a href="#">Dashboard <span
 						class="sr-only">(current)</span></a></li>
 				<li><a href="impostazioni.jsp">Impostazioni</a></li>
-				<li><a href="veicolo.jsp">Veicolo</a></li>
+				<li><a href="veicolo.jsp">Aggiungi veicolo</a></li>
+				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
 				<li><a href="#">Help</a></li>

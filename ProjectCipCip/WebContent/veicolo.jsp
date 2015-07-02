@@ -5,9 +5,9 @@
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboard.jsp">Dashboard</a></li>
-				<li><a href="impostazioni.jsf">Impostazioni </a></li>
-				<li class="active"><a href="#">Veicolo<span
-						class="sr-only">(current)</span></a></li>
+				<li><a href="impostazioni.jsp">Impostazioni </a></li>
+				<li class="active"><a href="#">Aggiungi veicolo<span class="sr-only">(current)</span></a></li>
+				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
 				<li><a href="#">Help</a></li>
@@ -16,71 +16,67 @@
 
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">Veicolo</h1>
+			<h1 class="page-header">Aggiungi veicolo</h1>
 
 
 
 
 			<div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="VeicoloServlet" class="form" id="form1">
+					<form method="POST" action="VeicoloServlet" class="form" id="form1">
+
 						
-						<!-- Mauri targa -->
 						<p class="targa">
-							<input name="targa" type="text"
-								class="feedback-input" minlength="6" maxlength="7" 
-								id="targa" placeholder="Inserisci targa" />
+							<input name="targa" type="text" class="feedback-input"
+								minlength="6" maxlength="7" id="targa"
+								placeholder="Inserisci targa" />
+
+						</p>
+						
+						<p class="marca">
+							<input name="marca" type="text" class="feedback-input" id="marca"
+								placeholder="Inserisci marca del veicolo" />
+						</p>
+						
+						<p class="modello">
+							<input name="modello" type="text" class="feedback-input"
+								id="modello" placeholder="Inserisci modello del veicolo" />
+						</p>
+						
+						<p class="date">
+							<input name="data_immatricolazione" type="text" onfocus="(this.type='month')"
+								class="feedback-input" id="data_immatricolazione" placeholder="Inserisci data di immatricolazione" /> 
 								
 						</p>
-						<!-- Mauri marca -->
-						<p class="marca">
-							<input name="marca" type="text"
-								class="feedback-input"
-								id="marca" placeholder="Inserisci marca del veicolo" />
-						</p>
-						<!-- Mauri modello -->		
-						<p class="modello">
-							<input name="modello" type="text"
-								class="feedback-input"
-								id="modello" min="1" max="450" placeholder="Inserisci modello del veicolo" />
-						</p>
-						<!-- Mauri data immatricolazione -->
-						<p class="date">
-							<input name="data_immatricolazione" type="text"
-								class="feedback-input"
-								id="data_immatricolazione" min="1" max="450" placeholder="Inserisci data di immatricolazione" />
-						</p>
-						<!-- Mauri Soglia velocità email -->
+						
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="soglia_mail" type="number"
-								class="feedback-input"
+							<input name="soglia_mail" type="number" min="1" max="350" class="feedback-input"
 								id="soglia_mail" placeholder="Soglia velocità per email" />
 						</p>
-						<!-- Mauri Soglia velocità sms -->
+						
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="soglia_sms" type="number"
-								class="feedback-input"
+							<input name="soglia_sms" type="number" min="1" max="350" class="feedback-input"
 								id="soglia_sms" placeholder="Soglia velocità per sms" />
 						</p>
-						
-						
-						
-						
+
+
+
+
 
 						<div class="submit">
 							<input style="margin-bottom: 15px;" type="submit" value="salva"
 								id="button-blue" />
 							<div class="ease"></div>
 						</div>
-						
+
 						<div class="submit">
-							<a style="text-align: center "id="button-red" href="#">cancellati</a>
+							<a style="text-align: center" id="button-red" href="#">cancellati</a>
 							<div class="ease"></div>
 						</div>
-						
+
 					</form>
-										
-				</div>								
+
+				</div>
 			</div>
 
 

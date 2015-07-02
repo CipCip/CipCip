@@ -182,14 +182,14 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
-#phone{
+#cellulare{
 	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
-#phone:focus{
+#cellulare:focus{
 	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
 	background-size: 30px 30px;
   background-position: 11px 8px;
@@ -205,6 +205,77 @@ a:hover {
 
 #targa:focus{
 	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#marca{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#marca:focus{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#modello{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#modello:focus{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#soglia_mail{
+	background-image: url(http://incidentreport365.com/img/features/dashboard.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#soglia_mail:focus{
+	background-image: url(http://incidentreport365.com/img/features/dashboard.png);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#soglia_sms{
+	background-image: url(http://incidentreport365.com/img/features/dashboard.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#soglia_sms:focus{
+	background-image: url(http://incidentreport365.com/img/features/dashboard.png);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#data_immatricolazione{
+	background-image: url(http://www.alegoo.com/images05/newyear/calendar-b11/015/calendar-icon-16.jpg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#data_immatricolazione:focus{
+	background-image: url(http://www.alegoo.com/images05/newyear/calendar-b11/015/calendar-icon-16.jpg);
 	background-size: 30px 30px;
   background-position: 11px 8px;
 	background-repeat: no-repeat;

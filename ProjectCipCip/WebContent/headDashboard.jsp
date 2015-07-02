@@ -38,7 +38,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <input type="submit" name="Logout" value="Logout">
+            
+            <li><input type="submit" name="Logout" value="Logout"></li>
+            
+            
           </ul>          
         </div>
       </div>
