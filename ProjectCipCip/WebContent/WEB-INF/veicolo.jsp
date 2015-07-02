@@ -5,9 +5,9 @@
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboard.jsp">Dashboard</a></li>
-				<li class="active"><a href="#">Impostazioni <span
+				<li class="active"><a href="#">Impostazioni </a></li>
+				<li><a href="veicolo.jsp">Veicolo<span
 						class="sr-only">(current)</span></a></li>
-				<li><a href="veicolo.jsp">Veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
 				<li><a href="#">Help</a></li>
@@ -16,48 +16,52 @@
 
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">Impostazioni</h1>
+			<h1 class="page-header">Veicolo</h1>
 
 
 
 
 			<div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="ImpostazioniServlet" class="form" id="form1">
+					<form  method="POST" action="VeicoloServlet" class="form" id="form1">
 						
-
-						<p class="email">
-							<input name="email" type="text"
+						<!-- Mauri targa -->
+						<p class="targa">
+							<input name="targa" type="text"
 								class="feedback-input"
-								id="email" placeholder="conferma email" />
+								id="targa" placeholder="Inserisci targa" />
 								
 						</p>
-
-						<p class="phone">
-							<input name="phone" type="text"
+						<!-- Mauri marca -->
+						<p class="marca">
+							<input name="marca" type="text"
 								class="feedback-input"
-								id="phone" placeholder="conferma numero di telefono" />
+								id="marca" placeholder="Inserisci marca del veicolo" />
 						</p>
-						
-						<p class="email">
-							<input name="phone" type="number"
+						<!-- Mauri modello -->		
+						<p class="modello">
+							<input name="modello" type="number"
 								class="feedback-input"
-								id="email" min="1" max="450" placeholder="inserisci soglia velocità per email" />
+								id="modello" min="1" max="450" placeholder="Inserisci modello del veicolo" />
 						</p>
-						
-						<p class="phone">
-							<input name="phone" type="number"
+						<!-- Mauri data immatricolazione -->
+						<p class="date">
+							<input name="data" type="number"
 								class="feedback-input"
-								id="phone" min="1" max="450" placeholder="inserisci soglia velocità per SMS" />
+								id="data_immatricolazione" min="1" max="450" placeholder="Inserisci data di immatricolazione" />
 						</p>
-						
-						<p class="targa">
+						<!-- Mauri Soglia velocità email -->
+						<p class="velocità">
 							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
 								class="feedback-input"
-								id="targa" placeholder="Cambia targa" />
+								id="soglia_email" placeholder="Soglia velocità per email" />
 						</p>
-						
-						
+						<!-- Mauri Soglia velocità sms -->
+						<p class="velocità">
+							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="email" type="text"
+								class="feedback-input"
+								id="soglia_sms" placeholder="Soglia velocità per sms" />
+						</p>
 						
 						
 						

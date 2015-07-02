@@ -5,7 +5,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
           	<li><a href="dashboard.jsp">Dashboard</a></li>
-            <li><a href="impostazioni.jsp">Impostazioni</a></li>            
+            <li><a href="impostazioni.jsp">Impostazioni</a></li>  
+            <li><a href="veicolo.jsp">Veicolo</a></li>          
             <li class="active"><a href="#">Avvisi <span class="sr-only">(current)</span></a></li>
             <li><a href="gallery.jsp">Gallery</a></li>
             <li><a href="#">Help</a></li>

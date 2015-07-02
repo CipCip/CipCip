@@ -6,6 +6,7 @@
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboard.jsp">Dashboard</a></li>
 				<li><a href="impostazioni.jsp">Impostazioni</a></li>
+				<li><a href="veicolo.jsp">Veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li class="active"><a href="gallery.jsp">Gallery <span
 						class="sr-only">(current)</span></a></li>

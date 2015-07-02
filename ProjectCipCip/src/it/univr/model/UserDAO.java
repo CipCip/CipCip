@@ -29,8 +29,8 @@ public class UserDAO {
 				+ "' and password='" + e + "'";
 		try{
 		try {
-			connessione = ConnectionManager.getConnection(); //il problema è qui
-			stmt= connessione.createStatement();//problema vuole prendere una connessione aspe
+			connessione = ConnectionManager.getConnection(); 
+			stmt= connessione.createStatement();
 			rs = stmt.executeQuery(logInQuery);
 			boolean more = rs.next();
 			if (more){
