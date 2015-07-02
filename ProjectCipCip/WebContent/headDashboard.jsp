@@ -32,6 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <p style="color: white" class="navbar-brand">Cip Cip</p>
         </div>

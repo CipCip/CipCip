@@ -31,8 +31,8 @@ public class VeicoloServlet extends HttpServlet {
 		car.setMarca(request.getParameter("marca"));
 		car.setModello(request.getParameter("modello"));
 		car.setData_immatricolazione(request.getParameter("data_immatricolazione"));
-		car.setSoglia_email(Float.parseFloat(request.getParameter("soglia_email")));
-		car.setSoglia_sms(Float.parseFloat(request.getParameter("soglia_sms")));
+		car.setSoglia_email(request.getParameter("soglia_email"));
+		car.setSoglia_sms(request.getParameter("soglia_sms"));
 		car.setTarga(request.getParameter("targa"));
 		
 		car=VeicoloDAO.inserimento(car, emailUtente);

@@ -21,12 +21,12 @@ public class VeicoloDAO {
     	String b=car.getMarca();
     	String c=car.getModello();
     	String d=car.getData_immatricolazione();
-    	float e=car.getSoglia_email();
-    	float f=car.getSoglia_sms();
+    	String e=car.getSoglia_email();
+    	String f=car.getSoglia_sms();
     	//String g=car.getEmail_utente();
     	//Controllo che g sia uguale alla String emailUtente
     	
-    	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_email, soglia_sms, email_utente) "
+    	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_mail, soglia_sms, emailutente) "
 				+ "values ('"
 				+ a 
 				+ "','" 
@@ -73,12 +73,12 @@ public class VeicoloDAO {
     public static VeicoloBean modifica(VeicoloBean car) {
 		Statement stmt = null;
 		
-		Float a = car.getSoglia_email();
-		Float b= car.getSoglia_sms();
+		String a = car.getSoglia_email();
+		String b= car.getSoglia_sms();
 		String e = car.getTarga();
 		//String vecchiaMail = request.getSession().getAttribute("modalita").toString();
 		//UPDATE impiegato SET stipendio = stipendio + 100 WHERE nome_dipartimento = ‘Vendite’;
-		String modificaCar="update utente set soglia_email='"+a+"', soglia_sms='"+b+"' where targa='"+e+"'";
+		String modificaCar="update utente set soglia_mail='"+a+"', soglia_sms='"+b+"' where targa='"+e+"'";
 		
 		try{
 			try {

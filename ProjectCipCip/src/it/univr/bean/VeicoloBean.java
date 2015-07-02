@@ -11,15 +11,15 @@ public class VeicoloBean {
 	private String marca;
 	private String modello;
 	private String data_immatricolazione;
-	private float soglia_email;
-	private float soglia_sms;
+	private String soglia_email;
+	private String soglia_sms;
 	private String email_utente;
 	private int codposizione;
 	private boolean valid;
 	
 
 	public VeicoloBean(String targa, String marca, String modello,
-			String data_immatricolazione, float soglia_email, float soglia_sms,
+			String data_immatricolazione, String soglia_email, String soglia_sms,
 			String email_utente, int codposizione, boolean valid) {
 		super();
 		this.targa = targa;
@@ -38,8 +38,8 @@ public class VeicoloBean {
 		this.marca = rs.getString("marca");
 		this.modello = rs.getString("modello");
 		this.data_immatricolazione = rs.getString("data_immatricolazione");
-		this.soglia_email = rs.getInt("soglia_email");
-		this.soglia_sms = rs.getInt("soglia_sms");
+		this.soglia_email = rs.getString("soglia_email");
+		this.soglia_sms = rs.getString("soglia_sms");
 		this.email_utente =rs.getString("email_utente");
 		this.codposizione =rs.getInt("codposizione");
 		this.valid=true;
@@ -78,16 +78,16 @@ public class VeicoloBean {
 		this.data_immatricolazione=data_immatricolazione;
 	}
 	
-	public float getSoglia_email() {
+	public String getSoglia_email() {
 		return soglia_email;
 	}
-	public void setSoglia_email(float soglia_email) {
+	public void setSoglia_email(String soglia_email) {
 		this.soglia_email = soglia_email;
 	}
-	public float getSoglia_sms() {
+	public String getSoglia_sms() {
 		return soglia_sms;
 	}
-	public void setSoglia_sms(float soglia_sms) {
+	public void setSoglia_sms(String soglia_sms) {
 		this.soglia_sms = soglia_sms;
 	}
 	public String getEmail_utente() {

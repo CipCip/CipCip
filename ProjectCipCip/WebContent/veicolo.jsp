@@ -5,8 +5,8 @@
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboard.jsp">Dashboard</a></li>
-				<li class="active"><a href="#">Impostazioni </a></li>
-				<li><a href="veicolo.jsp">Veicolo<span
+				<li><a href="impostazioni.jsf">Impostazioni </a></li>
+				<li class="active"><a href="#">Veicolo<span
 						class="sr-only">(current)</span></a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
@@ -40,25 +40,25 @@
 						</p>
 						<!-- Mauri modello -->		
 						<p class="modello">
-							<input name="modello" type="number"
+							<input name="modello" type="text"
 								class="feedback-input"
 								id="modello" min="1" max="450" placeholder="Inserisci modello del veicolo" />
 						</p>
 						<!-- Mauri data immatricolazione -->
 						<p class="date">
-							<input name="data" type="number"
+							<input name="data" type="text"
 								class="feedback-input"
 								id="data_immatricolazione" min="1" max="450" placeholder="Inserisci data di immatricolazione" />
 						</p>
 						<!-- Mauri Soglia velocità email -->
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="email" type="text"
+							<input style="text-transform:uppercase"  name="email" type="number"
 								class="feedback-input"
-								id="soglia_email" placeholder="Soglia velocità per email" />
+								id="soglia_mail" placeholder="Soglia velocità per email" />
 						</p>
 						<!-- Mauri Soglia velocità sms -->
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="email" type="text"
+							<input style="text-transform:uppercase"  name="email" type="number"
 								class="feedback-input"
 								id="soglia_sms" placeholder="Soglia velocità per sms" />
 						</p>
