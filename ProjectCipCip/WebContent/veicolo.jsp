@@ -46,19 +46,19 @@
 						</p>
 						<!-- Mauri data immatricolazione -->
 						<p class="date">
-							<input name="data" type="text"
+							<input name="data_immatricolazione" type="text"
 								class="feedback-input"
 								id="data_immatricolazione" min="1" max="450" placeholder="Inserisci data di immatricolazione" />
 						</p>
 						<!-- Mauri Soglia velocità email -->
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="email" type="number"
+							<input style="text-transform:uppercase"  name="soglia_mail" type="number"
 								class="feedback-input"
 								id="soglia_mail" placeholder="Soglia velocità per email" />
 						</p>
 						<!-- Mauri Soglia velocità sms -->
 						<p class="velocità">
-							<input style="text-transform:uppercase"  name="email" type="number"
+							<input style="text-transform:uppercase"  name="soglia_sms" type="number"
 								class="feedback-input"
 								id="soglia_sms" placeholder="Soglia velocità per sms" />
 						</p>

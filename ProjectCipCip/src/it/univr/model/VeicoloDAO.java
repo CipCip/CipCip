@@ -26,7 +26,7 @@ public class VeicoloDAO {
     	//String g=car.getEmail_utente();
     	//Controllo che g sia uguale alla String emailUtente
     	
-    	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_mail, soglia_sms, emailutente) "
+    	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_sms, soglia_mail,  emailutente) "
 				+ "values ('"
 				+ a 
 				+ "','" 
@@ -36,9 +36,9 @@ public class VeicoloDAO {
 				+ "','" 
 				+ d 
 				+ "','" 
-				+ e 
+				+ f 
 				+ "','"
-				+ f
+				+ e
 				+ "','" 
 				+ emailUtente
 				+ "')";
@@ -70,15 +70,16 @@ public class VeicoloDAO {
 	
     }
     
-    public static VeicoloBean modifica(VeicoloBean car) {
+    public static VeicoloBean modifica(VeicoloBean car, String targa) {
 		Statement stmt = null;
 		
 		String a = car.getSoglia_email();
 		String b= car.getSoglia_sms();
-		String e = car.getTarga();
+		System.out.println(targa);
+		//String e = car.getTarga();
 		//String vecchiaMail = request.getSession().getAttribute("modalita").toString();
 		//UPDATE impiegato SET stipendio = stipendio + 100 WHERE nome_dipartimento = ‘Vendite’;
-		String modificaCar="update utente set soglia_mail='"+a+"', soglia_sms='"+b+"' where targa='"+e+"'";
+		String modificaCar="update veicolo set soglia_mail='"+a+"', soglia_sms='"+b+"' where targa='"+targa+"'";
 		
 		try{
 			try {

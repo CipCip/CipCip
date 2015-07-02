@@ -31,11 +31,16 @@ public class VeicoloServlet extends HttpServlet {
 		car.setMarca(request.getParameter("marca"));
 		car.setModello(request.getParameter("modello"));
 		car.setData_immatricolazione(request.getParameter("data_immatricolazione"));
-		car.setSoglia_email(request.getParameter("soglia_email"));
 		car.setSoglia_sms(request.getParameter("soglia_sms"));
-		car.setTarga(request.getParameter("targa"));
+		car.setSoglia_email(request.getParameter("soglia_mail"));
+		//car.setTarga(request.getParameter("targa"));
 		
 		car=VeicoloDAO.inserimento(car, emailUtente);
+		
+		if(car.isValid()==true){
+			
+			session.setAttribute("targa",car.getTarga());
+		}
 		response.sendRedirect("dashboard.jsp");
 	}
 
