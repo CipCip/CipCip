@@ -20,6 +20,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" type="image/png" href="http://www.mammagallo.com/wp-content/uploads/2015/02/Twitter-logo.jpg"/>
+    
+    
 </head>
 
   <body>

@@ -1,0 +1,311 @@
+{
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 10.8625161,
+               "lng" : 78.71353030000002
+            },
+            "southwest" : {
+               "lat" : 10.7883584,
+               "lng" : 78.69576309999999
+            }
+         },
+         "copyrights" : "Map data ©2015 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "13,0 km",
+                  "value" : 13040
+               },
+               "duration" : {
+                  "text" : "21 min",
+                  "value" : 1233
+               },
+               "end_address" : "Tiruchirappalli, Tamil Nadu, India",
+               "end_location" : {
+                  "lat" : 10.7905009,
+                  "lng" : 78.704669
+               },
+               "start_address" : "Srirangam, Tiruchirappalli, Tamil Nadu, India",
+               "start_location" : {
+                  "lat" : 10.8560248,
+                  "lng" : 78.696524
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0,6 km",
+                        "value" : 627
+                     },
+                     "duration" : {
+                        "text" : "2 min",
+                        "value" : 131
+                     },
+                     "end_location" : {
+                        "lat" : 10.8531074,
+                        "lng" : 78.70065339999999
+                     },
+                     "html_instructions" : "Procedi in direzione \u003cb\u003esud\u003c/b\u003e verso \u003cb\u003eNariyan St/नारियां स्ट्रीट/నరియన్ స్ట్రీట్\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "cigaAgli_N`CIt@?R@D?@?@A@ABE`@o@TU@CDEfA}ALQBEFKBKHYTcANm@@GJ]BKJWBG@A@ABAJIBCN_@Vg@HOX_@BI?G?K?S?O?[?M?[Ba@Du@"
+                     },
+                     "start_location" : {
+                        "lat" : 10.8560248,
+                        "lng" : 78.696524
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1,1 km",
+                        "value" : 1088
+                     },
+                     "duration" : {
+                        "text" : "2 min",
+                        "value" : 131
+                     },
+                     "end_location" : {
+                        "lat" : 10.8624104,
+                        "lng" : 78.70375059999999
+                     },
+                     "html_instructions" : "Svolta a \u003cb\u003esinistra\u003c/b\u003e e imbocca \u003cb\u003eSalem - Namakkal - Trichy Rd/Trichy Chennai Trunk Rd/त्रिची चेन्नई ट्रंक मार्ग/त्रिची - नमक्कल मार्ग/सेलम - नमक्कल - त्रिची मार्ग/త్రిచి చెన్నై ట్రంక్ రోడ్డు/త్రిచి - నమక్కల్ రోడ్డు/సలెమ్ - నమక్కల్ - త్రిచి రోడ్డు\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Sri Venkateswara Hospital (sulla sinistra)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "}vfaAafj_NkJyBuA[yA]GAkDy@eBa@WGgBc@aB]cAWoCo@yG}AOCWGgDy@mBc@"
+                     },
+                     "start_location" : {
+                        "lat" : 10.8531074,
+                        "lng" : 78.70065339999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "55 m",
+                        "value" : 55
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 13
+                     },
+                     "end_location" : {
+                        "lat" : 10.8624107,
+                        "lng" : 78.7041909
+                     },
+                     "html_instructions" : "Svolta leggermente a \u003cb\u003edestra\u003c/b\u003e in New Security force-security service in trichy verso \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "aqhaAmyj_NIKCEACACAC?CAE@G?E@GPY"
+                     },
+                     "start_location" : {
+                        "lat" : 10.8624104,
+                        "lng" : 78.70375059999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 103
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 12
+                     },
+                     "end_location" : {
+                        "lat" : 10.861668,
+                        "lng" : 78.704735
+                     },
+                     "html_instructions" : "Svolta leggermente a \u003cb\u003edestra\u003c/b\u003e verso \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "aqhaAe|j_NPGRIHCXOHGHG@AHENMFGPY"
+                     },
+                     "start_location" : {
+                        "lat" : 10.8624107,
+                        "lng" : 78.7041909
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,6 km",
+                        "value" : 594
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 70
+                     },
+                     "end_location" : {
+                        "lat" : 10.8597641,
+                        "lng" : 78.70948480000001
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "mlhaAs_k_N@Ah@{@Xm@`@}@`BuDz@qBBGx@qB~@qBp@wABK@G@I?C?C?IAGEMEKIMAEYe@KQ"
+                     },
+                     "start_location" : {
+                        "lat" : 10.861668,
+                        "lng" : 78.704735
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "8,2 km",
+                        "value" : 8151
+                     },
+                     "duration" : {
+                        "text" : "9 min",
+                        "value" : 537
+                     },
+                     "end_location" : {
+                        "lat" : 10.7904945,
+                        "lng" : 78.70523229999999
+                     },
+                     "html_instructions" : "Svolta a \u003cb\u003edestra\u003c/b\u003e e imbocca \u003cb\u003eGrand Southern Trunk Rd/NH45/Tiruchi Chennai Hwy/चेन्नई थेनी हाईवे/तिरुची-चेन्नई हाईवे/திருச்சி சென்னை நெடுஞ்சாலை/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే/తిరుచి చెన్నై హైవే\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinua a seguire la Grand Southern Trunk Rd/NH45/चेन्नई थेनी हाईवे/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Petrol Bunk (sulla sinistra tra 350&nbsp;m)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "o`haAg}k_N\\UFEPMh@c@RSLKRUPQl@{@\\o@r@{AjAuC^w@JO\\i@v@w@hAu@dAg@bAWrAQhACrB@jC@xCBhCBdC?tCDjC@bCBfCBdA@rXVf@?l@@p@@nA@bC?tCBhCDpAAjAB|FFnIH`KPfEJ`CHxCDlDFhDFJ?h@@`BB~CBlBBP?bCBzEFjABzADJ?jC@fEB|A@bDD~DF|BBj@?f@@`AAlBEb@AfA?xBDnADlABfADpBFrBHnDJbGFvKFbA@lQJbFDxBBvBBdDD`DBpCDhDD|B@^@fADj@Ff@Hr@L|Bl@nBh@`@LnEnAVH`Cp@ND~Ad@z@Td@N|@VtA`@pBh@rA^RDPDn@PB?`Cp@`D~@nCx@TFb@Lb@N@?lCx@tAb@vAb@r@VTLPJVPNLRRPRPTl@bAL\\FLDPH\\DXXhC"
+                     },
+                     "start_location" : {
+                        "lat" : 10.8597641,
+                        "lng" : 78.70948480000001
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 192
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 36
+                     },
+                     "end_location" : {
+                        "lat" : 10.7892163,
+                        "lng" : 78.7060894
+                     },
+                     "html_instructions" : "Svolta leggermente a \u003cb\u003esinistra\u003c/b\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "qoz`Aubk_NTPFDDBB?@?B?@ABABAFGHIJKLKRORK`@UZWHIDIJOHMFODK"
+                     },
+                     "start_location" : {
+                        "lat" : 10.7904945,
+                        "lng" : 78.70523229999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,5 km",
+                        "value" : 520
+                     },
+                     "duration" : {
+                        "text" : "2 min",
+                        "value" : 103
+                     },
+                     "end_location" : {
+                        "lat" : 10.7898149,
+                        "lng" : 78.701864
+                     },
+                     "html_instructions" : "Fai una \u003cb\u003einversione a U\u003c/b\u003e",
+                     "maneuver" : "uturn-right",
+                     "polyline" : {
+                        "points" : "sgz`Aahk_NDNADCDABADQTKLUTUN_@Ti@ZKHGFGFEDEFKPADCDAJCFAL?J?J@L\\vDDb@BNFj@?@NlAHt@Hz@LbA"
+                     },
+                     "start_location" : {
+                        "lat" : 10.7892163,
+                        "lng" : 78.7060894
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,7 km",
+                        "value" : 670
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 85
+                     },
+                     "end_location" : {
+                        "lat" : 10.7883584,
+                        "lng" : 78.69594339999999
+                     },
+                     "html_instructions" : "Entra in \u003cb\u003eGrand Southern Trunk Rd/Nagapattinam - Coimbatore - Gundlupet Hwy/चेन्नई थेनी हाईवे/नागापट्टिनम - कोयम्बटूर - गुन्द्लुपेट हाईवे/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే/నగపట్టినం - కోయంబతూర్ - గుండ్లుపేట్ హైవే\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa il ponte (sulla destra tra 550&nbsp;m)\u003c/div\u003e",
+                     "maneuver" : "merge",
+                     "polyline" : {
+                        "points" : "ikz`Asmj_NLx@Jp@Fn@Hv@Fn@Jv@\\xCJv@Hn@Jz@Jt@Ht@L~@Ht@Hr@F^P`AT~@JZFNTh@NV"
+                     },
+                     "start_location" : {
+                        "lat" : 10.7898149,
+                        "lng" : 78.701864
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1,0 km",
+                        "value" : 950
+                     },
+                     "duration" : {
+                        "text" : "2 min",
+                        "value" : 107
+                     },
+                     "end_location" : {
+                        "lat" : 10.7903633,
+                        "lng" : 78.7038527
+                     },
+                     "html_instructions" : "Fai una \u003cb\u003einversione a U\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Kareen Kutty Cranes &amp; Ambulance (sulla sinistra)\u003c/div\u003e",
+                     "maneuver" : "uturn-right",
+                     "polyline" : {
+                        "points" : "gbz`Ashi_N{@b@Yk@MYM_@GOYeAOkAKaAIq@MeAc@uDMgAc@kDQ{AMoAK_AI{@?AG_AEe@UoBOwAU{BLQ"
+                     },
+                     "start_location" : {
+                        "lat" : 10.7883584,
+                        "lng" : 78.69594339999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "90 m",
+                        "value" : 90
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 8
+                     },
+                     "end_location" : {
+                        "lat" : 10.7905009,
+                        "lng" : 78.704669
+                     },
+                     "html_instructions" : "Svolta a \u003cb\u003esinistra\u003c/b\u003e e imbocca \u003cb\u003eNH 45B\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "wnz`Aazj_NYsCAO"
+                     },
+                     "start_location" : {
+                        "lat" : 10.7903633,
+                        "lng" : 78.7038527
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "cigaAgli_NvDIX@DC|CkEJW^}A`@_BRc@NKRc@`@w@X_@BI?S?c@BgBDu@kJyBoDy@qHeBiEaAsEgAiNcDmBc@IKEIEQ@MRa@hAe@^WVUR[h@{@Xm@bCsF~@yBx@qB~@qBt@cBBQAYWm@e@w@d@[|AqAd@g@jAkB~BqFj@gA\\i@v@w@hAu@dAg@bAWrAQhACrB@dHDnGBlPNn]Z`CBxGBhCDpAAhIJnIH`KPhIT|NTxKL|LNfBDrID~PRrA@nDGjBAhEJzJZnDJbGFzMHb`@XbST|CBrBLzAVlFvAjKxCpEpAxIbCtA\\dCp@pHxB~Ad@bF|AjCz@f@Xf@^d@f@~@xATj@Nn@^bD\\VNBPMv@q@t@a@d@a@b@w@DKDNEJa@l@k@d@iAp@a@^Wd@Gl@d@tFZjCRpBZ|BR`BPfB~@xHn@fFRhBX`B`@zA\\x@NV{@b@g@eAUo@YeAOkAUsBq@{FqA_L]}DaAiJLQYsCAO"
+         },
+         "summary" : "Grand Southern Trunk Rd/NH45/चेन्नई थेनी हाईवे/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
