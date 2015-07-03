@@ -34,6 +34,7 @@ public class UserBean {
 		this.nome = rs.getString("nome");
 		this.password = rs.getString("password");
 		this.cognome = rs.getString("cognome");
+		this.cellulare=rs.getString("cellulare");
 		this.amministratore = rs.getInt("amministratore");
 		this.valid = true;
 		
