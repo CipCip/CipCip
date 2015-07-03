@@ -70,7 +70,6 @@ public class UserDAO {
 		String e = user.getCellulare();
 		int f = user.getAmministratore();
 
-		//String registrationQuery="insert into utente(email, password, nome, cognome, cellulare, amministratore) values (?,?,?,?,?,?)";
 		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
 				+ "values ('"
 				+ a 
@@ -85,20 +84,14 @@ public class UserDAO {
 				+ "','"
 				+ f
 				+ "')";
-		//String inserimentoEff = "select * from utente where email='"+a+"'";*/
+	
 		try{
 			try {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
 				stmt.executeUpdate(registrationQuery);
-				//int more = stmt.getUpdateCount();
-				//rs = stmt.executeQuery(inserimentoEff);
-				//boolean more=rs.next();
-				
 				user.setValid(true);
-				
-				
-				
+			
 				
 			} catch (SQLException b1) {
 				System.out
@@ -187,6 +180,45 @@ public class UserDAO {
 	    		return car;
 	    	
 	    }
+	 
+	 public static UserBean updateUtente(UserBean user, String emailP){
+		 Statement stmt = null;
+			
+			String a = user.getEmail();
+			String b = user.getPassword();
+			String c = user.getCellulare();
+			String d = user.getNome();
+			String e = user.getCognome();
+			
+			
+			String modificaUser="update utente set email='"+a+"'"
+					+ ", password='"+b+"'"
+					+ ", nome='"+d+"'"
+					+ ", cognome='"+e+"'"
+					+ ", cellulare='"+c+"'"
+					+ " where email='"+emailP+"'";
+			
+			try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(modificaUser);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						user.setValid(true);
+					
+				} catch (SQLException b1) {
+					System.out.println("Modifica fallita " + b1);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return user;
+		 
+	 }
 	 
 	 public static List<UserBean> getUsers() {
 		 	Statement stmt=null;

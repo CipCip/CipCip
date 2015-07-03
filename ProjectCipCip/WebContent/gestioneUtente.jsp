@@ -11,22 +11,35 @@
 			</ul>
 
 		</div>
+		
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">Gestione utente xyz</h1>
-
-
+			
+		
+				<h1 class="page-header">Gestione utente <%=request.getParameter("rdbSelezione")%></h1>
+				<% String a = request.getParameter("rdbSelezione");
+				request.getSession().setAttribute("rdbSelezione",
+						a);
+						 %>
 
 <div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="ImpostazioniServlet" class="form" id="form1">
+					<form  method="POST" action="ModificaUtenteServlet" class="form" id="form1">
 						
 
 						<p class="email">
+							<input name="email" type="text"
+								class="feedback-input"
+								id="email" placeholder="Modifica email" />
+								
+						</p>
+						
+						<!-- la targa meglio di no ho già troppi elementi da gestire che mi arrivano dalla pagina precedente -->
+						<p class="targa">
 							<input name="password" type="text"
 								class="feedback-input"
 								id="password" placeholder="Modifica password" />
-								
 						</p>
+						
 
 						<p class="phone">
 							<input name="cellulare" type="text"
@@ -35,21 +48,15 @@
 						</p>
 						
 						<p class="email">
-							<input name="soglia_mail" type="text"
+							<input name="nome" type="text"
 								class="feedback-input"
-								id="soglia_mail" min="1" max="450" placeholder="Modifica soglia velocità per email" />
+								id="nome" min="1" max="450" placeholder="Modifica Nome" />
 						</p>
 						
 						<p class="phone">
-							<input name="soglia_sms" type="text"
+							<input name="cognome" type="text"
 								class="feedback-input"
-								id="soglia_sms" min="1" max="450" placeholder="Modifica soglia velocità per SMS" />
-						</p>
-						
-						<p class="targa">
-							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="targa" type="text"
-								class="feedback-input"
-								id="targa" placeholder="Conferma targa" />
+								id="cognome" min="1" max="450" placeholder="Modifica Cognome" />
 						</p>
 						
 						

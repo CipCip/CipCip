@@ -42,6 +42,8 @@ public class loginServlet extends HttpServlet {
 			HttpSession session=request.getSession(true);
 			
 			session.setAttribute("email",utente.getEmail());
+			session.setAttribute("nome",utente.getNome());
+			session.setAttribute("cognome",utente.getCognome());
 			session.setAttribute("targa", car.getTarga());
 			session.setAttribute("marca", car.getMarca());
 			session.setAttribute("modello", car.getModello());

@@ -26,6 +26,7 @@
 
 
 			<div class="table-responsive">
+			<form action="gestioneUtente.jsp" method="POST" name="formFiltro">
             <table class="table table-hover">
               <thead>
                 <tr>                  
@@ -37,9 +38,11 @@
                 </tr>
               </thead>
               <tbody>
-              <%
+              
+              	<%
 				List<UserBean> listaUtenti = UserDAO.getUsers();
 				%>
+
 				<%
 				for (UserBean utente : listaUtenti) {
 				%>
@@ -47,70 +50,19 @@
                 <tr>
                 
                   <td><%=utente.getNome() %></td>
-                  <td><%=utente.getCognome() %></td>  
+                  <td><%=utente.getCognome() %></td>
                   <td><%=utente.getCellulare() %></td>
                   <td><%=utente.getEmail() %></td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>
-                                                 
+                  <td><input type="radio" name="rdbSelezione" value="<%=utente.getEmail()%>"></td>
+                  <td><input type="submit" name="btnMode" value="Gestisci utente"> </td>
+                                               
                
                 </tr>
-                 <%
-				}
-                %>
-                <!--  <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
-                </tr>
-                
-                -->
+                 <%} %>          
                 
               </tbody>
             </table>
+            </form>
           </div>
 
 

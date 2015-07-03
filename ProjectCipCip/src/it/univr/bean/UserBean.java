@@ -31,8 +31,8 @@ public class UserBean {
 	
 	public UserBean(ResultSet rs) throws SQLException {
 		this.email = rs.getString("email");
-		this.nome = rs.getString("nome");
 		this.password = rs.getString("password");
+		this.nome = rs.getString("nome");
 		this.cognome = rs.getString("cognome");
 		this.cellulare=rs.getString("cellulare");
 		this.amministratore = rs.getInt("amministratore");
