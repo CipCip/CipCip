@@ -40,7 +40,7 @@ public class ImpostazioniServlet extends HttpServlet {
 		
 		user=UserDAO.modifica(user);
 		car=VeicoloDAO.modifica(car, targaUtente);
-		//stampare un messaggio di successo è a livello front??
+		
 		response.sendRedirect("dashboard.jsp");
 	}
 
