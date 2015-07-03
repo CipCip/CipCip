@@ -28,9 +28,10 @@ public class ImpostazioniServlet extends HttpServlet {
 		
 		HttpSession session=request.getSession(true);
 		String targaUtente=(String)session.getAttribute("targa");
+		String emailUtente=(String)session.getAttribute("email");
 		System.out.println(targaUtente);
 		
-		user.setEmail(request.getParameter("email"));
+		//user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("password"));
 		user.setCellulare(request.getParameter("cellulare"));
 		car.setSoglia_sms(request.getParameter("soglia_sms"));
@@ -38,7 +39,7 @@ public class ImpostazioniServlet extends HttpServlet {
 		//car.setTarga(request.getParameter("targa"));
 		
 		
-		user=UserDAO.modifica(user);
+		user=UserDAO.modifica(user, emailUtente);
 		car=VeicoloDAO.modifica(car, targaUtente);
 		
 		response.sendRedirect("dashboard.jsp");

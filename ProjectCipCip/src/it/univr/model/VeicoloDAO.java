@@ -105,5 +105,65 @@ public class VeicoloDAO {
 			}
 			return car;
 	}
-
+    
+    public static boolean rimuoviVeicolo(String targaUtente){
+    	Statement stmt=null;
+    	boolean res= false;
+    	
+    	String elimina= "delete from veicolo where targa='"+targaUtente+"'";
+    	try{
+			try {
+				connessione = ConnectionManager.getConnection(); 
+				stmt= connessione.createStatement();
+				stmt.executeUpdate(elimina);
+				int more = stmt.getUpdateCount();
+				//rs = stmt.executeQuery(inserimentoEff);
+				//boolean more=rs.next();
+				if(more!=0)
+					res=true;				
+				
+			} catch (SQLException b1) {
+				System.out
+						.println("Modifica fallita " + b1);
+			}
+			//rs.close();
+			stmt.close();
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			return res;
+	}
+    
+    public static VeicoloBean listaVeicolo(VeicoloBean car, String targaUtente){
+    	
+    	Statement stmt=null;
+    	
+    	String seleziona= "select * from veicolo where targa='"+targaUtente+"'";
+    	
+    	try{
+			try {
+				connessione = ConnectionManager.getConnection(); 
+				stmt= connessione.createStatement();
+				rs = stmt.executeQuery(seleziona);
+				boolean more=rs.next();
+				if(more)
+					car=new VeicoloBean(rs);				
+				
+			} catch (SQLException b1) {
+				System.out
+						.println("Modifica fallita " + b1);
+			}
+			//rs.close();
+			stmt.close();
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			return car;
+	
+    }
+    
+    
+  
 }

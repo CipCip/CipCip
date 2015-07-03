@@ -1,7 +1,9 @@
 package it.univr.controller;
 
 import it.univr.bean.UserBean;
+import it.univr.bean.VeicoloBean;
 import it.univr.model.UserDAO;
+import it.univr.model.VeicoloDAO;
 
 import java.io.IOException;
 
@@ -28,22 +30,25 @@ public class loginServlet extends HttpServlet {
 		UserBean utente=new UserBean();
 		utente.setEmail(request.getParameter("email"));
 		utente.setPassword(request.getParameter("password"));
+		
 		utente=UserDAO.logIn(utente);
 		
 		
 		if(utente.isValid()){
+			VeicoloBean car=new VeicoloBean();
+			
+			car=UserDAO.selezionaVeicolo(utente,car);
+			
 			HttpSession session=request.getSession(true);
-			session.setAttribute("nome",utente.getNome());
-			session.setAttribute("cognome", utente.getCognome());
+			
 			session.setAttribute("email",utente.getEmail());
-			response.sendRedirect("dashboard.jsp");
+			session.setAttribute("targa", car.getTarga());
+			session.setAttribute("marca", car.getMarca());
+			session.setAttribute("modello", car.getModello());
+			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			response.sendRedirect("dashboard.jsp");}
 		}
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
 
-}

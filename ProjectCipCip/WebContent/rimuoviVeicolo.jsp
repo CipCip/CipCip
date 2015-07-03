@@ -17,8 +17,6 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Rimuovi veicolo</h1>
 
-          
-
           <div class="table-responsive">
             <table class="table table-hover">
               <thead>
@@ -31,39 +29,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>                  
-                  <td>Ferrari</td>
-                  <td>Enzo</td>  
-                  <td>AB123CD</td>
-                  <td>02/2015</td>
-                  <td><a class="btn btn-danger" href="#" role="button">Rimuovi</a></td>                                                                     
-                </tr>
-                <tr>                  
-                  <td>Ferrari</td>
-                  <td>Enzo</td>  
-                  <td>AB123CD</td>
-                  <td>02/2015</td> 
-                  <td><a class="btn btn-danger" href="#" role="button">Rimuovi</a></td>                                                                    
-                </tr>
-                <tr>                  
-                  <td>Ferrari</td>
-                  <td>Enzo</td>  
-                  <td>AB123CD</td>
-                  <td>02/2015</td>
-                  <td><a class="btn btn-danger" href="#" role="button">Rimuovi</a></td>                                                                     
-                </tr>
-                <tr>                  
-                  <td>Ferrari</td>
-                  <td>Enzo</td>  
-                  <td>AB123CD</td>
-                  <td>02/2015</td>
-                  <td><a class="btn btn-danger" href="#" role="button">Rimuovi</a></td>                                                                     
-                </tr>                
+                <tr>               
+                  <td><%= (String)session.getAttribute("marca")%></td>
+                  <td><%= (String)session.getAttribute("modello")%></td>  
+                  <td><%= (String)session.getAttribute("targa")%></td>
+                  <td><%= (String)session.getAttribute("data_immatricolazione")%></td>
+                  <td><form method="POST" action="RimuoviVeicoloServlet"><button class="btn btn-danger" type="submit" value="submit">Rimuovi</button></form></td>                                                                     
+                </tr>               
               </tbody>
             </table>
           </div>
         </div>
-      </div>
+      </div><!--  <a class=" type="submit" value="submit" role="button">-->
     </div>
 
     <!-- Bootstrap core JavaScript
