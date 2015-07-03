@@ -1,5 +1,15 @@
-<%@ include file="headDashboard.jsp"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1" import="it.univr.bean.*" import="it.univr.model.*"
+	import="java.util.*"%>
+<%@ include file="headDashboard.jsp" %>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>...</title>
+</head>
+<body>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 col-md-2 sidebar">
@@ -27,14 +37,27 @@
                 </tr>
               </thead>
               <tbody>
+              <%
+				List<UserBean> listaUtenti = UserDAO.getUsers();
+				%>
+				<%
+				for (UserBean utente : listaUtenti) {
+				%>
+				
                 <tr>
-                  <td>Pinco</td>
-                  <td>Pallino</td>  
-                  <td>3463453456</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
+                
+                  <td><%=utente.getNome() %></td>
+                  <td><%=utente.getCognome() %></td>  
+                  <td><%=utente.getCellulare() %></td>
+                  <td><%=utente.getEmail() %></td>
+                  <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>
+                                                 
+               
                 </tr>
-                <tr>
+                 <%
+				}
+                %>
+                <!--  <tr>
                   <td>Pinco</td>
                   <td>Pallino</td>  
                   <td>3463453456</td>
@@ -84,7 +107,7 @@
                   <td><a class="btn btn-primary" href="gestioneUtente.jsp" role="button">Gestisci utente</a></td>                                 
                 </tr>
                 
-                
+                -->
                 
               </tbody>
             </table>

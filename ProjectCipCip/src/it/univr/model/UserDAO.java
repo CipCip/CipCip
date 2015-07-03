@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 //DAO responsabile delle query
 public class UserDAO {
@@ -185,6 +187,27 @@ public class UserDAO {
 	    		return car;
 	    	
 	    }
+	 
+	 public static List<UserBean> getUsers() {
+		 	Statement stmt=null;
+			List<UserBean> res = new ArrayList<>();
+			
+			String query="select * from utente order by nome";
+			
+			try {
+				connessione = ConnectionManager.getConnection(); 
+    			stmt= connessione.createStatement();
+    			rs = stmt.executeQuery(query);
+    			
+				while (rs.next())
+					res.add(new UserBean(rs));
+				} 
+			catch (SQLException e) {
+				System.out.println("Select failed: An Exception has occurred! " + e);
+			}
+			
+			return res;
+		}
 
 	
 }
