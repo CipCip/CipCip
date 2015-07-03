@@ -46,7 +46,11 @@ public class loginServlet extends HttpServlet {
 			session.setAttribute("marca", car.getMarca());
 			session.setAttribute("modello", car.getModello());
 			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
-			response.sendRedirect("dashboard.jsp");}
+			if(utente.getAmministratore()==1){
+				response.sendRedirect("dashboardAmministrazione.jsp");
+			}
+			else
+				response.sendRedirect("dashboard.jsp");}
 		}
 		
 	}
