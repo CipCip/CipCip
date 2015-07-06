@@ -29,10 +29,10 @@
 					<form class="form" id="form1">
 						<h3>CONTATTACI</h3>
 						<p class="name">
-							<input name="nome" type="text"
-								required="required" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
-								placeholder="Nome *" id="name" />
-						</p>
+					<input name="nome" type="text" required="required"
+						class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+						placeholder="Nome *" id="nome" />
+				</p>
 
 						<p class="email">
 							<input name="email" type="email"
