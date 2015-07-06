@@ -238,7 +238,7 @@ addGPSClient();
 self.setInterval("startRender()",500);
 window.set
 setTimeout("superataSoglia1()", 5000);
-setTimeout("superataSoglia2()", 10000);
+setTimeout("superataSoglia2()", 21000);
 }
     </script>
 </head>
@@ -305,7 +305,7 @@ setTimeout("superataSoglia2()", 10000);
 				<br />
 				<br />
 				
-					<input type="button" value="Start Simulation"
+					<input type="button" value="Inizia la simulazione"
 						onclick="javascript:dummyStart();"></input><br />
 					
 					<br />

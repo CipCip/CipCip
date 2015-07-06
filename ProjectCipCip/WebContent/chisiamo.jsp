@@ -26,7 +26,7 @@
 					
 						<div class="row">
 							<div class="col-sm-12">
-								<h1>Chi siamo</h1>
+								
 							</div>
 						</div>
 						<br />
@@ -46,7 +46,7 @@
 						</div>
 
 						<div align="center">
-							<h3>Scegli Project CIPCIP!</h3>
+							<h3><u><a href="registrazione.jsp"> Scegli CIPCIP!</a></u></h3>
 						</div>
 						<div align="center">
 							<h3>La tua macchina sarà sempre sotto controllo.</h3>
