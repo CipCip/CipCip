@@ -1,5 +1,15 @@
-<%@ include file="headDashboard.jsp"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1" import="it.univr.bean.*" import="it.univr.model.*"
+	import="java.util.*"%>
+<%@ include file="headDashboard.jsp" %>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>...</title>
+</head>
+<body>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 col-md-2 sidebar">
@@ -16,72 +26,46 @@
 
 
 			<div class="table-responsive">
+			<form action="modificaVeicoloAmministrazione.jsp" method="POST" name="formFiltro">
             <table class="table table-hover">
               <thead>
-                <tr>                  
-                  <th>Marca</th>                  
-                  <th>Modello</th>
-                  <th>Targa</th>
-                  <th>Immatricolazione</th>
-                  <th>Soglia SMS</th>
-                  <th>Soglia email</th>                  
-                  <th>Email proprietario</th>
+                <tr>  
+                	<th>Targa</th>                
+                  	<th>Marca</th>                  
+                  	<th>Modello</th>
+                    <th>Immatricolazione</th>
+                  	<th>Soglia email</th>  
+                  	<th>Soglia SMS</th>
+                  	<th>Email proprietario</th>
                   <th></th>                                     
                 </tr>
               </thead>
               <tbody>
+              <%
+				List<VeicoloBean> listaVeicoli = VeicoloDAO.getCars();
+				%>
+
+				<%
+				for (VeicoloBean car : listaVeicoli) {
+				%>
                 <tr>
-                  <td>Fiat</td>
-                  <td>500</td>  
-                  <td>AB123CD</td>
-                  <td>01/2015</td>
-                  <td>140</td>
-                  <td>230</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>                                 
+                  <td><%=car.getTarga() %></td>
+                  <td><%=car.getMarca() %></td>
+                  <td><%=car.getModello() %></td>  
+                  <td><%=car.getData_immatricolazione() %></td>
+                  <td><%=car.getSoglia_email() %></td>
+                  <td><%=car.getSoglia_sms() %></td>
+                  <td><%=car.getEmail_utente() %></td>
+                  <td><input type="radio" name="rdbSelezione" value="<%=car.getTarga()%>"></td>
+                  <td><input type="submit" name="btnMode" value="Gestisci veicolo"> </td>
+                  
+                  <!-- <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>  -->                                
                 </tr>
-                <tr>
-                  <td>Fiat</td>
-                  <td>500</td>  
-                  <td>AB123CD</td>
-                  <td>01/2015</td>
-                  <td>140</td>
-                  <td>230</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Fiat</td>
-                  <td>500</td>  
-                  <td>AB123CD</td>
-                  <td>01/2015</td>
-                  <td>140</td>
-                  <td>230</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Fiat</td>
-                  <td>500</td>  
-                  <td>AB123CD</td>
-                  <td>01/2015</td>
-                  <td>140</td>
-                  <td>230</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>                                 
-                </tr>
-                <tr>
-                  <td>Fiat</td>
-                  <td>500</td>  
-                  <td>AB123CD</td>
-                  <td>01/2015</td>
-                  <td>140</td>
-                  <td>230</td>
-                  <td>pinco.pallino@gmail.com</td>
-                  <td><a class="btn btn-primary" href="modificaVeicoloAmministrazione.jsp" role="button">Gestisci veicolo</a></td>                                 
-                </tr>
+                <%} %>  
+               
               </tbody>
             </table>
+            </form>
           </div>
 
 

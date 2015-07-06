@@ -14,15 +14,21 @@
 
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">Gestione veicolo AB123CD</h1>
-
+			<h1 class="page-header">Gestione veicolo <%=request.getParameter("rdbSelezione")%></h1>
+				<% String a = request.getParameter("rdbSelezione");
+				request.getSession().setAttribute("rdbSelezione",
+						a);
+						 %>
 
 
 			<div id="form-main">
 				<div id="form-div">
-					<form method="POST" action="VeicoloServlet" class="form" id="form1">
+					<form method="POST" action="CarAmminServlet" class="form" id="form1">
 
-						
+						<p class="targa">
+							<input name="targa" type="text" class="feedback-input" id="targa"
+								placeholder="Modifica targa" />
+						</p>
 						
 						<p class="marca">
 							<input name="marca" type="text" class="feedback-input" id="marca"

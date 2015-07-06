@@ -38,10 +38,10 @@ public class VeicoloBean {
 		this.marca = rs.getString("marca");
 		this.modello = rs.getString("modello");
 		this.data_immatricolazione = rs.getString("data_immatricolazione");
-		this.soglia_email = rs.getString("soglia_email");
+		this.soglia_email = rs.getString("soglia_mail");
 		this.soglia_sms = rs.getString("soglia_sms");
-		this.email_utente =rs.getString("email_utente");
-		this.codposizione =rs.getInt("codposizione");
+		this.email_utente =rs.getString("emailutente");
+		//this.codposizione =rs.getInt("codposizione");
 		this.valid=true;
 		
 	}

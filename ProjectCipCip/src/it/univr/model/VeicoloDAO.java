@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class VeicoloDAO {
@@ -163,6 +165,68 @@ public class VeicoloDAO {
 			return car;
 	
     }
+    public static VeicoloBean updateVeicolo(VeicoloBean car, String targa){
+		 Statement stmt = null;
+			
+			String a = car.getTarga();
+			String b = car.getMarca();
+			String c = car.getModello();
+			String d = car.getData_immatricolazione();
+			String e = car.getSoglia_sms();
+			String f = car.getSoglia_email();
+			//String g = car.getEmail_utente();
+			
+			
+			String modificaCar="update veicolo set targa='"+a+"'"
+					+ ", marca='"+b+"'"
+					+ ", modello='"+c+"'"
+					+ ", data_immatricolazione='"+d+"'"
+					+ ", soglia_sms='"+e+"'"
+					+ ", soglia_mail='"+f+"'"
+					+ " where targa='"+targa+"'";
+			
+			try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(modificaCar);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						car.setValid(true);
+					
+				} catch (SQLException b1) {
+					System.out.println("Modifica fallita " + b1);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return car;
+		 
+	 }
+    
+    public static List<VeicoloBean> getCars() {
+	 	Statement stmt=null;
+		List<VeicoloBean> res = new ArrayList<>();
+		
+		String query="select * from veicolo order by targa";
+		
+		try {
+			connessione = ConnectionManager.getConnection(); 
+			stmt= connessione.createStatement();
+			rs = stmt.executeQuery(query);
+			
+			while (rs.next())
+				res.add(new VeicoloBean(rs));
+			} 
+		catch (SQLException e) {
+			System.out.println("Select failed: An Exception has occurred! " + e);
+		}
+		
+		return res;
+	}
     
     
   

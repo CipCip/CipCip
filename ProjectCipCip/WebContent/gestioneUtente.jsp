@@ -69,14 +69,16 @@
 							<input style="margin-bottom: 15px;" type="submit" value="aggiorna"
 								id="button-blue" />
 							<div class="ease"></div>
+							</form>
 						</div>
 						
 						<div class="submit">
 							<a style="text-align: center "id="button-red" href="#">elimina utente</a>
 							<div class="ease"></div>
+							
 						</div>
 						
-					</form>
+					
 										
 				</div>								
 			</div>
