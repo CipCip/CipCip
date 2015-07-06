@@ -223,11 +223,11 @@ index++;
 }
 
 function superataSoglia1() {
-	document.getElementById("primoAlert").innerHTML = "<button type='button' class='btn btn-warning'>Superata prima soglia</button>";
+	document.getElementById("primoAlert").innerHTML = "<button type='button' class='btn btn-warning'>Superata prima soglia - email inviata</button>";
 }
 
 function superataSoglia2() {	
-	document.getElementById("secondoAlert").innerHTML = "<button type='button' class='btn btn-danger'>Superata seconda soglia</button>";
+	document.getElementById("secondoAlert").innerHTML = "<button type='button' class='btn btn-danger'>Superata seconda soglia - sms inviato</button>";
 }
 
 
