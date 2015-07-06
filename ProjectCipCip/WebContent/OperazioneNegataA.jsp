@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
-				<li ><a href="gestioneUtenti.jsp">Utenti</a></li>
+				<li ><a href="gestioneUtente.jsp">Utenti</a></li>
 				<li><a href="eliminaUtente.jsp">Elimina utente</a></li>
 				<li><a href="veicoliAmministrazione.jsp">Veicoli</a></li>
 				<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>				
