@@ -69,10 +69,6 @@
 							<div class="ease"></div>
 						</div>
 
-						<div class="submit">
-							<a style="text-align: center" id="button-red" href="#">cancellati</a>
-							<div class="ease"></div>
-						</div>
 
 					</form>
 

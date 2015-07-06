@@ -240,6 +240,35 @@ public class UserDAO {
 			
 			return res;
 		}
+	 
+	 public static boolean eliminaUtente(UserBean user){
+		 Statement stmt = null;
+		 boolean res=false;
+		 String a = user.getEmail();
+		 
+		 String eliminaQuery = "delete from utente where email='"+a+"'";
+		 try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(eliminaQuery);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						res=true;
+						
+					
+				} catch (SQLException b1) {
+					System.out.println("Eliminazione fallita " + b1);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return res;
+		 
+	 }
 
 	
 }

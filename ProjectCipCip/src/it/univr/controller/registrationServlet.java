@@ -36,7 +36,8 @@ public class registrationServlet extends HttpServlet {
 		
 		if(user.isValid()){
 			HttpSession session=request.getSession(true);
-		
+			
+			session.setAttribute("email", user.getEmail());
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
 			response.sendRedirect("dashboard.jsp");			

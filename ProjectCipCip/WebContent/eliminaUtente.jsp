@@ -17,15 +17,11 @@
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			
 		
-				<h1 class="page-header">Gestione utente <%=request.getParameter("rdbSelezione")%></h1>
-				<% String a = request.getParameter("rdbSelezione");
-				request.getSession().setAttribute("rdbSelezione",
-						a);
-						 %>
+				<h1 class="page-header">Elimina utente </h1>
 
 <div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="ModificaUtenteServlet" class="form" id="form1">
+					<form  method="POST" action="EliminazioneServlet" class="form" id="form1">
 						
 
 						<p class="email">
@@ -34,15 +30,13 @@
 								id="email" placeholder="Inserisci email dell'utente da eliminare" />
 								
 						</p>
-						
-						
-						
 						<div class="submit">
-							<a style="text-align: center "id="button-red" href="#">elimina utente</a>
-							<div class="ease"></div>
-							
+							<input style="margin-bottom: 15px;" type="submit"
+									value="Elimina utente" id="button-red" />
+						<div class="ease"></div>
 						</div>
 						
+						</form>
 					
 										
 				</div>								

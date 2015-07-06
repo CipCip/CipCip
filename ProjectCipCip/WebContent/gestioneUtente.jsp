@@ -6,7 +6,9 @@
 			<ul class="nav nav-sidebar">
 				<li class="active"><a href="dashboardAmministrazione.jsp">Utenti <span
 						class="sr-only">(current)</span></a></li>
+				<li><a href="eliminaUtente.jsp">Elimina utente</a></li>
 				<li><a href="veicoliAmministrazione.jsp">Veicoli</a></li>
+				<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>
 				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
 			</ul>
 
@@ -71,15 +73,8 @@
 							<div class="ease"></div>
 							</form>
 						</div>
-						
-						<div class="submit">
-							<a style="text-align: center "id="button-red" href="#">elimina utente</a>
-							<div class="ease"></div>
+
 							
-						</div>
-						
-					
-										
 				</div>								
 			</div>
 			

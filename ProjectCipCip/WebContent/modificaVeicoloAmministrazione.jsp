@@ -5,11 +5,12 @@
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboardAmministrazione.jsp">Utenti</a></li>
+				<li><a href="eliminaUtente.jsp">Elimina utente</a></li>
 				<li class="active"><a href="veicoliAmministrazione.jsp">Veicoli
 						<span class="sr-only">(current)</span>
+						<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>
 				</a></li>
-				<li><a href="impostazioniAmministrazione.jsp">Profilo
-						personale</a></li>
+				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
 			</ul>
 
 		</div>
@@ -63,11 +64,6 @@
 						<div class="submit">
 							<input style="margin-bottom: 15px;" type="submit" value="salva"
 								id="button-blue" />
-							<div class="ease"></div>
-						</div>
-
-						<div class="submit">
-							<a style="text-align: center" id="button-red" href="#">elimina veicolo</a>
 							<div class="ease"></div>
 						</div>
 

@@ -17,15 +17,11 @@
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			
 		
-				<h1 class="page-header">Gestione utente <%=request.getParameter("rdbSelezione")%></h1>
-				<% String a = request.getParameter("rdbSelezione");
-				request.getSession().setAttribute("rdbSelezione",
-						a);
-						 %>
+				<h1 class="page-header">Elimina veicolo</h1>
 
 <div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="ModificaUtenteServlet" class="form" id="form1">
+					<form  method="POST" action="EliminazioneVeicoloServlet" class="form" id="form1">
 						
 
 						<p class="targa">
