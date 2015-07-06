@@ -28,6 +28,11 @@ public class UserDAO {
 		String d = user.getEmail();
 		String e = user.getPassword();
 		
+		if(d.length()==0 || e.length()==0){
+			user.setError(true);
+			return user;
+		}
+		
 		String logInQuery="select * from utente where email='" + d
 				+ "' and password='" + e + "'";
 		try{
@@ -46,15 +51,19 @@ public class UserDAO {
 			
 			
 		} catch (SQLException a) {
-			System.out
-					.println("Selezione fallita " + a);
+			System.out.println("Selezione fallita " + a);
+			
+			
 		}
 		rs.close();
 		stmt.close();
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
+			user.setError(true);
 		}
+		
+		user.setError(false);
 		return user;
 		
 	
@@ -69,7 +78,12 @@ public class UserDAO {
 		String d = user.getCognome();
 		String e = user.getCellulare();
 		int f = user.getAmministratore();
-
+		
+		if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 ){
+			user.setError(true);
+			return user;
+		}
+		
 		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
 				+ "values ('"
 				+ a 
@@ -94,8 +108,8 @@ public class UserDAO {
 			
 				
 			} catch (SQLException b1) {
-				System.out
-						.println("Inserimento fallito " + b1);
+				System.out.println("Inserimento fallito " + b1);
+				user.setError(true);
 			}
 			//rs.close();
 			stmt.close();
@@ -112,11 +126,17 @@ public class UserDAO {
 		//String a = user.getEmail();
 		String b= user.getPassword();
 		String e = user.getCellulare();
-		//String vecchiaMail = request.getSession().getAttribute("modalita").toString();
-		//UPDATE impiegato SET stipendio = stipendio + 100 WHERE nome_dipartimento = ‘Vendite’;
-		String modificaUser="update utente set password='"+b+"', cellulare='"+e+"' where email='"+emailUtente+"'";
 		
+		if(b.length()==0 || e.length()==0){
+			user.setError(true);
+			return user;
+		}
+		
+		String modificaUser="update utente set password='"+b+"', cellulare='"+e+"' where email='"+emailUtente+"'";
+		System.out.println(e);
+		System.out.println(e.length());
 		try{
+			
 			try {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
@@ -124,13 +144,10 @@ public class UserDAO {
 				int more = stmt.getUpdateCount();
 				if(more!=0)
 					user.setValid(true);
-				
-				//rs = stmt.executeQuery(inserimentoEff);
-				//boolean more=rs.next();
-				
-				
+			
 			} catch (SQLException b1) {
 				System.out.println("Modifica fallita " + b1);
+				user.setError(true);
 			}
 			//rs.close();
 			stmt.close();
@@ -146,6 +163,12 @@ public class UserDAO {
 	    	
 	    	
 			String a=user.getEmail();
+			
+			if(a.length()==0 ){
+				car.setError(true);
+				return car;
+			}
+			
 	    	String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente";
 	    	
 	    	try{
@@ -168,8 +191,8 @@ public class UserDAO {
 	    			
 	    			
 	    		} catch (SQLException a1) {
-	    			System.out
-	    					.println("Selezione fallita " + a1);
+	    			System.out.println("Selezione fallita " + a1);
+	    			user.setError(true);
 	    		}
 	    		rs.close();
 	    		stmt.close();
@@ -190,6 +213,12 @@ public class UserDAO {
 			String d = user.getNome();
 			String e = user.getCognome();
 			
+			if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 ){
+				user.setError(true);
+				return user;
+			}
+			
+			
 			
 			String modificaUser="update utente set email='"+a+"'"
 					+ ", password='"+b+"'"
@@ -209,6 +238,7 @@ public class UserDAO {
 					
 				} catch (SQLException b1) {
 					System.out.println("Modifica fallita " + b1);
+					user.setError(true);
 				}
 				//rs.close();
 				stmt.close();
@@ -236,6 +266,7 @@ public class UserDAO {
 				} 
 			catch (SQLException e) {
 				System.out.println("Select failed: An Exception has occurred! " + e);
+				
 			}
 			
 			return res;
@@ -245,6 +276,11 @@ public class UserDAO {
 		 Statement stmt = null;
 		 boolean res=false;
 		 String a = user.getEmail();
+		 
+		 if(a.length()==0 ){
+				user.setError(true);
+				return res;
+			}
 		 
 		 String eliminaQuery = "delete from utente where email='"+a+"'";
 		 try{
@@ -259,6 +295,7 @@ public class UserDAO {
 					
 				} catch (SQLException b1) {
 					System.out.println("Eliminazione fallita " + b1);
+					user.setError(true);
 				}
 				//rs.close();
 				stmt.close();
@@ -276,7 +313,10 @@ public class UserDAO {
 			String b = user.getPassword();
 			String c = user.getCellulare();
 		
-			
+			if(b.length()==0 || c.length()==0){
+				user.setError(true);
+				return user;
+			}
 			
 			String modificaUser="update utente set password='"+b+"'"
 					+ ", cellulare='"+c+"'"
@@ -293,6 +333,7 @@ public class UserDAO {
 					
 				} catch (SQLException b1) {
 					System.out.println("Modifica fallita " + b1);
+					user.setError(true);
 				}
 				//rs.close();
 				stmt.close();

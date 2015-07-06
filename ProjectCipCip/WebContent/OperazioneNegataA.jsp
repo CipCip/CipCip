@@ -1,20 +1,28 @@
-<%@ include file="headDashboard.jsp"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1" import="it.univr.bean.*" import="it.univr.model.*"
+	import="java.util.*"%>
+<%@ include file="headDashboard.jsp" %>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>...</title>
+</head>
+<body>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
-				<li><a href="dashboard.jsp">Dashboard</a></li>
-				<li><a href="impostazioni.jsp">Impostazioni</a></li>
-				<li><a href="veicolo.jsp">Aggiungi veicolo</a></li>
-				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
-				<li><a href="avvisi.jsp">Avvisi</a></li>
-				<li><a href="gallery.jsp">Gallery</a></li>
-				<li><a href="#">Help</a></li>
-				
+				<li ><a href="gestioneUtenti.jsp">Utenti</a></li>
+				<li><a href="eliminaUtente.jsp">Elimina utente</a></li>
+				<li><a href="veicoliAmministrazione.jsp">Veicoli</a></li>
+				<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>				
+				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
 			</ul>
-			
+
 		</div>
+		
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<h1 class="page-header">Operazione negata</h1>
 	</div>
@@ -33,4 +41,4 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
-</html>
+</html>>

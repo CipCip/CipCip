@@ -32,7 +32,10 @@ public class ModificaAmministratoreServlet extends HttpServlet {
 		
 		utente=UserDAO.modificaAmministratore(utente, email);
 		
-		response.sendRedirect("dashboardAmministrazione.jsp");
+		if(utente.isError()==false )
+			response.sendRedirect("dashboardAmministrazione.jsp");
+		else
+			response.sendRedirect("OperazioneNegataA.jsp");
 		
 	}
 

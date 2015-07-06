@@ -44,7 +44,11 @@ public class VeicoloServlet extends HttpServlet {
 			session.setAttribute("modello",car.getModello());
 			session.setAttribute("data_immatricolazione",car.getData_immatricolazione());
 		}
-		response.sendRedirect("dashboard.jsp");
+		if(car.isError()==false)
+			response.sendRedirect("dashboard.jsp");
+		else
+			response.sendRedirect("OperazioneNegata.jsp");
+		
 	}
 
 }

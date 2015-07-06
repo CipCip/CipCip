@@ -37,7 +37,10 @@ public class ModificaUtenteServlet extends HttpServlet {
 		
 		user=UserDAO.updateUtente(user, emailP);
 		
-		response.sendRedirect("dashboardAmministrazione.jsp");
+		if(user.isError()==false)
+			response.sendRedirect("dashboardAmministraazione.jsp");
+		else
+			response.sendRedirect("OperazioneNegataA.jsp");
 	}
 
 }

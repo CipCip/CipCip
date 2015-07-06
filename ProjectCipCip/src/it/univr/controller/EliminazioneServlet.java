@@ -28,7 +28,12 @@ public class EliminazioneServlet extends HttpServlet {
 		boolean res=UserDAO.eliminaUtente(user);
 		
 		 if(res==true)
-			 response.sendRedirect("dashboardAmministrazione.jsp");
+				response.sendRedirect("dashboardAmministrazione.jsp");
+			else
+				response.sendRedirect("OperazioneNegataA.jsp");
+			
+			
+			 
 		
 	}
 

@@ -31,6 +31,8 @@ public class RimuoviVeicoloServlet extends HttpServlet {
 		if(rimosso){
 			response.sendRedirect("veicolo.jsp");
 		}
+		else
+			response.sendRedirect("OperazioneNegata.jsp");
 		
 		
 	}

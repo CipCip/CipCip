@@ -11,6 +11,7 @@ public class UserBean {
 	private String cellulare;
 	private int amministratore;
 	private boolean valid;
+	private boolean error;
 	
 
 	public UserBean(String email, String password, String nome, String cognome, 
@@ -82,6 +83,14 @@ public class UserBean {
 	}
 	public void setValid(boolean valid) {
 		this.valid = valid;
+	}
+
+	public boolean isError() {
+		return error;
+	}
+
+	public void setError(boolean error) {
+		this.error = error;
 	}
 	
 

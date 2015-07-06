@@ -41,7 +41,10 @@ public class ImpostazioniServlet extends HttpServlet {
 		user=UserDAO.modifica(user, emailUtente);
 		car=VeicoloDAO.modifica(car, targaUtente);
 		
-		response.sendRedirect("dashboard.jsp");
+		if(user.isError()==false && car.isError()==false)
+			response.sendRedirect("dashboard.jsp");
+		else
+			response.sendRedirect("OperazioneNegata.jsp");
 	}
 
 }

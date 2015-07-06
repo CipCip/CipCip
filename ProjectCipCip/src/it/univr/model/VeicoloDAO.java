@@ -27,7 +27,13 @@ public class VeicoloDAO {
     	String f=car.getSoglia_sms();
     	//String g=car.getEmail_utente();
     	//Controllo che g sia uguale alla String emailUtente
+    	int numero=0;
     	
+    	if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 || f.length()==0){
+			car.setError(true);
+			return car;
+		}
+		
     	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_sms, soglia_mail,  emailutente) "
 				+ "values ('"
 				+ a 
@@ -55,12 +61,17 @@ public class VeicoloDAO {
 				//rs = stmt.executeQuery(inserimentoEff);
 				//boolean more=rs.next();
 				
-				car.setValid(true);
+				numero++;
+				if(numero==1)
+					car.setValid(true);
+				else
+					car.setValid(false);
 				
 				
 			} catch (SQLException b1) {
 				System.out
 						.println("Inserimento fallito " + b1);
+				car.setError(true);
 			}
 			//rs.close();
 			stmt.close();
@@ -78,9 +89,11 @@ public class VeicoloDAO {
 		String a = car.getSoglia_email();
 		String b= car.getSoglia_sms();
 		System.out.println(targa);
-		//String e = car.getTarga();
-		//String vecchiaMail = request.getSession().getAttribute("modalita").toString();
-		//UPDATE impiegato SET stipendio = stipendio + 100 WHERE nome_dipartimento = ‘Vendite’;
+
+		if(a.length()==0 || b.length()==0){
+			car.setError(true);
+			return car;
+		}
 		String modificaCar="update veicolo set soglia_mail='"+a+"', soglia_sms='"+b+"' where targa='"+targa+"'";
 		
 		try{
@@ -98,6 +111,7 @@ public class VeicoloDAO {
 			} catch (SQLException b1) {
 				System.out
 						.println("Modifica fallita " + b1);
+				car.setError(true);
 			}
 			//rs.close();
 			stmt.close();
@@ -111,6 +125,7 @@ public class VeicoloDAO {
     public static boolean rimuoviVeicolo(String targaUtente){
     	Statement stmt=null;
     	boolean res= false;
+    	int numero=1;
     	
     	String elimina= "delete from veicolo where targa='"+targaUtente+"'";
     	try{
@@ -121,12 +136,18 @@ public class VeicoloDAO {
 				int more = stmt.getUpdateCount();
 				//rs = stmt.executeQuery(inserimentoEff);
 				//boolean more=rs.next();
-				if(more!=0)
-					res=true;				
+				
+				if(numero==1)
+					if(more!=0){
+						numero--;
+						res=true;	}
+					else
+						res=false;
 				
 			} catch (SQLException b1) {
 				System.out
 						.println("Modifica fallita " + b1);
+				
 			}
 			//rs.close();
 			stmt.close();
@@ -155,6 +176,7 @@ public class VeicoloDAO {
 			} catch (SQLException b1) {
 				System.out
 						.println("Modifica fallita " + b1);
+				car.setError(true);
 			}
 			//rs.close();
 			stmt.close();
@@ -174,7 +196,11 @@ public class VeicoloDAO {
 			String d = car.getData_immatricolazione();
 			String e = car.getSoglia_sms();
 			String f = car.getSoglia_email();
-			//String g = car.getEmail_utente();
+			
+			if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 || f.length()==0){
+				car.setError(true);
+				return car;
+			}
 			
 			
 			String modificaCar="update veicolo set targa='"+a+"'"
@@ -196,6 +222,7 @@ public class VeicoloDAO {
 					
 				} catch (SQLException b1) {
 					System.out.println("Modifica fallita " + b1);
+					car.setError(true);
 				}
 				//rs.close();
 				stmt.close();

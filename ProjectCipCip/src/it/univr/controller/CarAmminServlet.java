@@ -41,7 +41,12 @@ public class CarAmminServlet extends HttpServlet {
 		
 		car=VeicoloDAO.updateVeicolo(car, targaP);
 		
-		response.sendRedirect("dashboardAmministrazione.jsp");
+		if(car.isError()==false)
+			response.sendRedirect("dashboardAmministrazione.jsp");
+		else
+			response.sendRedirect("OperazioneNegataA.jsp");
+		
+		
 	}
 
 }

@@ -16,6 +16,7 @@ public class VeicoloBean {
 	private String email_utente;
 	private int codposizione;
 	private boolean valid;
+	private boolean error;
 	
 
 	public VeicoloBean(String targa, String marca, String modello,
@@ -109,6 +110,14 @@ public class VeicoloBean {
 
 	public void setValid(boolean valid) {
 		this.valid = valid;
+	}
+
+	public boolean isError() {
+		return error;
+	}
+
+	public void setError(boolean error) {
+		this.error = error;
 	}
 	
 }
