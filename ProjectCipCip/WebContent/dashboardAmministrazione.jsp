@@ -16,7 +16,9 @@
 			<ul class="nav nav-sidebar">
 				<li class="active"><a href="#">Utenti <span
 						class="sr-only">(current)</span></a></li>
+				<li><a href="eliminaUtente.jsp">Elimina utente</a></li>
 				<li><a href="veicoliAmministrazione.jsp">Veicoli</a></li>
+				<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>				
 				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
 			</ul>
 
