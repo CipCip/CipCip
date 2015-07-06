@@ -3,295 +3,435 @@
       {
          "bounds" : {
             "northeast" : {
-               "lat" : 10.8625161,
-               "lng" : 78.71353030000002
+               "lat" : 45.5180038,
+               "lng" : 12.3155329
             },
             "southwest" : {
-               "lat" : 10.7883584,
-               "lng" : 78.69576309999999
+               "lat" : 45.3958728,
+               "lng" : 10.9674168
             }
          },
          "copyrights" : "Map data ©2015 Google",
          "legs" : [
             {
                "distance" : {
-                  "text" : "13,0 km",
-                  "value" : 13040
+                  "text" : "121 km",
+                  "value" : 120552
                },
                "duration" : {
-                  "text" : "21 min",
-                  "value" : 1233
+                  "text" : "1 ora 17 min",
+                  "value" : 4643
                },
-               "end_address" : "Tiruchirappalli, Tamil Nadu, India",
+               "end_address" : "Venezia, Italia",
                "end_location" : {
-                  "lat" : 10.7905009,
-                  "lng" : 78.704669
+                  "lat" : 45.4408535,
+                  "lng" : 12.3155329
                },
-               "start_address" : "Srirangam, Tiruchirappalli, Tamil Nadu, India",
+               "start_address" : "Verona VR, Italia",
                "start_location" : {
-                  "lat" : 10.8560248,
-                  "lng" : 78.696524
+                  "lat" : 45.4383765,
+                  "lng" : 10.9916256
                },
                "steps" : [
                   {
                      "distance" : {
-                        "text" : "0,6 km",
-                        "value" : 627
+                        "text" : "0,8 km",
+                        "value" : 798
                      },
                      "duration" : {
-                        "text" : "2 min",
-                        "value" : 131
+                        "text" : "3 min",
+                        "value" : 206
                      },
                      "end_location" : {
-                        "lat" : 10.8531074,
-                        "lng" : 78.70065339999999
+                        "lat" : 45.4316515,
+                        "lng" : 10.9880669
                      },
-                     "html_instructions" : "Procedi in direzione \u003cb\u003esud\u003c/b\u003e verso \u003cb\u003eNariyan St/नारियां स्ट्रीट/నరియన్ స్ట్రీట్\u003c/b\u003e",
+                     "html_instructions" : "Procedi in direzione \u003cb\u003esud\u003c/b\u003e da \u003cb\u003eCorso Porta Nuova\u003c/b\u003e verso \u003cb\u003eVia dei Mutilati\u003c/b\u003e",
                      "polyline" : {
-                        "points" : "cigaAgli_N`CIt@?R@D?@?@A@ABE`@o@TU@CDEfA}ALQBEFKBKHYTcANm@@GJ]BKJWBG@A@ABAJIBCN_@Vg@HOX_@BI?G?K?S?O?[?M?[Ba@Du@"
+                        "points" : "{titGuxabAv@\\n@Vx@X^TzAj@LJrBp@zBhApAd@l@Tp@ZhCfAfKpE`Bz@"
                      },
                      "start_location" : {
-                        "lat" : 10.8560248,
-                        "lng" : 78.696524
+                        "lat" : 45.4383765,
+                        "lng" : 10.9916256
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
-                        "text" : "1,1 km",
-                        "value" : 1088
-                     },
-                     "duration" : {
-                        "text" : "2 min",
-                        "value" : 131
-                     },
-                     "end_location" : {
-                        "lat" : 10.8624104,
-                        "lng" : 78.70375059999999
-                     },
-                     "html_instructions" : "Svolta a \u003cb\u003esinistra\u003c/b\u003e e imbocca \u003cb\u003eSalem - Namakkal - Trichy Rd/Trichy Chennai Trunk Rd/त्रिची चेन्नई ट्रंक मार्ग/त्रिची - नमक्कल मार्ग/सेलम - नमक्कल - त्रिची मार्ग/త్రిచి చెన్నై ట్రంక్ రోడ్డు/త్రిచి - నమక్కల్ రోడ్డు/సలెమ్ - నమక్కల్ - త్రిచి రోడ్డు\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Sri Venkateswara Hospital (sulla sinistra)\u003c/div\u003e",
-                     "maneuver" : "turn-left",
-                     "polyline" : {
-                        "points" : "}vfaAafj_NkJyBuA[yA]GAkDy@eBa@WGgBc@aB]cAWoCo@yG}AOCWGgDy@mBc@"
-                     },
-                     "start_location" : {
-                        "lat" : 10.8531074,
-                        "lng" : 78.70065339999999
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "55 m",
-                        "value" : 55
+                        "text" : "11 m",
+                        "value" : 11
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 13
+                        "value" : 14
                      },
                      "end_location" : {
-                        "lat" : 10.8624107,
-                        "lng" : 78.7041909
+                        "lat" : 45.43165740000001,
+                        "lng" : 10.9879211
                      },
-                     "html_instructions" : "Svolta leggermente a \u003cb\u003edestra\u003c/b\u003e in New Security force-security service in trichy verso \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
-                     "maneuver" : "turn-slight-right",
+                     "html_instructions" : "Svolta a \u003cb\u003edestra\u003c/b\u003e e imbocca \u003cb\u003eCirconvallazione Oriani\u003c/b\u003e",
+                     "maneuver" : "turn-right",
                      "polyline" : {
-                        "points" : "aqhaAmyj_NIKCEACACAC?CAE@G?E@GPY"
+                        "points" : "yjhtGmbabAA\\"
                      },
                      "start_location" : {
-                        "lat" : 10.8624104,
-                        "lng" : 78.70375059999999
+                        "lat" : 45.4316515,
+                        "lng" : 10.9880669
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
                         "text" : "0,1 km",
-                        "value" : 103
+                        "value" : 112
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 12
+                        "value" : 33
                      },
                      "end_location" : {
-                        "lat" : 10.861668,
-                        "lng" : 78.704735
+                        "lat" : 45.4307212,
+                        "lng" : 10.9877372
                      },
-                     "html_instructions" : "Svolta leggermente a \u003cb\u003edestra\u003c/b\u003e verso \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
-                     "maneuver" : "turn-slight-right",
+                     "html_instructions" : "Svolta a \u003cb\u003esinistra\u003c/b\u003e e imbocca \u003cb\u003ePiazzale Porta Nuova\u003c/b\u003e",
+                     "maneuver" : "turn-left",
                      "polyline" : {
-                        "points" : "aqhaAe|j_NPGRIHCXOHGHG@AHENMFGPY"
+                        "points" : "{jhtGoaabAFLPLLFXJRFJBb@@HAF?DADADCBABADCBG"
                      },
                      "start_location" : {
-                        "lat" : 10.8624107,
-                        "lng" : 78.7041909
+                        "lat" : 45.43165740000001,
+                        "lng" : 10.9879211
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
                         "text" : "0,6 km",
-                        "value" : 594
+                        "value" : 570
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 70
+                        "value" : 61
                      },
                      "end_location" : {
-                        "lat" : 10.8597641,
-                        "lng" : 78.70948480000001
+                        "lat" : 45.4258803,
+                        "lng" : 10.985342
                      },
-                     "html_instructions" : "Continua su \u003cb\u003eNetaji Nagar Rd/नेताजी नगर मार्ग/నేతాజీ నగర్ రోడ్డు\u003c/b\u003e",
-                     "polyline" : {
-                        "points" : "mlhaAs_k_N@Ah@{@Xm@`@}@`BuDz@qBBGx@qB~@qBp@wABK@G@I?C?C?IAGEMEKIMAEYe@KQ"
-                     },
-                     "start_location" : {
-                        "lat" : 10.861668,
-                        "lng" : 78.704735
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "8,2 km",
-                        "value" : 8151
-                     },
-                     "duration" : {
-                        "text" : "9 min",
-                        "value" : 537
-                     },
-                     "end_location" : {
-                        "lat" : 10.7904945,
-                        "lng" : 78.70523229999999
-                     },
-                     "html_instructions" : "Svolta a \u003cb\u003edestra\u003c/b\u003e e imbocca \u003cb\u003eGrand Southern Trunk Rd/NH45/Tiruchi Chennai Hwy/चेन्नई थेनी हाईवे/तिरुची-चेन्नई हाईवे/திருச்சி சென்னை நெடுஞ்சாலை/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే/తిరుచి చెన్నై హైవే\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinua a seguire la Grand Southern Trunk Rd/NH45/चेन्नई थेनी हाईवे/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Petrol Bunk (sulla sinistra tra 350&nbsp;m)\u003c/div\u003e",
+                     "html_instructions" : "Svolta a \u003cb\u003edestra\u003c/b\u003e e imbocca \u003cb\u003eViale del Piave/SS12\u003c/b\u003e",
                      "maneuver" : "turn-right",
                      "polyline" : {
-                        "points" : "o`haAg}k_N\\UFEPMh@c@RSLKRUPQl@{@\\o@r@{AjAuC^w@JO\\i@v@w@hAu@dAg@bAWrAQhACrB@jC@xCBhCBdC?tCDjC@bCBfCBdA@rXVf@?l@@p@@nA@bC?tCBhCDpAAjAB|FFnIH`KPfEJ`CHxCDlDFhDFJ?h@@`BB~CBlBBP?bCBzEFjABzADJ?jC@fEB|A@bDD~DF|BBj@?f@@`AAlBEb@AfA?xBDnADlABfADpBFrBHnDJbGFvKFbA@lQJbFDxBBvBBdDD`DBpCDhDD|B@^@fADj@Ff@Hr@L|Bl@nBh@`@LnEnAVH`Cp@ND~Ad@z@Td@N|@VtA`@pBh@rA^RDPDn@PB?`Cp@`D~@nCx@TFb@Lb@N@?lCx@tAb@vAb@r@VTLPJVPNLRRPRPTl@bAL\\FLDPH\\DXXhC"
+                        "points" : "_ehtGk`abAXR^PrK|D`@Nx@Z|KnE"
                      },
                      "start_location" : {
-                        "lat" : 10.8597641,
-                        "lng" : 78.70948480000001
+                        "lat" : 45.4307212,
+                        "lng" : 10.9877372
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
-                        "text" : "0,2 km",
-                        "value" : 192
+                        "text" : "0,3 km",
+                        "value" : 276
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 36
+                        "value" : 14
                      },
                      "end_location" : {
-                        "lat" : 10.7892163,
-                        "lng" : 78.7060894
+                        "lat" : 45.423531,
+                        "lng" : 10.9842201
                      },
-                     "html_instructions" : "Svolta leggermente a \u003cb\u003esinistra\u003c/b\u003e",
-                     "maneuver" : "turn-slight-left",
+                     "html_instructions" : "Prosegui dritto su \u003cb\u003eViale del Piave\u003c/b\u003e",
+                     "maneuver" : "straight",
                      "polyline" : {
-                        "points" : "qoz`Aubk_NTPFDDBB?@?B?@ABABAFGHIJKLKRORK`@UZWHIDIJOHMFODK"
+                        "points" : "wfgtGkq`bA~GnCxBz@@?JCl@V"
                      },
                      "start_location" : {
-                        "lat" : 10.7904945,
-                        "lng" : 78.70523229999999
+                        "lat" : 45.4258803,
+                        "lng" : 10.985342
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1,9 km",
+                        "value" : 1903
+                     },
+                     "duration" : {
+                        "text" : "3 min",
+                        "value" : 192
+                     },
+                     "end_location" : {
+                        "lat" : 45.40739809999999,
+                        "lng" : 10.9761259
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003eViale del Lavoro\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "axftGkj`bAd@Rd@RxEhBhDrAbBp@xAj@zAl@p@Xl@Tt@Z~@^VJh@R~@^pFvBhNtFfE`Bb@PrIhDhHpCRHpBx@hAb@d@NFN@?p@XfAd@VN^N~Al@"
+                     },
+                     "start_location" : {
+                        "lat" : 45.423531,
+                        "lng" : 10.9842201
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,3 km",
+                        "value" : 340
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 25
+                     },
+                     "end_location" : {
+                        "lat" : 45.4045096,
+                        "lng" : 10.9747119
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003eVia delle Nazioni\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "gsctGyw~aAb@RtBt@vD|ArBx@x@ZRHl@R"
+                     },
+                     "start_location" : {
+                        "lat" : 45.40739809999999,
+                        "lng" : 10.9761259
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,4 km",
+                        "value" : 357
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 22
+                     },
+                     "end_location" : {
+                        "lat" : 45.4014925,
+                        "lng" : 10.9731393
+                     },
+                     "html_instructions" : "Mantieni la \u003cb\u003esinistra\u003c/b\u003e per restare su \u003cb\u003eVia delle Nazioni\u003c/b\u003e",
+                     "maneuver" : "keep-left",
+                     "polyline" : {
+                        "points" : "eactG}n~aAb@Lv@XlCfApAd@`@RfAd@v@`@|BfA"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4045096,
+                        "lng" : 10.9747119
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
                         "text" : "0,5 km",
-                        "value" : 520
-                     },
-                     "duration" : {
-                        "text" : "2 min",
-                        "value" : 103
-                     },
-                     "end_location" : {
-                        "lat" : 10.7898149,
-                        "lng" : 78.701864
-                     },
-                     "html_instructions" : "Fai una \u003cb\u003einversione a U\u003c/b\u003e",
-                     "maneuver" : "uturn-right",
-                     "polyline" : {
-                        "points" : "sgz`Aahk_NDNADCDABADQTKLUTUN_@Ti@ZKHGFGFEDEFKPADCDAJCFAL?J?J@L\\vDDb@BNFj@?@NlAHt@Hz@LbA"
-                     },
-                     "start_location" : {
-                        "lat" : 10.7892163,
-                        "lng" : 78.7060894
-                     },
-                     "travel_mode" : "DRIVING"
-                  },
-                  {
-                     "distance" : {
-                        "text" : "0,7 km",
-                        "value" : 670
+                        "value" : 465
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 85
+                        "value" : 47
                      },
                      "end_location" : {
-                        "lat" : 10.7883584,
-                        "lng" : 78.69594339999999
+                        "lat" : 45.3990871,
+                        "lng" : 10.9687536
                      },
-                     "html_instructions" : "Entra in \u003cb\u003eGrand Southern Trunk Rd/Nagapattinam - Coimbatore - Gundlupet Hwy/चेन्नई थेनी हाईवे/नागापट्टिनम - कोयम्बटूर - गुन्द्लुपेट हाईवे/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే/నగపట్టినం - కోయంబతూర్ - గుండ్లుపేట్ హైవే\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa il ponte (sulla destra tra 550&nbsp;m)\u003c/div\u003e",
-                     "maneuver" : "merge",
+                     "html_instructions" : "Mantieni la \u003cb\u003edestra\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStrada a pedaggio parziale\u003c/div\u003e",
+                     "maneuver" : "keep-right",
                      "polyline" : {
-                        "points" : "ikz`Asmj_NLx@Jp@Fn@Hv@Fn@Jv@\\xCJv@Hn@Jz@Jt@Ht@L~@Ht@Hr@F^P`AT~@JZFNTh@NV"
+                        "points" : "inbtGce~aAp@b@hB|@TLDBLHFFDHBFBJDT@Z@VAb@Bn@Fp@PhAJl@Ln@Rn@HZJXJTHNTb@V`@j@|@h@`A"
                      },
                      "start_location" : {
-                        "lat" : 10.7898149,
-                        "lng" : 78.701864
+                        "lat" : 45.4014925,
+                        "lng" : 10.9731393
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
-                        "text" : "1,0 km",
-                        "value" : 950
+                        "text" : "94,4 km",
+                        "value" : 94350
                      },
                      "duration" : {
-                        "text" : "2 min",
-                        "value" : 107
+                        "text" : "50 min",
+                        "value" : 3014
                      },
                      "end_location" : {
-                        "lat" : 10.7903633,
-                        "lng" : 78.7038527
+                        "lat" : 45.4464893,
+                        "lng" : 12.0759237
                      },
-                     "html_instructions" : "Fai una \u003cb\u003einversione a U\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eOltrepassa Kareen Kutty Cranes &amp; Ambulance (sulla sinistra)\u003c/div\u003e",
-                     "maneuver" : "uturn-right",
+                     "html_instructions" : "Mantieni la \u003cb\u003esinistra\u003c/b\u003e al bivio, segui le indicazioni per \u003cb\u003eE70/A4/Venezia/Valdastico\u003c/b\u003e ed entra in \u003cb\u003eA4/E70\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStrada a pedaggio\u003c/div\u003e",
+                     "maneuver" : "fork-left",
                      "polyline" : {
-                        "points" : "gbz`Ashi_N{@b@Yk@MYM_@GOYeAOkAKaAIq@MeAc@uDMgAc@kDQ{AMoAK_AI{@?AG_AEe@UoBOwAU{BLQ"
+                        "points" : "i_btGui}aAVN@@@@NPb@f@t@`AJJHJXTVPPJZL\\JZDZBJ@^B~@D^@TAJAHAJAJCHEJEDEHGHKHMHMDKDMDSBIBM@O@K?Q?Q?QCQCOEQGSGOGIEIGGGGGEOKc@SWM]OUOEEMKKKGKEICICIEOCIASQ_BPwKDoBJ}HJuHPeL@}A?{D?mAAqBCcCCcBEuBMiDMkDUmDYgE[wD_@eF]mE_@wESoCIaBEk@IuBS{DYoGQeDCs@Cs@]{KWwIMwDOiDU{Ek@{LKwBQkDIcBc@iJ_@_IScEGqAEoA}@gRe@sJW_GAWG}@q@_Oa@_JOqCQcCk@{H]aGOgCEoACa@Cc@SmE}@iRAYAYC]A]C[?CAYWoFIsCCaCGoCIkEKiC]oH_@}HYkGWoFQyDs@oOs@qO[aHMyBWiGYcIcAqXSoFSwFYmIQgEKwCMiDIsBGmBMqCIqBKkBK_BOsBOmBWaCUuBQsAQsAWkB_@iBQ_AIe@Ie@iCgOeAeGUmA_@wBc@mCw@qE_@{Bw@gE_D{Qy@wEgAkGcCqNWuAcA}Fy@}Eg@sCO}@u@gEQ_A]qBSiA[iB_@qBKi@sA}HuAeI[eBeAkGm@gDe@qC[gBi@}Ce@eCs@cD_AaEMe@eAaEwCkLaAyDsAkFIWAIEQaBuGSw@Sw@m@cCcEePIYI[_BoGWeA?CGW_@uBIg@EUa@gCM_Am@kEm@eFWmCUqCSwCW}EI_CE{@EoBAaAAqAAgA@eB?{ABeEBwBFeBDaBPwEJqCBo@@K@a@hAc\\NcFB[?A@[TaG@a@?AB_@ZyIJiCXyGTuFPaFd@yMVqGTwGJgCDsADgBB_BV}NLgHB_CJgFLwHLiJFyBDwC@S?SDuCHaDD}AHuBDo@PsD@Md@_GDi@BWFa@T{BZ}Bx@_Gl@_EBODUfB}LjAuIbBiLl@}D\\{BRqAv@}Ft@mFb@kDP}A`@sDRsBTmCFq@VsDHoAP_Df@yKd@uJP{ETsEj@eM@]?CBYReEd@sK^eIZeHFy@RsERuEFoANaDFeAFmANqDz@sRn@aNL{CFaADcALoCb@iJNeDNyD^mJTkGF_Aj@wLb@yJh@gLDm@FqAFkBD}@NgEJqCPoDPiDZwHDu@Du@J}BRmEd@wJD}@FgAL{CBYBaAJ}BHwBj@{LLkCFoA@]Bc@HcBBi@LwCN{CR}E?EDeB@[@[@s@BsD?}C?s@EmGGeIEyFEsGC{CEyFCeCEwACsAI_CGkAI}AIyAQ}BOmBQiBQcBUcBS{AUgBqBiNCIa@qCM}@eBgLw@kFaAsGm@eEQqASoAYiBWkBqBcNw@oFGa@]}Bo@eEwByNyBmO_@_C]{BGg@_@gC_@eCgJyn@gEkYU_B}BqOQmAU{A]oBIg@Km@Ow@Ow@Ou@YoA]wAa@}Ag@kBg@cBa@oAk@gBSm@Sm@sIwWsCwIaBaFyAoEkAoDk@iBw@cC}@oCsAeEiAkDaA{Ci@aBgBqFm@iBw@cCy@cCgCaIaDuJeBmFmAyDy@aCm@kB}A_Fs@uBe@sAm@oBmAuDy@iCm@gByAqE}@oCI[_ByEcGcRoE}Mc@qAe@}Ae@yA{@mCAA_CgHmAyDe@yAWw@Uy@?Cw@yCe@oBYwAWiAY{AWqAMy@w@_Fa@kCMs@o@_EiAcHm@_DMm@g@yBmA}EcAiDi@aBWw@Yy@e@oAmAaDs@cBYk@i@kAYi@qAaCiAuBwA{BgBiCsCaEyBaDmBmCkBqCoBoCsAmBq@cAOUA?OUcAyAgCsDc@q@w@qAs@mAgAuBu@yAw@cBm@uAa@_AWq@k@{AGQu@wB_@aAMc@AC[_AK[Ka@m@oB{A_FcAgDu@uB_@gAUi@Sk@aA{BiAeCoAgCa@u@aAgBeAeBiAiB}@mA}CaE]e@_@e@_AmAe@m@}@iAuBmC{@iAoCkD}ByCy@gAMS{@oAaA}AeAcBa@s@Ye@gAgBwA_CkAmBgAiBuA}BwGwKe@u@k@_AaBmC}CeFgBwCcAcBcAaB_BmC{@oAiAeBi@y@i@y@a@q@U]S_@mAmB[i@mAoBo@gAWc@wBuD_BqCeAiB_BmCeBsCsAwBaA_BS[a@k@ACoBqCq@}@i@o@kB{B}AgBoAwAaBqBwAaBcCsCyBiCoAyA{DsE{DqEwBiCaBkBqA{AwAcB_AiAi@o@iAqAMMgCyCgD{D{AgBy@aAaAiAu@{@oEkFmAwA]_@yAcBk@q@kB{BqEkFeCwCwCkD}G_IiC}CGIkCcDkAwAwCiD]a@]a@{BkCg@q@q@_Ae@q@cAaBiAiBs@uAs@uAq@wAi@kAa@aAi@uAu@oBi@_Bo@qB_@qA]mASq@kBqHk@sBa@yBWuA]uBWeB{@gGgAyHo@{DGUEUcAaFYuA]sA}AaGeAeEK]K]cFmT}DsOkAuEu@sC{@aD}AcGoCmKqCwKkHeYy@{Co@eCm@eCw@{C}@wD_A{DuBwIKa@U_AI]?AK][uAScAQ}@QgA[{BUoBOkBImAEq@Ac@ASCq@Am@AWAkBEmEC{AKkUAsCA}E?y@AaHAoGAoKCcSAiJ?_B?EAyA@oD@kBDyDFoBF}BJeCLsBJaBNmBPsBPyBv@oIJeBPaDF}A@c@Bs@ZqHV{JHgCFuARgFXqINiFJuBRaIX{I@Sz@mUFuBDsB@_A@gA?}BCqCGqDE_BEuBCwAA{AAsB?_A@sBDwCJuF@sA@yBCeDIyEOuIOmHI_DGuAG_BOuCEcACk@COSiDIiBM_CIwBGyBu@cW[iKKcDIoCE}AE{ACwB@oB@kAB_ADqAHyAF_APyBH}@Jw@XwBN{@N}@f@gCReAxAwHfBcJdEaT`@wBfAwFt@yDRgAlAgGtByKP_A^iB`@wB~@wEReANw@Z_Bt@wDh@qC^gBv@aENu@VqA\\gBj@{Cd@{BVmAb@wBXwAh@gCf@cCX}ADSBKf@kCVqAjA_GF[XyAf@eCBO\\iBl@{Ch@sCLo@d@_C`BqIBI`@uB@KVsA^mBJi@TgAd@eCr@oDh@oCn@cDf@gCf@mCv@oEVqA@MTmAXyAZ{A@IjAeGhBgJtAgH`BiIR_Ap@sCr@yCp@mC~GuXd@mBRy@hCmKZsA~@sDfBmHzAyFr@wCn@iCXmAjAuEVaAtAuFhAuEdD}Mp@kCzAkGh@_Cz@wD`@sBt@_EZkB|BeM|AyIbAsFpCsOn@gDv@iEhDoRZiBhAgG\\kBTeAP_Ah@aCf@mBZkAdA_EfA_EhAeEvAkFhAcErA_FbAuDLc@Ja@~A}Fz@cD`@yA^yAR_AfB_IfN}m@dGiXr@_DjEuR~@}DbAoExC{MxHg]bR}y@FYBIJc@fHs[VeA\\_Bb@sBViA^oBVuAV{AVgBRyATqBXeCl@uGj@kGn@}Gv@cJVkCX_Dd@mF~@aKh@iGBWBWb@uEpB_UReCRgC~BeWFk@?CFm@X_Df@_Gh@_F\\cCTcBl@wDd@mC^cBf@iCP{@Z{AXqAXuAP{@XuAXuAReAVkAReAXoA^mB\\cBTeATkAXoAP}@TkAVkAReA`@kBZ_Bb@oBVoAR_ARaANw@Pw@P{@TgAVkATmAPy@VoAR}@Ny@R}@P{@RaATkARaAR}@RcAR_ANy@RaAPw@Ls@P{@VmATcALs@TeATgA\\eB^gB\\cBVmAVmAVqA\\eBZqBRqATyARwARcBNsAP_BPmBL_BNmBJwAPiCLaBN}BNoBNwBLgBNsBJaBNwBNkBHsAHaAJ{AJ}AL}AJuALiBLiBJwAJ}ANqBLcBJ}ANoBNuBJuALqBP_CNsBLeBJwALoBLaBL}AJ}AJ_BJwAJwAL_BJyAJqALgBJuAJ_BNsBF_ALcBHuAL{AFeAJyAL}AH_AF}@F_AJqAF}@JwAJuAF_AFy@HuADe@JqAJwAJ_BNsBL_BPiCDo@Fo@PoCP{BLiBHeALeBNqBRoCPiCFcAJkALcBLuBNsBJwAF{@NgBJyAL_BJuALwAPoBLgBP}BJmAF{@JyANoBPkCn@eJL_BNwBNsBLoBL}AJyARoCLyAHqAH}@LuABOFm@Hw@NuAJ{@J{@NsALkAJcA|@aIXmCZuCpDu\\|@cINsALkALkAJ}@v@aHDe@P{AXiCzAgNZuCh@yELgAJ_AHw@VaCpAmLdAuJb@yDnDe\\Hw@J_ABWr@sG|@eIDe@DYFk@XcCR}ARyARuANy@Lu@TsATeATgAhAcFjByH\\uANk@?A@E@G@C\\uAtEsRV}@VaAbBcH\\yALe@Lg@`A}D~AwGp@mChA}DxA{EvBqHd@_Bd@aBpByGf@aBZiAx@qCr@cChAyDzByH~CsKrAoETu@h@gBh@_B`@iAl@{AtAgDfBeE~BqFjKiVbBwD`@aA`@aAb@_A@EfDyHFQ@ABGHQjKeVp@}AjEmJ@E@?`@cAj@}A`AiDZqAt@kEZsCR_CNmD@iABsACoCCmAEqAGeAQqBIeAAKIe@K}@_A}H]kCOqAAG?ACQQuAgCcSsA{KaBiMKy@?A?AEY?CCMEa@aCgR_@uCK{@Kw@CM_@{CUcBK}@QwAUiBQqA[uCKy@wDc[[eC[cC{@qHg@wDSaB_@wCUmBQ_Bo@}E[qCWkBCSCSaAcIeKcz@EYCYmImq@SyAmGah@uDoZI{@oB{O{Dk[mA}J_@wCgAcJSeA{@eHCWCUaAaIoA_KC[eAmIuAeLmU_lBe@{DM{@}@uHuEu_@Y_CQuAg@_E_@eD]kCUmBQqAKeAQoAOiACMGm@MgAYyBQwA]oCOiAMgAOsAS_BOiAMaAMgAKw@K{@CUM_AMeAKq@Ky@Eg@Ga@Ku@K_AKs@Io@Ec@Kw@OgAGm@Kq@Ec@CMGg@Gk@M}@MgAQuAK_AIg@McAIy@Ik@?CE[OkAOmAKy@SgB"
                      },
                      "start_location" : {
-                        "lat" : 10.7883584,
-                        "lng" : 78.69594339999999
+                        "lat" : 45.3990871,
+                        "lng" : 10.9687536
                      },
                      "travel_mode" : "DRIVING"
                   },
                   {
                      "distance" : {
-                        "text" : "90 m",
-                        "value" : 90
+                        "text" : "10,4 km",
+                        "value" : 10449
+                     },
+                     "duration" : {
+                        "text" : "6 min",
+                        "value" : 378
+                     },
+                     "end_location" : {
+                        "lat" : 45.47293519999999,
+                        "lng" : 12.2043818
+                     },
+                     "html_instructions" : "Mantieni la \u003cb\u003edestra\u003c/b\u003e al bivio per continuare su \u003cb\u003eA57\u003c/b\u003e, segui le indicazioni per \u003cb\u003eVenezia/Aeroporto\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStrada a pedaggio parziale\u003c/div\u003e",
+                     "maneuver" : "fork-right",
+                     "polyline" : {
+                        "points" : "qgktGoquhADg@?QE[Ea@E[i@kFMiAOoAMcAGe@a@kDUeBQyACWQwAIu@QyAKaAS{AKeAK_AMcAM}@Gi@Gc@EWCSIg@Kq@Ia@Ga@GUKk@Mo@Kk@COG]ESIc@EWE[G[E]G]E[EYGa@E[G_@E]E]Gg@Ea@E[CWc@uDEa@k@wEyAyLm@sEOuACQo@eF{@cHe@oDCWEWQwAEc@Ge@cCgSiAgJYaCSaBm@{E[mCc@oDaC{RCUo@iFWsBiB_OqA{KUgBUgBMiAgH{k@c@sDkBkOY}B]uCw@oGOsAUeBsA{KUmB{AwLMcAIu@Q{Ai@kEu@kGi@oEu@eGmA_KaAmIo@iFg@{De@wDcDiXsAiK[oCu@}FoE__@Gg@AEIq@m@{EGg@qEg_@CKkBsOaAgIyAmL_@{Ce@eEEU?ACUmAyJ}CeWmA_Kc@cFC_@CUIaAIeAA[MeBWoEOcBMgAYsCU_B]iCG]E]G]GYKa@WeAMc@EWEWMu@a@oBSs@s@kDYmBe@_DuA{KAEc@iDcA{I_@_C"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4464893,
+                        "lng" : 12.0759237
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,6 km",
+                        "value" : 584
                      },
                      "duration" : {
                         "text" : "1 min",
-                        "value" : 8
+                        "value" : 48
                      },
                      "end_location" : {
-                        "lat" : 10.7905009,
-                        "lng" : 78.704669
+                        "lat" : 45.4735814,
+                        "lng" : 12.2116724
                      },
-                     "html_instructions" : "Svolta a \u003cb\u003esinistra\u003c/b\u003e e imbocca \u003cb\u003eNH 45B\u003c/b\u003e",
-                     "maneuver" : "turn-left",
+                     "html_instructions" : "Prendi l'uscita verso \u003cb\u003eVenezia/Ravenna/Mestre/Marghera\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStrada a pedaggio\u003c/div\u003e",
+                     "maneuver" : "ramp-right",
                      "polyline" : {
-                        "points" : "wnz`Aazj_NYsCAO"
+                        "points" : "{lptGktniAAgAIeAKcAMuAEy@AKCUIy@Q_BMgAGo@Ee@Cc@MuBGuAK{AC]GcACYCo@Ce@A]Aa@@O@ODWRu@Li@"
                      },
                      "start_location" : {
-                        "lat" : 10.7903633,
-                        "lng" : 78.7038527
+                        "lat" : 45.47293519999999,
+                        "lng" : 12.2043818
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,3 km",
+                        "value" : 300
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 30
+                     },
+                     "end_location" : {
+                        "lat" : 45.4749609,
+                        "lng" : 12.2139882
+                     },
+                     "html_instructions" : "Alla rotonda prendi la \u003cb\u003e2ª\u003c/b\u003e uscita e imbocca lo svincolo \u003cb\u003eVia della Libertà\u003c/b\u003e per \u003cb\u003ePorto/Trieste/Belluno/Tarvisio/Venezia\u003c/b\u003e",
+                     "maneuver" : "roundabout-right",
+                     "polyline" : {
+                        "points" : "{pptG}apiAHSDODOBOBOBO@Q?W@SAYC[CYGWGWKUKWMOOOQMQKQGSCSAS?KIOE[EWGQIUO"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4735814,
+                        "lng" : 12.2116724
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,8 km",
+                        "value" : 760
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 43
+                     },
+                     "end_location" : {
+                        "lat" : 45.4808467,
+                        "lng" : 12.2188805
+                     },
+                     "html_instructions" : "Mantieni la \u003cb\u003esinistra\u003c/b\u003e, segui le indicazioni per \u003cb\u003eVenezia\u003c/b\u003e",
+                     "maneuver" : "keep-left",
+                     "polyline" : {
+                        "points" : "oyptGmppiAUKYUSUu@q@gA}@_@UUOe@WSKe@U[Qm@Ya@SgBaAc@[USIKk@k@w@{@e@g@{@{@m@k@g@a@]YeCsBWSUS_@a@GGGICCGC"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4749609,
+                        "lng" : 12.2139882
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "9,2 km",
+                        "value" : 9171
+                     },
+                     "duration" : {
+                        "text" : "8 min",
+                        "value" : 502
+                     },
+                     "end_location" : {
+                        "lat" : 45.44177879999999,
+                        "lng" : 12.3152751
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003eVia della Libertà\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "i~qtG_oqiAMQU]GKQ[IOGKISGOGMOa@Oc@Og@Me@Kc@a@iBs@}Cm@oCESI_@Mu@OkAIkAA[ASCyABiA@e@Be@Hy@H{@p@uDr@qDb@}BN}@TqAn@yDh@yCfAqGh@_Dx@_EHa@VoBTsBVoBXeCV}BV}BLuANuAD]TuBTsBHq@Fq@ZmCj@qFx@{G^iDLgAHk@Hk@RoAVoARcAf@wBf@cBf@cBVo@HYXw@Xo@JUN_@Vk@LY`@w@Vg@^s@hAiBb@o@l@{@fA{AhBaC\\e@rAiBPU`@m@b@q@Zg@PYR[^s@Ta@Zo@N[LWLWZs@Xs@^aA^sA|@oCVcAXgAz@oDR}@^wBVyATyAHs@H{@Jy@Fg@Fe@BYFa@BYDc@Da@Dk@BUHy@Fq@Dc@Hw@De@De@PcBBWD]BWD[B]Fa@Fg@TgBFc@Fi@Fe@F_@BWFc@F]D]DYL}@BWDWBSFa@FW@KDSBQBKD[FYBUDO@EDMLi@Ji@H[L_@J_@@AHYN]L[`@u@\\q@Xk@vAoCLSrByDd@}@Zq@Vo@FOJ[La@HUJ_@Pe@BIFSH]Py@FYDUPcABMFg@Ho@Hs@H}@@ODc@De@BQ@KBKFWH_@DSDMFQLa@FQN[\\_Ax@kB|@mBr@}A`AwBf@cAz@iBfBwD\\u@Xm@Zs@h@iAz@iBZo@Tg@r@}Ax@gBdN{Yp@}A^u@N]t@}A|@qBbKmTHQFKTg@\\s@LWh@mAd@cAx@eBd@cAN[Zq@Zo@h@kAjDsH^w@tCiGzAaDN]t@_BP]Tg@f@gAjMqXzA_DFOHOT_@HMPWh@q@Xe@T_@\\q@bFuKvA_D^o@LSJMFI@CPUJIHIHIJGFGJGFGFEPIJGHEFCPGNGHCVGLCFATAJAz@C~BG^A^AL?LAVA"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4808467,
+                        "lng" : 12.2188805
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 102
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 14
+                     },
+                     "end_location" : {
+                        "lat" : 45.4408859,
+                        "lng" : 12.3155102
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003eSS11\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "cjjtGoidjAn@ALA^CLCDAHAFCLGJERK"
+                     },
+                     "start_location" : {
+                        "lat" : 45.44177879999999,
+                        "lng" : 12.3152751
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "4 m",
+                        "value" : 4
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : {
+                        "lat" : 45.4408535,
+                        "lng" : 12.3155329
+                     },
+                     "html_instructions" : "Continua su \u003cb\u003ePonte della Libertà\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "qdjtG}jdjAFC"
+                     },
+                     "start_location" : {
+                        "lat" : 45.4408859,
+                        "lng" : 12.3155102
                      },
                      "travel_mode" : "DRIVING"
                   }
@@ -300,9 +440,9 @@
             }
          ],
          "overview_polyline" : {
-            "points" : "cigaAgli_NvDIX@DC|CkEJW^}A`@_BRc@NKRc@`@w@X_@BI?S?c@BgBDu@kJyBoDy@qHeBiEaAsEgAiNcDmBc@IKEIEQ@MRa@hAe@^WVUR[h@{@Xm@bCsF~@yBx@qB~@qBt@cBBQAYWm@e@w@d@[|AqAd@g@jAkB~BqFj@gA\\i@v@w@hAu@dAg@bAWrAQhACrB@dHDnGBlPNn]Z`CBxGBhCDpAAhIJnIH`KPhIT|NTxKL|LNfBDrID~PRrA@nDGjBAhEJzJZnDJbGFzMHb`@XbST|CBrBLzAVlFvAjKxCpEpAxIbCtA\\dCp@pHxB~Ad@bF|AjCz@f@Xf@^d@f@~@xATj@Nn@^bD\\VNBPMv@q@t@a@d@a@b@w@DKDNEJa@l@k@d@iAp@a@^Wd@Gl@d@tFZjCRpBZ|BR`BPfB~@xHn@fFRhBX`B`@zA\\x@NV{@b@g@eAUo@YeAOkAUsBq@{FqA_L]}DaAiJLQYsCAO"
+            "points" : "{titGuxabAzOxGzH~ChNlGDj@lAh@`ABTIHE\\JnOzFxXzKdCz@`QzGrLxEju@`ZjHbD`ThIzHtC~GbDvDrB^b@h@dHv@hDv@bBdCpDv@|@dBnBbBv@dFRpAm@n@qB@aAUgA]k@cAm@sBwASm@E]Q_BPwKPmL\\{U?yM[gOyAyUqB{Wm@_Ms@}OsAua@aEm{@eEs}@gDml@cBg^eAi_@eGgrAwEwnA{As^mAyM{A}JoImf@mQ}cAqTuoAqC}OgEmQuLse@qKmb@uCcRoB}Sm@iOCaIN_OdCqt@|@yUlDg_ArAav@r@y`@zAkU~T_`BrAgNzA}XrCmn@pIskB`IqjBvFqnAfA_VZeJFaLg@qt@[wJu@cLmAmKmDmV{Iwl@ue@ecDyFq^iB{H}CgKcYw{@uO_f@md@ivAka@soAoCkLwBgMiDcTqDeP_D}JaEaK_FmJmMiRqNmSgHqKiFaK_GsOyHoVkCyG}FkLkJ_NcDgEaSsWwN{Uah@ez@e]kk@wH{JgJsKq^ob@yg@}l@wc@wh@_HeI{FoHuFwJgD{HoDsKiEePkH_e@aCaL{DcOcPkp@{Lke@oVuaAyBwJsA_LSwDa@mj@MghA@{J`@mPbDic@pGqmBHyJWyOGgJTuQ[oYi@cSsAaX_Cmz@LmIl@qIdAiH|FiZnQu~@hPaz@v^qkBfEkUlJ_f@jD{NbW{cAfPqp@rFoUpFeZjTulAnBsJpEyP|Noi@pCwKh[gvAnk@_hChMuk@zAsJhCyWlH_y@hIq~@rBmTfCmPtE_UhKyg@nIka@vHi_@|EwVpAgJ`AaKxB_[fBiW`Fyr@pJstApLs`B|Fsx@hNqpAfOauAdJoz@`CgQdHc[lK_c@zBeJtH_YfNoe@dQ_l@~[av@pRsc@`GqMjD}KpA_Jb@mHA{Ji@oIwAmLaHoj@}BuQqQoxAka@_fD{pAwlKcLm~@eDmX_@aDDy@{@eIaCgS{Dc[_CgNs]stCqv@_oGc^{vCkJqx@}A{SwBsOiD_PwCoTgBeOa@gEi@yGa@{DeAgOSsGdAkEFmAQgBm@uAeAq@}Cm@mG}EwIwE{HyHeGmFaBkC{B_IqBaJi@iF?}EhAqIhIee@pBeM`BqN|BeTrC_W~@wFjCcKtAqDdFyJhL}OfEqHpAwCtCiJhCmL`AcHv@cHv@uIbCkS~AmKfAeEfFkKlEyIj@cBrAkFbAoIl@iDvFyMjK_U`j@mkAdYqm@vSoc@jBoCxJwStAcBvA}@vBg@zHUpC[f@U"
          },
-         "summary" : "Grand Southern Trunk Rd/NH45/चेन्नई थेनी हाईवे/தேசிய நெடுஞ்சாலை 45/பெரும் தெற்கு வழி தடம்/చెన్నై తేని హైవే",
+         "summary" : "A4/E70",
          "warnings" : [],
          "waypoint_order" : []
       }

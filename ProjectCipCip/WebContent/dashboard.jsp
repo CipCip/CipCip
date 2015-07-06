@@ -59,7 +59,7 @@ function focusTarget(address,zoom)
       map: map
     }
 geocoder = new google.maps.Geocoder();
-focusTarget('srirangam',13);
+focusTarget('verona',13);
       }
 
 
@@ -222,10 +222,23 @@ GPSClientInit(GPSClientArray[index]);
 index++;
 }
 
+function superataSoglia1() {
+	document.getElementById("primoAlert").innerHTML = "<button type='button' class='btn btn-warning'>Superata prima soglia</button>";
+}
+
+function superataSoglia2() {	
+	document.getElementById("secondoAlert").innerHTML = "<button type='button' class='btn btn-danger'>Superata seconda soglia</button>";
+}
+
+
+
 function dummyStart()
 {
 addGPSClient();
 self.setInterval("startRender()",500);
+window.set
+setTimeout("superataSoglia1()", 5000);
+setTimeout("superataSoglia2()", 10000);
 }
     </script>
 </head>
@@ -281,7 +294,7 @@ self.setInterval("startRender()",500);
 
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<h1 class="page-header">Impostazioni</h1>
+				<h1 class="page-header">Dashboard</h1>
 
 
 
@@ -296,6 +309,8 @@ self.setInterval("startRender()",500);
 						onclick="javascript:dummyStart();"></input><br />
 					
 					<br />
+					<p id="primoAlert"></p>
+					<p id="secondoAlert"></p>
 					
 				
 </body>
