@@ -21,7 +21,7 @@
 
 			<div id="form-main">
 				<div id="form-div">
-					<form  method="POST" action="" class="form" id="form1">
+					<form  method="POST" action="ModificaAmministratoreServlet" class="form" id="form1">
 						
 
 						<p class="email">

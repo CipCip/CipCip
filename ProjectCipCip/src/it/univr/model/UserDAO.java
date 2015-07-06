@@ -269,6 +269,40 @@ public class UserDAO {
 				return res;
 		 
 	 }
+	 
+	 public static UserBean modificaAmministratore(UserBean user, String email){
+		 Statement stmt= null;
+		 ;
+			String b = user.getPassword();
+			String c = user.getCellulare();
+		
+			
+			
+			String modificaUser="update utente set password='"+b+"'"
+					+ ", cellulare='"+c+"'"
+					+ " where email='"+email+"'";
+			
+			try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(modificaUser);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						user.setValid(true);
+					
+				} catch (SQLException b1) {
+					System.out.println("Modifica fallita " + b1);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return user;
+		 
+	 }
 
 	
 }
