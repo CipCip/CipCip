@@ -288,7 +288,7 @@ setTimeout("superataSoglia2()", 21000);
 					<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 					<li><a href="avvisi.jsp">Avvisi</a></li>
 					<li><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="#">Help</a></li>
+					<li><a href="help.jsp">Help</a></li>
 				</ul>
 
 

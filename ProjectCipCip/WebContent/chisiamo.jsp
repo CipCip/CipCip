@@ -15,7 +15,7 @@
 							<ul class="nav masthead-nav">
 								<li><a href="index.jsp">Home</a></li>
 								<li class="active"><a href="chisiamo.jsp">Chi siamo</a></li>
-								<li><a href="contattaci.jsp">Contattaci</a></li>
+								<li><a href="helpHome.jsp">Help</a></li>
 							</ul>
 						</nav>
 					</div>

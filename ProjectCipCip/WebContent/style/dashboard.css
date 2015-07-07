@@ -318,6 +318,23 @@ input:focus, textarea:focus {
   font-weight:700;
 }
 
+
+#nome{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#nome:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
 #button-blue:hover{
 	background-color: rgba(0,0,0,0);
 	color: #0493bd;

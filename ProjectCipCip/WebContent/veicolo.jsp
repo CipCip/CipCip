@@ -10,7 +10,7 @@
 				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="help.jsp">Help</a></li>
 			</ul>
 
 
@@ -28,8 +28,11 @@
 						
 						<p class="targa">
 							<input name="targa" type="text" class="feedback-input"
-								minlength="6" maxlength="7" id="targa"
+								style="text-transform:uppercase" minlength="6" maxlength="7" id="targa"
 								placeholder="Inserisci targa" />
+								
+								
+								
 
 						</p>
 						

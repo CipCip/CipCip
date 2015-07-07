@@ -10,7 +10,7 @@
             <li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>          
             <li class="active"><a href="#">Avvisi <span class="sr-only">(current)</span></a></li>
             <li><a href="gallery.jsp">Gallery</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="help.jsp">Help</a></li>
           </ul>
           
         </div>
@@ -32,78 +32,41 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
+                  <td>21/06/2015</td>
+                  <td>12:50:15</td>  
                   <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
+                  <td>21.9</td>
+                  <td>12.33</td>                                 
                 </tr>
                 <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
+                  <td>10/06/2015</td>
+                  <td>14:00:15</td>  
                   <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
+                  <td>121.9</td>
+                  <td>52.433</td>                                 
                 </tr>
                 <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
+                  <td>21/06/2015</td>
+                  <td>15:45:15</td>  
                   <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
+                  <td>12.9</td>
+                  <td>18.4833</td>                                 
                 </tr>
                 <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
+                  <td>03/06/2015</td>
+                  <td>19:00:15</td>  
                   <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
+                  <td>31.9</td>
+                  <td>87.4833</td>                                 
                 </tr>
                 <tr>
-                  <td>21/10/2015</td>
+                  <td>21/06/2015</td>
                   <td>12:00:15</td>  
                   <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>41.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/10/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>41.9</td>
+                  <td>87.9</td>
                   <td>12.4833</td>                                 
                 </tr>
                 
-                
-                </tr>
               </tbody>
             </table>
           </div>

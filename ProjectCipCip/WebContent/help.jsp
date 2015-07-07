@@ -1,30 +1,26 @@
-<%@ include file="head.jsp" %>
+<%@ include file="headDashboard.jsp"%>
 
-<body>
-
-	<div class="site-wrapper">
-
-		<!-- <div class="site-wrapper-inner"> -->
-
-		<div class="cover-container">
-
-			<div class="masthead clearfix">
-				<div class="inner">
-					<h3 class="masthead-brand">Cip Cip</h3>
-					<nav>
-						<ul class="nav masthead-nav">
-							<li><a href="index.jsp">Home</a></li>
-							<li><a href="chisiamo.jsp">Chi siamo</a></li>
-							<li class="active"><a href="contattaci.jsp">Contattaci</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><a href="dashboard.jsp">Dashboard</a></li>
+				<li><a href="impostazioni.jsp">Impostazioni</a></li>
+				<li><a href="veicolo.jsp">Aggiungi veicolo</a></li>
+				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
+				<li><a href="avvisi.jsp">Avvisi</a></li>
+				<li><a href="gallery.jsp">Gallery</a></li>
+				<li class="active"><a href="#">Help <span
+						class="sr-only">(current)</span></a></li>				
+			</ul>
 
 
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1 class="page-header">Help</h1>
 
 
-			<div id="form-main">
+<div id="form-main">
 				<div id="form-div">
 					<form class="form" id="form1">
 						<h3>CONTATTACI</h3>
@@ -54,8 +50,5 @@
 					</form>
 				</div>
 			</div>
-		</div>
-
-	</div>
-</body>
-</html>
+			</div>
+			</div>

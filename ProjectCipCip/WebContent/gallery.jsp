@@ -11,7 +11,7 @@
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li class="active"><a href="gallery.jsp">Gallery <span
 						class="sr-only">(current)</span></a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="help.jsp">Help</a></li>
 			</ul>
 
 

@@ -11,7 +11,7 @@
 				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="help.jsp">Help</a></li>
 			</ul>
 
 
@@ -28,15 +28,15 @@
 						
 
 						<p class="email">
-							<input name="password" type="text"
-								class="feedback-input"
+							<input name="password" type="password"
+								required="required" class="feedback-input"
 								id="password" placeholder="Modifica password" />
 								
 						</p>
 
 						<p class="phone">
 							<input name="cellulare" type="text"
-								class="feedback-input"
+								required="required"  class="feedback-input"
 								id="cellulare" placeholder="Modifica numero di telefono" />
 						</p>
 						
@@ -48,14 +48,14 @@
 						
 						<p class="phone">
 							<input name="soglia_sms" type="text"
-								class="feedback-input"
+								required="required" class="feedback-input"
 								id="soglia_sms" min="1" max="450" placeholder="Modifica soglia velocità per SMS" />
 						</p>
 						
 						<p class="targa">
 							<input style="text-transform:uppercase" minlength="6" maxlength="7" name="targa" type="text"
-								class="feedback-input"
-								id="targa" placeholder="Conferma targa" />
+								required="required"  class="feedback-input"
+								id="targa" required="required" placeholder="Conferma targa" />
 						</p>
 						
 						
