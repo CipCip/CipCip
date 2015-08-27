@@ -34,11 +34,12 @@
 						
 						
 						<div class="submit">
-							<a style="text-align: center "id="button-red" href="#">elimina utente</a>
-							<div class="ease"></div>
-							
+							<input style="margin-bottom: 15px;" type="submit"
+									value="Elimina veicolo" id="button-red" />
+						<div class="ease"></div>
 						</div>
 						
+						</form>
 					
 										
 				</div>								

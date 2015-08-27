@@ -27,16 +27,17 @@
 				<div id="form-div">
 					<form  method="POST" action="ModificaUtenteServlet" class="form" id="form1">
 						
-
+					<!-- la mail è referenziata non la modifica. Se l'utente ha problemi manda un messaggio 
+					all'amministratore
 						<p class="email">
 							<input name="email" type="text"
 								class="feedback-input"
 								id="email" placeholder="Modifica email" />
 								
-						</p>
+						</p>  -->
 						
 						<!-- la targa meglio di no ho già troppi elementi da gestire che mi arrivano dalla pagina precedente -->
-						<p class="targa">
+						<p class="password">
 							<input name="password" type="text"
 								class="feedback-input"
 								id="password" placeholder="Modifica password" />
@@ -49,13 +50,13 @@
 								id="cellulare" placeholder="Modifica numero di telefono" />
 						</p>
 						
-						<p class="email">
+						<p class="name">
 							<input name="nome" type="text"
 								class="feedback-input"
 								id="nome" min="1" max="450" placeholder="Modifica Nome" />
 						</p>
 						
-						<p class="phone">
+						<p class="cognome">
 							<input name="cognome" type="text"
 								class="feedback-input"
 								id="cognome" min="1" max="450" placeholder="Modifica Cognome" />

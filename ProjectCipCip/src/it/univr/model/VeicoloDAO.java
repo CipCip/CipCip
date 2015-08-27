@@ -244,11 +244,11 @@ public class VeicoloDAO {
 		return res;
 	}
     
-    public static VeicoloBean selezionaVeicolo(/*UserBean user, */VeicoloBean car){
+    public static VeicoloBean selezionaVeicolo(UserBean user,VeicoloBean car){
     	Statement stmt=null;
     	
     	
-		//String a=user.getEmail();
+		String a=user.getEmail();
 		String b=car.getTarga();
 		
 		/*if(a.length()==0 ){
@@ -259,7 +259,7 @@ public class VeicoloDAO {
     	//String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente"
     			//+ "and v.targa='"+b+"'";
     	
-		String selezioneQuery="select * from veicolo v where and v.targa='"+b+"'";
+		String selezioneQuery="select * from veicolo v where v.targa='"+b+"' and v.emailutente='"+a+"'";
 		
     	try{
     		try {
@@ -269,10 +269,11 @@ public class VeicoloDAO {
     			boolean more = rs.next();
     			if (more){
     				car.setValid(true);
-    				car.setMarca(rs.getString("marca"));
-    				car.setModello(rs.getString("modello"));
-    				car.setTarga(rs.getString("targa"));
-    				car.setData_immatricolazione(rs.getString("data_immatricolazione"));
+    				car=new VeicoloBean(rs);
+    				//car.setMarca(rs.getString("marca"));
+    				//car.setModello(rs.getString("modello"));
+    				//car.setTarga(rs.getString("targa"));
+    				//car.setData_immatricolazione(rs.getString("data_immatricolazione"));
     			
     			}
     			else
@@ -293,6 +294,41 @@ public class VeicoloDAO {
     		return car;
     	
     }
+    
+    public static boolean eliminaVeicolo(VeicoloBean car){
+		 Statement stmt = null;
+		 boolean res=false;
+		 String a = car.getTarga();
+		 
+		 if(a.length()==0 ){
+				car.setError(true);
+				return res;
+			}
+		 
+		 String eliminaQuery = "delete from veicolo where targa='"+a+"'";
+		 try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(eliminaQuery);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						res=true;
+						
+					
+				} catch (SQLException b1) {
+					System.out.println("Eliminazione fallita " + b1);
+					car.setError(true);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return res;
+		 
+	 }
     
     
   

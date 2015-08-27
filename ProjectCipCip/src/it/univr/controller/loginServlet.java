@@ -38,16 +38,15 @@ public class loginServlet extends HttpServlet {
 		
 		if(utente.isValid()){
 			
-			//car=UserDAO.selezionaVeicolo(car);
-			
 			HttpSession session=request.getSession(true);
 			
 			session.setAttribute("email",utente.getEmail());
 			session.setAttribute("nome",utente.getNome());
 			session.setAttribute("cognome",utente.getCognome());
 			session.setAttribute("targa", car.getTarga());
+			System.out.print(car.getMarca());
 			
-			//car=VeicoloDAO.selezionaVeicolo(car);
+			car=VeicoloDAO.selezionaVeicolo(utente,car);
 			
 			session.setAttribute("marca", car.getMarca());
 			session.setAttribute("modello", car.getModello());
