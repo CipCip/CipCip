@@ -302,6 +302,20 @@ body {
 	background-repeat: no-repeat;
 }
 
+#targa{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#targa:focus{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
 
 
 #comment{
@@ -412,5 +426,19 @@ input:focus, textarea:focus {
 	background-image: url(http://www.clipartbest.com/cliparts/4T9/o5R/4T9o5RXTE.jpeg);
 	background-size: 30px 30px;
   background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#targa{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#targa:focus{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png);
+	background-size: 30px 30px;
+  	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }

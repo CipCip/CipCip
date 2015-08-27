@@ -5,18 +5,18 @@
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="dashboard.jsp">Dashboard</a></li>
-				<li><a href="impostazioni.jsp">Impostazioni </a></li>
-				<li class="active"><a href="#">Aggiungi veicolo<span class="sr-only">(current)</span></a></li>
+				<li><a href="impostazioni.jsp">Inserisci o modifica impostazioni personali </a></li>
+				<li class="active"><a href="#">Inserisci o modifica dati veicolo<span class="sr-only">(current)</span></a></li>
 				<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 				<li><a href="avvisi.jsp">Avvisi</a></li>
 				<li><a href="gallery.jsp">Gallery</a></li>
-				<li><a href="help.jsp">Help</a></li>
+				<li><a href="#">Help</a></li>
 			</ul>
 
 
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<h1 class="page-header">Aggiungi veicolo</h1>
+			<h1 class="page-header">Inserisci dati del veicolo di targa: <%=session.getAttribute("targa") %></h1>
 
 
 
@@ -26,13 +26,10 @@
 					<form method="POST" action="VeicoloServlet" class="form" id="form1">
 
 						
-						<p class="targa">
+						<!-- <p class="targa">
 							<input name="targa" type="text" class="feedback-input"
-								style="text-transform:uppercase" minlength="6" maxlength="7" id="targa"
-								placeholder="Inserisci targa" />
-								
-								
-								
+								minlength="6" maxlength="7" id="targa"
+								placeholder="Conferma targa" />  -->
 
 						</p>
 						

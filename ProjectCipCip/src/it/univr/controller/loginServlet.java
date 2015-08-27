@@ -28,26 +28,28 @@ public class loginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		UserBean utente=new UserBean();
+		VeicoloBean car=new VeicoloBean();
 		utente.setEmail(request.getParameter("email"));
+		car.setTarga(request.getParameter("targa"));
 		utente.setPassword(request.getParameter("password"));
 		
-		utente=UserDAO.logIn(utente);
+		utente=UserDAO.logIn(utente, car);
 		
 		
 		if(utente.isValid()){
-			VeicoloBean car=new VeicoloBean();
 			
-			car=UserDAO.selezionaVeicolo(utente,car);
+			//car=UserDAO.selezionaVeicolo(utente,car);
 			
 			HttpSession session=request.getSession(true);
 			
 			session.setAttribute("email",utente.getEmail());
 			session.setAttribute("nome",utente.getNome());
 			session.setAttribute("cognome",utente.getCognome());
+			
 			session.setAttribute("targa", car.getTarga());
-			session.setAttribute("marca", car.getMarca());
-			session.setAttribute("modello", car.getModello());
-			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			//session.setAttribute("marca", car.getMarca());
+			//session.setAttribute("modello", car.getModello());
+			//session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
 			if(utente.getAmministratore()==1){
 				response.sendRedirect("dashboardAmministrazione.jsp");
 			}
@@ -58,5 +60,3 @@ public class loginServlet extends HttpServlet {
 		}
 		
 	}
-
-

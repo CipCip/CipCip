@@ -43,6 +43,11 @@
 								class="validate[required,custom[email]] feedback-input"
 								id="email" placeholder="Email" required="required" />
 						</p>
+						
+						<p class="targa">
+							<input style="text-transform:uppercase" class="validate[required,length[6,7]] feedback-input" type="text" name="targa"
+								id="targa" placeholder="Targa" required="required"/>					
+						</p>
 
 						<p class="password">
 							<input type="password" name="password"

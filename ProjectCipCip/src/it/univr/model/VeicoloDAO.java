@@ -15,11 +15,11 @@ public class VeicoloDAO {
 	static ResultSet rs = null;
     static Connection connessione = null;
     
-    public static VeicoloBean inserimento(VeicoloBean car, String emailUtente){
+    public static VeicoloBean inserimento(VeicoloBean car, String targa, String email){
     	
     	Statement stmt=null;
     	
-    	String a=car.getTarga();
+    	//String a=car.getTarga();
     	String b=car.getMarca();
     	String c=car.getModello();
     	String d=car.getData_immatricolazione();
@@ -27,53 +27,43 @@ public class VeicoloDAO {
     	String f=car.getSoglia_sms();
     	//String g=car.getEmail_utente();
     	//Controllo che g sia uguale alla String emailUtente
-    	int numero=0;
     	
-    	if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 || f.length()==0){
+    	
+    	if(b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 || f.length()==0){
 			car.setError(true);
 			return car;
 		}
+    	//String modificaCar="update veicolo set soglia_mail='"+a+"', soglia_sms='"+b+"' where targa='"+targa+"'";
 		
-    	String inserimentoVeicolo="insert into veicolo(targa, marca, modello, data_immatricolazione, soglia_sms, soglia_mail,  emailutente) "
-				+ "values ('"
-				+ a 
-				+ "','" 
-				+ b 
-				+ "','" 
-				+ c 
-				+ "','" 
-				+ d 
-				+ "','" 
-				+ f 
-				+ "','"
-				+ e
-				+ "','" 
-				+ emailUtente
-				+ "')";
+    	String inserimentoVeicolo="update veicolo set marca='"
+				+ b + "', modello='" 
+				+ c + "', data_immatricolazione='"
+				+ d + "', soglia_sms='" 
+				+ f + "', soglia_mail='" 
+				+ e + "' where targa='"+targa+"'";
+    	
+    	//String val="select * from veicolo where targa='"+targa+"'";
     	
     	try{
 			try {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
-				
 				stmt.executeUpdate(inserimentoVeicolo);
-				//int more = stmt.getUpdateCount();
-				//rs = stmt.executeQuery(inserimentoEff);
-				//boolean more=rs.next();
-				
-				numero++;
-				if(numero==1)
-					car.setValid(true);
-				else
+				int bla=stmt.getUpdateCount();
+				if(bla!=0){
+					car.setValid(true);	
+				}
+				else{
 					car.setValid(false);
+					
+				}
 				
 				
 			} catch (SQLException b1) {
-				System.out
-						.println("Inserimento fallito " + b1);
+				System.out.println("Inserimento fallito " + b1);
 				car.setError(true);
 			}
-			//rs.close();
+			
 			stmt.close();
 			}
 			catch (Exception ex) {
@@ -101,19 +91,22 @@ public class VeicoloDAO {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
 				stmt.executeUpdate(modificaCar);
-				//int more = stmt.getUpdateCount();
-				//rs = stmt.executeQuery(inserimentoEff);
-				//boolean more=rs.next();
+				int more = stmt.getUpdateCount();
 				
-				car.setValid(true);
+				if(more!=0){					
+					car.setValid(true);
+				}
+				else{
+					car.setValid(false);
+					car.setError(true);
+				}
 				
-				
+					
 			} catch (SQLException b1) {
-				System.out
-						.println("Modifica fallita " + b1);
+				System.out.println("Modifica fallita " + b1);
 				car.setError(true);
 			}
-			//rs.close();
+			
 			stmt.close();
 			}
 			catch (Exception ex) {
@@ -125,8 +118,7 @@ public class VeicoloDAO {
     public static boolean rimuoviVeicolo(String targaUtente){
     	Statement stmt=null;
     	boolean res= false;
-    	int numero=1;
-    	
+    
     	String elimina= "delete from veicolo where targa='"+targaUtente+"'";
     	try{
 			try {
@@ -134,19 +126,17 @@ public class VeicoloDAO {
 				stmt= connessione.createStatement();
 				stmt.executeUpdate(elimina);
 				int more = stmt.getUpdateCount();
-				//rs = stmt.executeQuery(inserimentoEff);
-				//boolean more=rs.next();
-				
-				if(numero==1)
+					
 					if(more!=0){
-						numero--;
-						res=true;	}
+						res=true;
+						
+					}
 					else
 						res=false;
 				
 			} catch (SQLException b1) {
-				System.out
-						.println("Modifica fallita " + b1);
+				System.out.println("Modifica fallita " + b1);
+				
 				
 			}
 			//rs.close();
@@ -174,8 +164,7 @@ public class VeicoloDAO {
 					car=new VeicoloBean(rs);				
 				
 			} catch (SQLException b1) {
-				System.out
-						.println("Modifica fallita " + b1);
+				System.out.println("Modifica fallita " + b1);
 				car.setError(true);
 			}
 			//rs.close();

@@ -30,6 +30,11 @@ public class RimuoviVeicoloServlet extends HttpServlet {
 		
 		if(rimosso){
 			response.sendRedirect("veicolo.jsp");
+			//si potrebbe fare così:
+			//una volta rimosso il veicolo l'utente verrà reindirizzato alla pagina di registrazione dove potrà 
+			//potrà inserire un nuovo veicolo
+			
+			//response.sendRedirect("registrazione.jsp");
 		}
 		else
 			response.sendRedirect("OperazioneNegata.jsp");

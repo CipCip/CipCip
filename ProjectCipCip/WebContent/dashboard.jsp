@@ -283,18 +283,20 @@ setTimeout("superataSoglia2()", 21000);
 									
 					<li class="active"><a href="#">Dashboard <span
 							class="sr-only">(current)</span></a></li>					
-					<li><a href="impostazioni.jsp">Impostazioni</a></li>
-					<li><a href="veicolo.jsp">Aggiungi veicolo</a></li>
+					<li><a href="impostazioni.jsp">Inserisci o modifica impostazioni personali</a></li>
+					<li><a href="veicolo.jsp">Inserisci o modifica dati veicolo</a></li>
 					<li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
 					<li><a href="avvisi.jsp">Avvisi</a></li>
 					<li><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="help.jsp">Help</a></li>
+					<li><a href="#">Help</a></li>
 				</ul>
 
 
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<h1 class="page-header">Dashboard</h1>
+				<h1 class="page-header">Localizzazione veicolo: 
+				 <%=session.getAttribute("targa") %>  
+				</h1>
 
 
 

@@ -18,6 +18,7 @@ public class VeicoloBean {
 	private boolean valid;
 	private boolean error;
 	
+	
 
 	public VeicoloBean(String targa, String marca, String modello,
 			String data_immatricolazione, String soglia_email, String soglia_sms,
@@ -119,5 +120,6 @@ public class VeicoloBean {
 	public void setError(boolean error) {
 		this.error = error;
 	}
+
 	
 }

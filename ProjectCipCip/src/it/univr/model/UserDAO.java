@@ -21,20 +21,21 @@ public class UserDAO {
     static ResultSet rs = null;
     static Connection connessione = null;
 
-	public static UserBean logIn(UserBean user) {
+	public static UserBean logIn(UserBean user, VeicoloBean car) {
 		
 		Statement stmt = null;
 	    
 		String d = user.getEmail();
 		String e = user.getPassword();
+		String f = car.getTarga();
 		
 		if(d.length()==0 || e.length()==0){
 			user.setError(true);
 			return user;
 		}
 		
-		String logInQuery="select * from utente where email='" + d
-				+ "' and password='" + e + "'";
+		String logInQuery="select * from utente u, veicolo v where u.email='" + d
+				+ "' and u.password='" + e + "' and v.targa='" + f + "'";
 		try{
 		try {
 			connessione = ConnectionManager.getConnection(); 
@@ -69,7 +70,7 @@ public class UserDAO {
 	
 }
 		
-	public static UserBean registrazione(UserBean user) {
+	public static UserBean registrazione(UserBean user, VeicoloBean car) {
 		Statement stmt = null;
 	
 		String a = user.getEmail();
@@ -78,13 +79,14 @@ public class UserDAO {
 		String d = user.getCognome();
 		String e = user.getCellulare();
 		int f = user.getAmministratore();
+		String g=car.getTarga();
 		
 		if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 ){
 			user.setError(true);
 			return user;
 		}
 		
-		String registrationQuery = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
+		String registrationQueryUser = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
 				+ "values ('"
 				+ a 
 				+ "','" 
@@ -98,18 +100,30 @@ public class UserDAO {
 				+ "','"
 				+ f
 				+ "')";
+		
+		String registrationQueryCar="insert into veicolo(targa, emailutente) "
+				+ "values ('"
+				+ g 
+				+ "','"
+				+ a
+				+ "')";
 	
 		try{
 			try {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
-				stmt.executeUpdate(registrationQuery);
-				user.setValid(true);
+				stmt.executeUpdate(registrationQueryUser);
+				//stmt.executeUpdate(registrationQueryCar);
+				//user.setValid(true);
+				//car.setValid(true);
 			
 				
 			} catch (SQLException b1) {
-				System.out.println("Inserimento fallito " + b1);
-				user.setError(true);
+				System.out.println("Non reinserisco l'utente, aggiungo solo un auto riferita " + b1);
+				stmt.executeUpdate(registrationQueryCar);
+				user.setValid(true);
+				car.setValid(true);
+				//user.setError(true);
 			}
 			//rs.close();
 			stmt.close();

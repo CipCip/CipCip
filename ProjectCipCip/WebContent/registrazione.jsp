@@ -62,6 +62,12 @@
 						class="validate[required,length[6,300]] feedback-input"
 						id="password" placeholder="Password" required="required"/>					
 				</p>
+				
+				<!-- TARGA -->
+				<p class="targa">
+					<input style="text-transform:uppercase" class="validate[required,length[6,7]] feedback-input" type="text" name="targa"
+						id="targa" placeholder="Targa" required="required"/>					
+				</p>
 
 
 				<div class="submit">

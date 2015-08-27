@@ -1,6 +1,7 @@
 package it.univr.controller;
 
 import it.univr.bean.UserBean;
+import it.univr.bean.VeicoloBean;
 import it.univr.model.UserDAO;
 
 import java.io.IOException;
@@ -19,18 +20,22 @@ public class registrationServlet extends HttpServlet {
  
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		//richiedo anche la targa in registrazione
 		UserBean user=new UserBean();
+		VeicoloBean car=new VeicoloBean();
+		
 		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("password"));
 		user.setNome(request.getParameter("nome"));
 		user.setCognome(request.getParameter("cognome"));
 		user.setCellulare(request.getParameter("cellulare"));
 		
+		car.setTarga(request.getParameter("targa"));
+		
 		user.setAmministratore(0);
 		
 		
-		user=UserDAO.registrazione(user);
+		user=UserDAO.registrazione(user, car);
 	
 	
 		
@@ -40,6 +45,7 @@ public class registrationServlet extends HttpServlet {
 			session.setAttribute("email", user.getEmail());
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("cognome", user.getCognome());
+			session.setAttribute("targa", car.getTarga());
 			response.sendRedirect("dashboard.jsp");	}
 	
 			
