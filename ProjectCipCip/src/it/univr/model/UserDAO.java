@@ -44,6 +44,7 @@ public class UserDAO {
 			boolean more = rs.next();
 			if (more){
 				user = new UserBean(rs); 
+				//car = new VeicoloBean(rs);
 				System.out.print(car.getTarga());
 			}
 		
@@ -172,7 +173,7 @@ public class UserDAO {
 			return user;
 	}
 	
-	 public static VeicoloBean selezionaVeicolo(/*UserBean user, */VeicoloBean car){
+	/* public static VeicoloBean selezionaVeicolo(/*UserBean user, VeicoloBean car){
 	    	Statement stmt=null;
 	    	
 	    	
@@ -182,7 +183,7 @@ public class UserDAO {
 			/*if(a.length()==0 ){
 				car.setError(true);
 				return car;
-			}*/
+			}
 			
 	    	//String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente"
 	    			//+ "and v.targa='"+b+"'";
@@ -220,7 +221,7 @@ public class UserDAO {
 	    		}
 	    		return car;
 	    	
-	    }
+	    }*/
 	 
 	 public static UserBean updateUtente(UserBean user, String emailP){
 		 Statement stmt = null;

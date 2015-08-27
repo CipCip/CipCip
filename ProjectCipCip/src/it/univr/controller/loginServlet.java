@@ -47,7 +47,7 @@ public class loginServlet extends HttpServlet {
 			session.setAttribute("cognome",utente.getCognome());
 			session.setAttribute("targa", car.getTarga());
 			
-			car=UserDAO.selezionaVeicolo(car);
+			//car=VeicoloDAO.selezionaVeicolo(car);
 			
 			session.setAttribute("marca", car.getMarca());
 			session.setAttribute("modello", car.getModello());

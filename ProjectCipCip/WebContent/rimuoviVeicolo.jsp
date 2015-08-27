@@ -32,10 +32,10 @@
               </thead>
               <tbody>
                 <tr>               
-                  <td><%= (String)session.getAttribute("marca")%></td>
-                  <td><%= (String)session.getAttribute("modello")%></td>  
-                  <td><%= (String)session.getAttribute("targa")%></td>
-                  <td><%= (String)session.getAttribute("data_immatricolazione")%></td>
+                  <td><%=session.getAttribute("marca")%></td>
+                  <td><%=session.getAttribute("modello")%></td>  
+                  <td><%=session.getAttribute("targa")%></td>
+                  <td><%=session.getAttribute("data_immatricolazione")%></td>
                   <td><form method="POST" action="RimuoviVeicoloServlet"><button class="btn btn-danger" type="submit" value="submit">Rimuovi</button></form></td>                                                                     
                 </tr>               
               </tbody>

@@ -244,6 +244,56 @@ public class VeicoloDAO {
 		return res;
 	}
     
+    public static VeicoloBean selezionaVeicolo(/*UserBean user, */VeicoloBean car){
+    	Statement stmt=null;
+    	
+    	
+		//String a=user.getEmail();
+		String b=car.getTarga();
+		
+		/*if(a.length()==0 ){
+			car.setError(true);
+			return car;
+		}*/
+		
+    	//String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente"
+    			//+ "and v.targa='"+b+"'";
+    	
+		String selezioneQuery="select * from veicolo v where and v.targa='"+b+"'";
+		
+    	try{
+    		try {
+    			connessione = ConnectionManager.getConnection(); 
+    			stmt= connessione.createStatement();
+    			rs = stmt.executeQuery(selezioneQuery);
+    			boolean more = rs.next();
+    			if (more){
+    				car.setValid(true);
+    				car.setMarca(rs.getString("marca"));
+    				car.setModello(rs.getString("modello"));
+    				car.setTarga(rs.getString("targa"));
+    				car.setData_immatricolazione(rs.getString("data_immatricolazione"));
+    			
+    			}
+    			else
+    				car.setValid(false);
+    		
+    			
+    			
+    		} catch (SQLException a1) {
+    			System.out.println("Selezione fallita in selezione veicolo " + a1);
+    			car.setError(true);
+    		}
+    		rs.close();
+    		stmt.close();
+    		}
+    		catch (Exception ex) {
+    			ex.printStackTrace();
+    		}
+    		return car;
+    	
+    }
+    
     
   
 }
