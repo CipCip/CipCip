@@ -1,5 +1,5 @@
 <%@ include file="head.jsp" %>
-
+<!--  funziono -->
 <body>
 
 	<div class="site-wrapper">
