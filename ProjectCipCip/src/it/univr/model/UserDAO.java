@@ -44,7 +44,7 @@ public class UserDAO {
 			boolean more = rs.next();
 			if (more){
 				user = new UserBean(rs); 
-				
+				System.out.print(car.getTarga());
 			}
 		
 			else
@@ -52,7 +52,7 @@ public class UserDAO {
 			
 			
 		} catch (SQLException a) {
-			System.out.println("Selezione fallita " + a);
+			System.out.println("Selezione fallita logIn" + a);
 			
 			
 		}
@@ -172,19 +172,23 @@ public class UserDAO {
 			return user;
 	}
 	
-	 public static VeicoloBean selezionaVeicolo(UserBean user, VeicoloBean car){
+	 public static VeicoloBean selezionaVeicolo(/*UserBean user, */VeicoloBean car){
 	    	Statement stmt=null;
 	    	
 	    	
-			String a=user.getEmail();
+			//String a=user.getEmail();
+			String b=car.getTarga();
 			
-			if(a.length()==0 ){
+			/*if(a.length()==0 ){
 				car.setError(true);
 				return car;
-			}
+			}*/
 			
-	    	String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente";
+	    	//String selezioneQuery="select * from veicolo v, utente u where u.email='"+a+"' and u.email=v.emailutente"
+	    			//+ "and v.targa='"+b+"'";
 	    	
+			String selezioneQuery="select * from veicolo v where and v.targa='"+b+"'";
+			
 	    	try{
 	    		try {
 	    			connessione = ConnectionManager.getConnection(); 
@@ -205,8 +209,8 @@ public class UserDAO {
 	    			
 	    			
 	    		} catch (SQLException a1) {
-	    			System.out.println("Selezione fallita " + a1);
-	    			user.setError(true);
+	    			System.out.println("Selezione fallita in selezione veicolo " + a1);
+	    			car.setError(true);
 	    		}
 	    		rs.close();
 	    		stmt.close();

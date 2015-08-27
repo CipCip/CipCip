@@ -38,18 +38,21 @@ public class loginServlet extends HttpServlet {
 		
 		if(utente.isValid()){
 			
-			//car=UserDAO.selezionaVeicolo(utente,car);
+			//car=UserDAO.selezionaVeicolo(car);
 			
 			HttpSession session=request.getSession(true);
 			
 			session.setAttribute("email",utente.getEmail());
 			session.setAttribute("nome",utente.getNome());
 			session.setAttribute("cognome",utente.getCognome());
-			
 			session.setAttribute("targa", car.getTarga());
-			//session.setAttribute("marca", car.getMarca());
-			//session.setAttribute("modello", car.getModello());
-			//session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			
+			car=UserDAO.selezionaVeicolo(car);
+			
+			session.setAttribute("marca", car.getMarca());
+			session.setAttribute("modello", car.getModello());
+			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			
 			if(utente.getAmministratore()==1){
 				response.sendRedirect("dashboardAmministrazione.jsp");
 			}
