@@ -28,7 +28,7 @@
 
 
 
-<script type="text/javascript"
+<!-- <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
 <script type="text/javascript">
@@ -248,7 +248,7 @@ setTimeout("superataSoglia2()", 21000);
 
 
 
-<body onload="javascript:initialize();">
+<body onload="javascript:initialize();"> -->
 
 <form  method="POST" action="LogoutServlet" class="form" id="form1">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -297,22 +297,70 @@ setTimeout("superataSoglia2()", 21000);
 				<h1 class="page-header">Localizzazione veicolo: 
 				 <%=session.getAttribute("targa") %>  
 				</h1>
+	<!-- JAVASCRIPT CHE CARICA LA MAPPA DALLE API DI GOOGLE -->
+
+											<script
+												src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAi_x03rBPvcUzObU_OU5Z_RRMrZ4ZiepwBPC13G1CO0mIcOaHJBSF-jlBQxmGDKmcezkCQdycMczfaQ"
+												type="text/javascript"></script>
+
+											<!-- JAVASCRIPT CHE CARICA LO SCRIPT PER IL POSIZIONAMENTO DELL'INDICATORE -->
+											<script src="js/epoly.js" type="text/javascript"></script>
+
+											<!-- JAVASCRIPT CHE CARICA LO SCRIPT IN JQUERY PER L'INVIO DELLA MAIL -->
+
+											<script
+												src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+											</script>
+
+											<div align="center" style="width: 100%; height: 50px">
+												<div id="controls" style="width: 100%; height: 100%">
+
+													<form
+														onsubmit="start('<%=session.getAttribute("initposition")%>','<%=session.getAttribute("finalposition")%>',
+														'<%=session.getAttribute("soglia_mail")%>','<%=session.getAttribute("soglia_sms")%>',
+														'<%=session.getAttribute("speed")%>','<%=session.getAttribute("nome")%>',
+														'<%=session.getAttribute("email")%>');return false">
+
+														<button
+															class="btn btn-red waves-button waves-effect waves-light"
+															type="submit" value="Submit">Localizza il
+															veicolo</button>
+													</form>
+												</div>
+											</div>
+
+											<div align="center" style="width: 100%; height: 450px">
+
+												<div id="map" style="width: 100%; height: 100%"></div>
+
+												<div class="style1" id="step">&nbsp;</div>
+
+												<span class="style1"> <!-- JAVASCRIPT CHE CARICA IL MOTORE PER MUOVERE L'INDICATORE + ESECUZIONE MAIL -->
+													<script src="js/engine.js" type="text/javascript"> </script>
+
+												</span>
+												<button class="waves-effect waves-light" data-toggle="toast"
+													title="E' stata superata la prima soglia. Verrà mandata un'email sull'account di posta registrato."
+													hidden="hidden"></button>
+												<button class="waves-effect waves-light" data-toggle="toast"
+													title="ATTENZIONE! PROBABILE FURTO DELL'AUTO! E' stata superata la seconda soglia. Verrà mandato un'SMS immediatamente!"
+													hidden="hidden"></button>
+											</div>
 
 
 
 
-
-				<div id="map_canvas"
+				<!-- <div id="map_canvas"
 					style="height: 400px;  top: 30px; border: 1px solid black;"></div>
 				<br />
-				<br />
+				<br / > -->
 				
-					<input type="button" value="Inizia la simulazione"
+					<!-- <input type="button" value="Inizia la simulazione"
 						onclick="javascript:dummyStart();"></input><br />
 					
 					<br />
 					<p id="primoAlert"></p>
-					<p id="secondoAlert"></p>
+					<p id="secondoAlert"></p> -->
 					
 				
 </body>
