@@ -15,8 +15,8 @@ public class PosizioniDAO {
 	public PosizioniBean positions(PosizioniBean pos){
 
 		Statement stmt = null;
-		String queryPos1 = "select startpos from tmid";
-		String queryPos2 = "select endpos from tmid";
+		String queryPos1 = "select posiniziale from cipcip";
+		String queryPos2 = "select posifinale from cipcip";
 		
 		try 
 		{

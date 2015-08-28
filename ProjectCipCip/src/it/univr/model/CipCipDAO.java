@@ -12,7 +12,7 @@ public class CipCipDAO {
 	static ResultSet rs = null; 
 
 
-	public CipCipBean invio(CipCipBean cinguetto) throws InterruptedException{
+	public static CipCipBean invio(CipCipBean cinguetto) throws InterruptedException{
 
 		Statement stmt = null;
 		String a = cinguetto.getTargaCipCip();
