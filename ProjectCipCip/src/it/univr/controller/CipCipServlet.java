@@ -26,8 +26,9 @@ public class CipCipServlet extends HttpServlet {
 			HttpSession session = request.getSession(true);
 			CipCipBean cip = new CipCipBean();
 			cip.setTargaCipCip((String) session.getAttribute("targa"));
-	       
+			
 			cip = CipCipDAO.invio(cip);
+			System.out.print("FAnculo");
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/dashboard.jsp");
 			session.setAttribute("velocita",cip.getVelocita());
 			//session.setAttribute("video",tmid.getUrlvideo());

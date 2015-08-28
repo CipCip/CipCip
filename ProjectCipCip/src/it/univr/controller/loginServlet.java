@@ -51,6 +51,8 @@ public class loginServlet extends HttpServlet {
 			session.setAttribute("marca", car.getMarca());
 			session.setAttribute("modello", car.getModello());
 			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			session.setAttribute("soglia_mail",car.getSoglia_email());
+			session.setAttribute("soglia_sms",car.getSoglia_sms());
 			
 			if(utente.getAmministratore()==1){
 				response.sendRedirect("dashboardAmministrazione.jsp");

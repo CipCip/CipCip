@@ -18,7 +18,8 @@ public class CipCipDAO {
 		String a = cinguetto.getTargaCipCip();
 		String b = cinguetto.getPosiniziale();
 		String c = cinguetto.getPosfinale();
-		String d = Float.toString(cinguetto.getVelocita());
+		//String d = Float.toString(cinguetto.getVelocita());
+		Float d =cinguetto.getVelocita();
 		
 		try 
 		{
@@ -26,7 +27,7 @@ public class CipCipDAO {
 			stmt=currentCon.createStatement();
 			
 			String insertQuery =
-					"insert into cipcip(targacipcip,posiniziale, posfinale, velocita) VALUES ('"
+					"insert into cipcip(targacipcip, posiniziale, posfinale, velocita) VALUES ('"
 							+ a
 							+ "','"
 							+ b
@@ -35,7 +36,8 @@ public class CipCipDAO {
 							+ "','"
 							+ d
 							+ "')";
-			String insertInPos = "insert into positions(targaposizioni, posiniziale, posfinale) VALUES ('"
+			
+			String insertInPos = "insert into posizioni(targaposizioni, posiniziale, posfinale) VALUES ('"
 					+ a
 					+ "','"
 					+ b
@@ -43,6 +45,7 @@ public class CipCipDAO {
 					+ c
 					+ "')";
 			String searchQuery = "select * from cipcip where targacipcip='"+a+"'";
+			System.out.print("QuiArrivo");
 			String deleteQuery = "delete from cipcip";
 			rs = stmt.executeQuery(searchQuery);
 			boolean more = rs.next();
