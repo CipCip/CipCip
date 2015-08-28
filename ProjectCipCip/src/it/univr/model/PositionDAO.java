@@ -1,13 +1,14 @@
 package it.univr.model;
 
 
+
 import it.univr.bean.PosizioniBean;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class PosizioniDAO {
+public class PositionDAO {
 	static Connection currentCon = null;
 	static ResultSet rs = null; 
 	
@@ -15,8 +16,8 @@ public class PosizioniDAO {
 	public PosizioniBean positions(PosizioniBean pos){
 
 		Statement stmt = null;
-		String queryPos1 = "select posiniziale from cipcip";
-		String queryPos2 = "select posifinale from cipcip";
+		String queryPos1 = "select poiniziale from cipcip";
+		String queryPos2 = "select posfinale from cipcip";
 		
 		try 
 		{
@@ -33,7 +34,7 @@ public class PosizioniDAO {
 
 		catch (Exception ex) 
 		{
-			System.out.println("Errore " + ex);
+			System.out.println("Si è verificato un problema! " + ex);
 		} 
 
 
@@ -68,7 +69,7 @@ public class PosizioniDAO {
 
 	}
 	
-	public PosizioniBean posizioniFinali(PosizioniBean pos){
+	public static PosizioniBean lastfivepositions(PosizioniBean pos){
 
 		Statement stmt = null;
 		String targa = pos.getTarga();
@@ -90,7 +91,7 @@ public class PosizioniDAO {
 
 		catch (Exception ex) 
 		{
-			System.out.println("Problems! " + ex);
+			System.out.println("Si è verificato un problema! " + ex);
 		} 
 
 

@@ -1,7 +1,10 @@
 package it.univr.controller;
 
 import it.univr.bean.CipCipBean;
+import it.univr.bean.PosizioniBean;
 import it.univr.model.CipCipDAO;
+import it.univr.model.PositionDAO;
+
 
 import java.io.IOException;
 
@@ -28,12 +31,18 @@ public class CipCipServlet extends HttpServlet {
 			cip.setTargaCipCip((String) session.getAttribute("targa"));
 			
 			cip = CipCipDAO.invio(cip);
-			System.out.print("FAnculo");
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/dashboard.jsp");
+			//RequestDispatcher rd = getServletContext().getRequestDispatcher("/dashboard.jsp");
 			session.setAttribute("velocita",cip.getVelocita());
-			//session.setAttribute("video",tmid.getUrlvideo());
-			rd.include(request, response);
+			//rd.include(request, response);
 			cip = null;
+			
+			PosizioniBean positions = new PosizioniBean();
+			positions = PositionDAO.lastfivepositions(positions);
+			
+			session.setAttribute("posiniziale",positions.getPosIniziale());
+			session.setAttribute("posfinale",positions.getPosFinale());
+			positions = null;
+			response.sendRedirect("dashboard.jsp");
 			
 		} 
 		catch (Throwable theException) 	    
