@@ -1,4 +1,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!-- 
+Il file Mappa.jsp viene chiamato al click su "Localizzazione" dal menu 
+principale e fa apparire la mappa prelevata da Google Maps attraverso le
+API di Google. Premendo il pulsante "Localizza veicolo" verrà chiamata la
+funzione di avvio contenuta nello script "engine.js" che carica il percorso
+scelto casualmente, che a sua volta carica lo script "epoly.js" permettendo
+così di vedere l'indicatore sulla mappa muoversi.
+-->
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -68,34 +78,57 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		<h1 class="page-header">Localizzazione veicolo: <%=session.getAttribute("targa") %>  </h1>
-		
-		<!-- JAVASCRIPT CHE CARICA LA MAPPA DALLE API DI GOOGLE -->
+	<!-- cancella fin qui -->
+	<div class="content">
+		<div class="content-heading">
+			<div class="container">
+				<h1 class="heading">Mappa</h1>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-sm-15">
+						<div class="card-wrap">
+							<div class="card">
+								<div class="card-main">
+									<div class="card-header">
+										<div class="card-inner">
+											<p class="card-heading">Localizzazione Veicolo</p>
 
-			<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAi_x03rBPvcUzObU_OU5Z_RRMrZ4ZiepwBPC13G1CO0mIcOaHJBSF-jlBQxmGDKmcezkCQdycMczfaQ" 
-			type="text/javascript"></script>
-		
-		<!-- JAVASCRIPT CHE CARICA LO SCRIPT PER IL POSIZIONAMENTO DELL'INDICATORE -->
-			
-			<script src="js/epoly.js" type="text/javascript"></script>
+											<!-- JAVASCRIPT CHE CARICA LA MAPPA DALLE API DI GOOGLE -->
 
-		<!-- JAVASCRIPT CHE CARICA LO SCRIPT IN JQUERY PER L'INVIO DELLA MAIL -->
+											<script
+												src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAi_x03rBPvcUzObU_OU5Z_RRMrZ4ZiepwBPC13G1CO0mIcOaHJBSF-jlBQxmGDKmcezkCQdycMczfaQ"
+												type="text/javascript"></script>
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+											<!-- JAVASCRIPT CHE CARICA LO SCRIPT PER IL POSIZIONAMENTO DELL'INDICATORE -->
+											<script src="js/epoly.js" type="text/javascript"></script>
 
-				<div align="center" style="width: 100%; height: 50px">
-						<div id="controls" style="width: 100%; height: 100%">
+											<!-- JAVASCRIPT CHE CARICA LO SCRIPT IN JQUERY PER L'INVIO DELLA MAIL -->
+
+											<script
+												src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+											</script>
+
+											<div align="center" style="width: 100%; height: 50px">
+												<div id="controls" style="width: 100%; height: 100%">
 
 													<form
-														onsubmit="start('<%=session.getAttribute("posiniziale")%>','<%=session.getAttribute("posfinale")%>','<%=session.getAttribute("speed")%>');return false">
+														onsubmit="start('<%=session.getAttribute("posiniziale")%>','<%=session.getAttribute("posfinale")%>',
+														'<%=session.getAttribute("soglia_mail")%>','<%=session.getAttribute("soglia_sms")%>',
+														'<%=session.getAttribute("speed")%>','<%=session.getAttribute("nome")%>',
+														'<%=session.getAttribute("email")%>');return false">
+
 														<button
-															
+															class="btn btn-red waves-button waves-effect waves-light"
 															type="submit" value="Submit">Localizza il
 															veicolo</button>
 													</form>
-						</div>
-				</div>
+												</div>
+											</div>
 
 											<div align="center" style="width: 100%; height: 450px">
 
@@ -103,8 +136,7 @@
 
 												<div class="style1" id="step">&nbsp;</div>
 
-												<span class="style1"> 
-												<!-- JAVASCRIPT CHE CARICA IL MOTORE PER MUOVERE L'INDICATORE + ESECUZIONE MAIL -->
+												<span class="style1"> <!-- JAVASCRIPT CHE CARICA IL MOTORE PER MUOVERE L'INDICATORE + ESECUZIONE MAIL -->
 													<script src="js/engine.js" type="text/javascript"> </script>
 
 												</span>
@@ -115,16 +147,57 @@
 													title="ATTENZIONE! PROBABILE FURTO DELL'AUTO! E' stata superata la seconda soglia. Verrà mandato un'SMS immediatamente!"
 													hidden="hidden"></button>
 											</div>
-					
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- VIDEO 
+	<div aria-hidden="true" class="modal fade" id="video" role="dialog"
+		tabindex="-1">
+		<div class="modal-dialog modal-full">
+			<div class="modal-content">
+				<iframe class="iframe-seamless" src="Video.jsp"
+					title="Video sorveglianza"></iframe>
+			</div>
+		</div>
+	</div>-->
 
 
-
-				
-					
-							<form method="post" action="CipCipServlet" class="form" id="form1">
+<form method="post" action="CipCipServlet" class="form" id="form1">
 								<button class="btn btn-red waves-button waves-effect waves-light" type="submit" value="Submit">Inizia simulazione</button>
 											</form></div>
 
-			
+	<div class="fbtn-container-2">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Velocità</span>
+			<span class="fbtn-ori fa fa-tachometer"></span><span class="fbtn-sub icon icon-close"></span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn fbtn-alt"><span id="distanza" class="fbtn-text"></span><span class="fa fa-road"></span></a> 
+				<a class="fbtn fbtn-alt"><span id="speed" class="fbtn-text"></span><span class="fa fa-tachometer"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-blue fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Altro</span>
+			<span class="fbtn-ori fa fa-chevron-up"></span><span class="fbtn-sub icon icon-close"></span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn fbtn-alt" data-toggle="modal" href="#video">
+					<span class="fbtn-text">Visione video</span><span class="icon icon-videocam"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--  <script src="js/base.min.js" type="text/javascript"></script>
+
+	<script src="js/dynamic.js"></script>-->
 </body>
 </html>

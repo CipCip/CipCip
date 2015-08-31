@@ -1,11 +1,12 @@
 /* SCRIPT "engine.jsp"
- * E' lo script che permette di calcolare il percorso tra le due localit‡ scelte,
- * impostare una velocit‡ random ed effettuare lo spostamento dell'indicatore sulla
+ * E' lo script che permette di calcolare il percorso tra le due localit√† scelte,
+ * impostare una velocit√† random ed effettuare lo spostamento dell'indicatore sulla
  * mappa.
  */
 
 var stepspeed;
-
+var mail;
+var nome;
 var sogliaone;
 var sogliatwo;
 var marker;
@@ -21,7 +22,8 @@ if (GBrowserIsCompatible()) {
 	var poly;
 	var eol;
 	var car = new GIcon();
-	car.image="images/samples/tmid.png"car.iconSize=new GSize(60,100);
+	car.image="images/samples/tmid.png"
+		car.iconSize=new GSize(60,100);
 	car.iconAnchor=new GPoint(30,100);
 	var k=0;
 	var stepnum=0;
@@ -55,7 +57,7 @@ if (GBrowserIsCompatible()) {
 				var steptime = dirn.getRoute(0).getStep(stepnum-1).getDuration().seconds;
 				step = stepspeed/70.0;
 
-				//velocit‡ attuale
+				//velocit√† attuale
 				document.getElementById("speed").innerHTML = stepspeed +" KM/h";
 
 			}
@@ -88,8 +90,7 @@ if (GBrowserIsCompatible()) {
 
 	function messSuperamento1() {
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
-			alert("Soglia superata");
-			//document.getElementsByClassName("waves-effect waves-light")[1].click();
+			document.getElementsByClassName("waves-effect waves-light")[1].click();
 			//var snd = new Audio("audio/popup.mp3");
 			//snd.play();
 			//sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
@@ -100,22 +101,23 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
-			alert("Soglia superata");
-			//document.getElementsByClassName("waves-effect waves-light")[2].click();
+			document.getElementsByClassName("waves-effect waves-light")[2].click();
 			//var snd = new Audio("audio/notifica2.wav");
 			//snd.play();
 		}
 	}
 
-	function start(startpoint,endpoint,speed) {
+	function start(posiniziale,posfinale,soglia_mail,soglia_sms,speed,nome,email) {
 
-		sogliaone = 0;
-		sogliatwo = 0;
+		mail = email;
+		nome = name;
+		sogliaone = soglia_mail;
+		sogliatwo = soglia_sms;
 		stepspeed = speed;
 		window.setTimeout("messSuperamento1()", 10000);
 		window.setTimeout("messSuperamento2()", 20000);
-		var startpoint = startpoint;
-		var endpoint = endpoint;
+		var startpoint = posiniziale;
+		var endpoint = posfinale;
 		dirn.loadFromWaypoints([startpoint,endpoint],{getPolyline:true,getSteps:true});
 
 	}
@@ -123,7 +125,7 @@ if (GBrowserIsCompatible()) {
 }
 
 
-/*
+
 function sendingMail(a,b,c){
 	$.ajax({
 		type: "POST",
@@ -143,4 +145,4 @@ function sendingMail(a,b,c){
 			}
 		}
 	});
-}*/
+}
