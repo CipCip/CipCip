@@ -6,6 +6,7 @@ import it.univr.model.CipCipDAO;
 import it.univr.model.PositionDAO;
 
 
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -31,17 +32,17 @@ public class CipCipServlet extends HttpServlet {
 			cip.setTargaCipCip((String) session.getAttribute("targa"));
 			
 			cip = CipCipDAO.invio(cip);
-			//RequestDispatcher rd = getServletContext().getRequestDispatcher("/dashboard.jsp");
-			session.setAttribute("velocita",cip.getVelocita());
-			//rd.include(request, response);
-			cip = null;
+			
+			session.setAttribute("speed",cip.getVelocita());
+			//cip = null;
 			
 			PosizioniBean positions = new PosizioniBean();
-			positions = PositionDAO.lastfivepositions(positions);
+			positions = PositionDAO.positions(positions);
 			
 			session.setAttribute("posiniziale",positions.getPosIniziale());
 			session.setAttribute("posfinale",positions.getPosFinale());
 			positions = null;
+			
 			response.sendRedirect("dashboard.jsp");
 			
 		} 

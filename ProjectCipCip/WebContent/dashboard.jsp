@@ -88,9 +88,7 @@
 						<div id="controls" style="width: 100%; height: 100%">
 
 													<form onsubmit="start('<%=session.getAttribute("posiniziale")%>','<%=session.getAttribute("posfinale")%>',
-														'<%=session.getAttribute("soglia_mail")%>','<%=session.getAttribute("soglia_sms")%>',
-														'<%=session.getAttribute("velocita")%>','<%=session.getAttribute("nome")%>',
-														'<%=session.getAttribute("email")%>');return false">
+														'<%=session.getAttribute("speed")%>');return false">
 														
 														<button
 															class="btn btn-red waves-button waves-effect waves-light"

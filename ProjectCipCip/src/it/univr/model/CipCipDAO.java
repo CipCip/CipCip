@@ -27,7 +27,7 @@ public class CipCipDAO {
 			stmt=currentCon.createStatement();
 			
 			String insertQuery =
-					"insert into cipcip(targacipcip, posiniziale, posfinale, velocita) VALUES ('"
+					"insert into cipcip(targacipcip, posiniziale, posfinale, speed) VALUES ('"
 							+ a
 							+ "','"
 							+ b

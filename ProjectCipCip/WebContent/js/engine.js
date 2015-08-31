@@ -22,7 +22,7 @@ if (GBrowserIsCompatible()) {
 	var poly;
 	var eol;
 	var car = new GIcon();
-	car.image="images/samples/tmid.png"
+	//car.image="images/samples/tmid.png"
 		car.iconSize=new GSize(60,100);
 	car.iconAnchor=new GPoint(30,100);
 	var k=0;
@@ -47,7 +47,7 @@ if (GBrowserIsCompatible()) {
 		}
 
 		marker.setPoint(p);
-		document.getElementById("distanza").innerHTML =  (d/1000).toFixed(2) +" KM";
+		document.getElementById("distance").innerHTML =  (d/1000).toFixed(2) +" KM";
 
 		if (stepnum+1 < dirn.getRoute(0).getNumSteps()) {
 			if (dirn.getRoute(0).getStep(stepnum).getPolylineIndex() < poly.GetIndexAtDistance(d)) {
@@ -90,10 +90,11 @@ if (GBrowserIsCompatible()) {
 
 	function messSuperamento1() {
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
+			alert("invio email")
 			document.getElementsByClassName("waves-effect waves-light")[1].click();
-			var snd = new Audio("audio/popup.mp3");
-			snd.play();
-			sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
+			//var snd = new Audio("audio/popup.mp3");
+			//snd.play();
+			//sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
 		}
 
 	}
@@ -101,19 +102,20 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
+			alert("invio sms")
 			document.getElementsByClassName("waves-effect waves-light")[2].click();
-			var snd = new Audio("audio/notifica2.wav");
-			snd.play();
+			//var snd = new Audio("audio/notifica2.wav");
+			//snd.play();
 		}
 	}
 
-	function start(startpoint,endpoint,soglia1,soglia2,speed,name,email) {
+	function start(startpoint,endpoint,speed) {
 
-		mail = email;
-		nome = name;
-		sogliaone = soglia1;
-		sogliatwo = soglia2;
+		
 		stepspeed = speed;
+	
+		sogliaone=0;
+		sogliatwo=0;
 		window.setTimeout("messSuperamento1()", 10000);
 		window.setTimeout("messSuperamento2()", 20000);
 		var startpoint = startpoint;
@@ -122,11 +124,11 @@ if (GBrowserIsCompatible()) {
 
 	}
 
-}
 
 
 
-function sendingMail(a,b,c){
+
+/*function sendingMail(a,b,c){
 	$.ajax({
 		type: "POST",
 		url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -144,5 +146,6 @@ function sendingMail(a,b,c){
 				       'html': 'Salve ' + nome+'; <br/><br/> Volevamo informarla che la prima soglia è stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ALFADA PROGETTI --'
 			}
 		}
-	});
+	});*/
+
 }

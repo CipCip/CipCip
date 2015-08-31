@@ -2,6 +2,7 @@ package it.univr.model;
 
 
 
+import it.univr.bean.CipCipBean;
 import it.univr.bean.PosizioniBean;
 
 import java.sql.Connection;
@@ -13,10 +14,10 @@ public class PositionDAO {
 	static ResultSet rs = null; 
 	
 	
-	public PosizioniBean positions(PosizioniBean pos){
+	public static PosizioniBean positions(PosizioniBean pos){
 
 		Statement stmt = null;
-		String queryPos1 = "select poiniziale from cipcip";
+		String queryPos1 = "select posiniziale from cipcip";
 		String queryPos2 = "select posfinale from cipcip";
 		
 		try 
@@ -69,10 +70,12 @@ public class PositionDAO {
 
 	}
 	
-	public static PosizioniBean lastfivepositions(PosizioniBean pos){
+	public static PosizioniBean lastfivepositions(CipCipBean pos){
 
 		Statement stmt = null;
-		String targa = pos.getTarga();
+		String targa = pos.getTargaCipCip();
+		PosizioniBean posizione=new PosizioniBean();
+		System.out.println("Targa:"+pos.getTargaCipCip());
 		String queryPos = "select posiniziale, posfinale from posizioni where targaposizioni='"+targa+"'";
 		
 		try 
@@ -80,10 +83,12 @@ public class PositionDAO {
 			currentCon = ConnectionManager.getConnection();
 			stmt=currentCon.createStatement();
 			rs = stmt.executeQuery(queryPos);
+			
 			int c=0;
+			System.out.println("Posizioni: "+pos.getPosiniziale()+", "+pos.getPosfinale());
 			while (rs.next() && c<5) {
-				pos.addListInit(rs.getString("posiniziale"));
-				pos.addListFinal(rs.getString("posfinale"));
+				posizione.addListInit(rs.getString("posiniziale"));
+				posizione.addListFinal(rs.getString("posfinale"));
 				c+=1;
 			}
 			
@@ -122,7 +127,7 @@ public class PositionDAO {
 			}
 		}
 
-		return pos;
+		return posizione;
 
 	}
 }
