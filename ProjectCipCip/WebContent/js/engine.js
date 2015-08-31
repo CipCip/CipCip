@@ -1,12 +1,11 @@
 /* SCRIPT "engine.jsp"
- * E' lo script che permette di calcolare il percorso tra le due localit√† scelte,
- * impostare una velocit√† random ed effettuare lo spostamento dell'indicatore sulla
+ * E' lo script che permette di calcolare il percorso tra le due localit‡ scelte,
+ * impostare una velocit‡ random ed effettuare lo spostamento dell'indicatore sulla
  * mappa.
  */
 
 var stepspeed;
-var mail;
-var nome;
+
 var sogliaone;
 var sogliatwo;
 var marker;
@@ -22,8 +21,7 @@ if (GBrowserIsCompatible()) {
 	var poly;
 	var eol;
 	var car = new GIcon();
-	//car.image="images/samples/tmid.png"
-		car.iconSize=new GSize(60,100);
+	car.image="images/samples/tmid.png"car.iconSize=new GSize(60,100);
 	car.iconAnchor=new GPoint(30,100);
 	var k=0;
 	var stepnum=0;
@@ -47,7 +45,7 @@ if (GBrowserIsCompatible()) {
 		}
 
 		marker.setPoint(p);
-		document.getElementById("distance").innerHTML =  (d/1000).toFixed(2) +" KM";
+		document.getElementById("distanza").innerHTML =  (d/1000).toFixed(2) +" KM";
 
 		if (stepnum+1 < dirn.getRoute(0).getNumSteps()) {
 			if (dirn.getRoute(0).getStep(stepnum).getPolylineIndex() < poly.GetIndexAtDistance(d)) {
@@ -57,7 +55,7 @@ if (GBrowserIsCompatible()) {
 				var steptime = dirn.getRoute(0).getStep(stepnum-1).getDuration().seconds;
 				step = stepspeed/70.0;
 
-				//velocit√† attuale
+				//velocit‡ attuale
 				document.getElementById("speed").innerHTML = stepspeed +" KM/h";
 
 			}
@@ -90,8 +88,8 @@ if (GBrowserIsCompatible()) {
 
 	function messSuperamento1() {
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
-			alert("invio email")
-			document.getElementsByClassName("waves-effect waves-light")[1].click();
+			alert("Soglia superata");
+			//document.getElementsByClassName("waves-effect waves-light")[1].click();
 			//var snd = new Audio("audio/popup.mp3");
 			//snd.play();
 			//sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
@@ -102,8 +100,8 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
-			alert("invio sms")
-			document.getElementsByClassName("waves-effect waves-light")[2].click();
+			alert("Soglia superata");
+			//document.getElementsByClassName("waves-effect waves-light")[2].click();
 			//var snd = new Audio("audio/notifica2.wav");
 			//snd.play();
 		}
@@ -111,11 +109,9 @@ if (GBrowserIsCompatible()) {
 
 	function start(startpoint,endpoint,speed) {
 
-		
+		sogliaone = 0;
+		sogliatwo = 0;
 		stepspeed = speed;
-	
-		sogliaone=0;
-		sogliatwo=0;
 		window.setTimeout("messSuperamento1()", 10000);
 		window.setTimeout("messSuperamento2()", 20000);
 		var startpoint = startpoint;
@@ -124,11 +120,11 @@ if (GBrowserIsCompatible()) {
 
 	}
 
+}
 
 
-
-
-/*function sendingMail(a,b,c){
+/*
+function sendingMail(a,b,c){
 	$.ajax({
 		type: "POST",
 		url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -146,6 +142,5 @@ if (GBrowserIsCompatible()) {
 				       'html': 'Salve ' + nome+'; <br/><br/> Volevamo informarla che la prima soglia √® stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ALFADA PROGETTI --'
 			}
 		}
-	});*/
-
-}
+	});
+}*/

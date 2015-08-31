@@ -87,11 +87,10 @@
 				<div align="center" style="width: 100%; height: 50px">
 						<div id="controls" style="width: 100%; height: 100%">
 
-													<form onsubmit="start('<%=session.getAttribute("posiniziale")%>','<%=session.getAttribute("posfinale")%>',
-														'<%=session.getAttribute("speed")%>');return false">
-														
+													<form
+														onsubmit="start('<%=session.getAttribute("posiniziale")%>','<%=session.getAttribute("posfinale")%>','<%=session.getAttribute("speed")%>');return false">
 														<button
-															class="btn btn-red waves-button waves-effect waves-light"
+															
 															type="submit" value="Submit">Localizza il
 															veicolo</button>
 													</form>
@@ -125,6 +124,7 @@
 							<form method="post" action="CipCipServlet" class="form" id="form1">
 								<button class="btn btn-red waves-button waves-effect waves-light" type="submit" value="Submit">Inizia simulazione</button>
 											</form></div>
-				
+
+			
 </body>
 </html>
