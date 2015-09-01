@@ -40,9 +40,11 @@ public class VeicoloServlet extends HttpServlet {
 		if(car.isValid()==true){
 			
 			//session.setAttribute("targa",car.getTarga());
-			session.setAttribute("marca",car.getMarca());
-			session.setAttribute("modello",car.getModello());
-			session.setAttribute("data_immatricolazione",car.getData_immatricolazione());
+			//session.setAttribute("marca",car.getMarca());
+			//session.setAttribute("modello",car.getModello());
+			//session.setAttribute("data_immatricolazione",car.getData_immatricolazione());
+			session.setAttribute("soglia_mail",car.getSoglia_email());
+			session.setAttribute("soglia_sms",car.getSoglia_sms());
 		}
 		if(car.isError())
 			response.sendRedirect("OperazioneNegata.jsp");

@@ -44,7 +44,7 @@ public class registrationServlet extends HttpServlet {
 			
 			session.setAttribute("email", user.getEmail());
 			session.setAttribute("nome",user.getNome());
-			session.setAttribute("cognome", user.getCognome());
+			//session.setAttribute("cognome", user.getCognome());
 			session.setAttribute("targa", car.getTarga());
 			response.sendRedirect("dashboard.jsp");	}
 	

@@ -90,10 +90,11 @@ if (GBrowserIsCompatible()) {
 
 	function messSuperamento1() {
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
-			document.getElementsByClassName("waves-effect waves-light")[1].click();
+			alert("Soglia email superata-invio email")
+			//document.getElementsByClassName("waves-effect waves-light")[1].click();
 			//var snd = new Audio("audio/popup.mp3");
 			//snd.play();
-			//sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
+			sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
 		}
 
 	}
@@ -101,7 +102,8 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
-			document.getElementsByClassName("waves-effect waves-light")[2].click();
+			alert("Soglia sms superata-invio sms")
+			//document.getElementsByClassName("waves-effect waves-light")[2].click();
 			//var snd = new Audio("audio/notifica2.wav");
 			//snd.play();
 		}
@@ -110,6 +112,7 @@ if (GBrowserIsCompatible()) {
 	function start(posiniziale,posfinale,soglia_mail,soglia_sms,speed,nome,email) {
 
 		mail = email;
+		alert(mail)
 		nome = name;
 		sogliaone = soglia_mail;
 		sogliatwo = soglia_sms;
@@ -133,15 +136,15 @@ function sendingMail(a,b,c){
 		data: {
 			'key': 'dS1-S4X_hBsL2x_5pe4a8A',
 			'message': {
-				'from_email': 'alfadaprogetti@gmail.com',
+				'from_email': 'cla.biondi2104@gmail.com',
 				'to': [
 				       {
 				    	   'email': a,
 				    	   'type': 'to'
 				       }
 				       ],
-				       'subject': 'ALFADA PROGETTI - Avviso superamento soglia',
-				       'html': 'Salve ' + nome+'; <br/><br/> Volevamo informarla che la prima soglia Ã¨ stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ALFADA PROGETTI --'
+				       'subject': 'ProjectCipCip - Avviso superamento soglia',
+				       'html': 'Salve ' + nome+'; <br/><br/> La soglia per email è stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ProjectCipCip --'
 			}
 		}
 	});

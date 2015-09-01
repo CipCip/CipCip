@@ -46,15 +46,15 @@ public class loginServlet extends HttpServlet {
 			
 			session.setAttribute("email",utente.getEmail());
 			session.setAttribute("nome",utente.getNome());
-			session.setAttribute("cognome",utente.getCognome());
+			//session.setAttribute("cognome",utente.getCognome());
 			session.setAttribute("targa", car.getTarga());
 			System.out.print(car.getTarga());
 			
 			car=VeicoloDAO.selezionaVeicolo(utente,car);
 			
-			session.setAttribute("marca", car.getMarca());
-			session.setAttribute("modello", car.getModello());
-			session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
+			//session.setAttribute("marca", car.getMarca());
+			//session.setAttribute("modello", car.getModello());
+			//session.setAttribute("data_immatricolazione", car.getData_immatricolazione());
 			session.setAttribute("soglia_mail",car.getSoglia_email());
 			session.setAttribute("soglia_sms",car.getSoglia_sms());
 			
