@@ -22,9 +22,9 @@ if (GBrowserIsCompatible()) {
 	var poly;
 	var eol;
 	var car = new GIcon();
-	car.image="images/samples/tmid.png"
-		car.iconSize=new GSize(60,100);
-	car.iconAnchor=new GPoint(30,100);
+	car.image="images/samples/cip.jpg"
+		car.iconSize=new GSize(30,50);
+	car.iconAnchor=new GPoint(15,40);
 	var k=0;
 	var stepnum=0;
 	var speed = "";   

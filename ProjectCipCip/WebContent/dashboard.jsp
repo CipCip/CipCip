@@ -42,9 +42,10 @@
           <ul class="nav navbar-nav navbar-right">
            
             <li><form  method="POST" action="LogoutServlet" class="form" id="form1">
-            <input type="submit" name="Logout" value="Logout"></form></li>
-           
-           
+            <!-- <input type="submit" name="Logout" value="Logout"> -->
+            </br>
+           <button class="btn btn-red waves-button waves-effect waves-light" type="submit" value="Submit">Logout</button>
+           </form></li>
           </ul>          
         </div>
       </div>
