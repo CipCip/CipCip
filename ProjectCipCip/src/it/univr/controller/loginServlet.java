@@ -1,7 +1,11 @@
 package it.univr.controller;
 
+import it.univr.bean.CipCipBean;
+import it.univr.bean.PosizioniBean;
 import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
+import it.univr.model.CipCipDAO;
+import it.univr.model.PositionDAO;
 import it.univr.model.UserDAO;
 import it.univr.model.VeicoloDAO;
 
@@ -57,8 +61,35 @@ public class loginServlet extends HttpServlet {
 			if(utente.getAmministratore()==1){
 				response.sendRedirect("dashboardAmministrazione.jsp");
 			}
-			else
-				response.sendRedirect("dashboard.jsp");}
+			else{
+				//aggiungo codice di Cipcip servlet per vedere se da qui funziona
+				/*try
+				{	    
+					HttpSession session1 = request.getSession(true);
+					CipCipBean cip = new CipCipBean();
+					cip.setTargaCipCip((String) session1.getAttribute("targa"));
+					
+					cip = CipCipDAO.invio(cip);
+					
+					session1.setAttribute("speed",cip.getVelocita());
+					//cip = null;
+					
+					PosizioniBean positions = new PosizioniBean();
+					positions = PositionDAO.positions(positions);
+					
+					session1.setAttribute("posiniziale",positions.getPosIniziale());
+					session1.setAttribute("posfinale",positions.getPosFinale());
+					positions = null;
+					
+					response.sendRedirect("dashboard.jsp");
+					
+				} 
+				catch (Throwable theException) 	    
+				{
+					System.out.println(theException); */
+				response.sendRedirect("dashboard.jsp");
+				}
+				}
 		else
 				response.sendRedirect("errorLogIn.jsp");
 		}
