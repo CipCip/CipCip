@@ -2,12 +2,16 @@ package it.univr.model;
 
 
 
-import it.univr.bean.CipCipBean;
+//import it.univr.bean.CipCipBean;
 import it.univr.bean.PosizioniBean;
+//import it.univr.bean.UserBean;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PositionDAO {
 	static Connection currentCon = null;
@@ -70,7 +74,7 @@ public class PositionDAO {
 
 	}
 	
-	public static PosizioniBean lastfivepositions(CipCipBean pos){
+	/*public static PosizioniBean lastfivepositions(CipCipBean pos){
 
 		Statement stmt = null;
 		String targa = pos.getTargaCipCip();
@@ -129,5 +133,28 @@ public class PositionDAO {
 
 		return posizione;
 
+	}*/
+	
+	public static List<PosizioniBean> getPosizioni(String targa) {
+	 	Statement stmt=null;
+		List<PosizioniBean> res = new ArrayList<>();
+		System.out.println("Targa:"+targa);
+	
+		String queryPos = "select * from posizioni where targaposizioni='"+targa+"'";
+		
+		try {
+			currentCon = ConnectionManager.getConnection(); 
+			stmt= currentCon.createStatement();
+			rs = stmt.executeQuery(queryPos);
+			
+			while (rs.next())
+				res.add(new PosizioniBean(rs));
+			} 
+		catch (SQLException e) {
+			System.out.println("Select failed: An Exception has occurred! " + e);
+			
+		}
+		
+		return res;
 	}
 }

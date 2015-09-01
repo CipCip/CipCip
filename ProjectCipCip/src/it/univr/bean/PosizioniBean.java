@@ -1,5 +1,7 @@
 package it.univr.bean;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 
 public class PosizioniBean {
@@ -13,6 +15,27 @@ public class PosizioniBean {
 	private String posfinale;
 	
 	private String targaPosizione;
+	
+	
+	
+	public PosizioniBean(String posiniziale, String posfinale,
+			String targaPosizione) {
+		super();
+		this.posiniziale = posiniziale;
+		this.posfinale = posfinale;
+		this.targaPosizione = targaPosizione;
+	}
+	
+	public PosizioniBean(){
+		new PosizioniBean(posiniziale, posfinale, targaPosizione); 
+	}
+
+	public PosizioniBean(ResultSet rs) throws SQLException {
+		this.posiniziale = rs.getString("posiniziale");
+		this.posfinale = rs.getString("posfinale");
+		this.targaPosizione = rs.getString("targaposizioni");
+		
+	}
 	
 
 

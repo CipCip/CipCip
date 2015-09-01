@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1" import="it.univr.bean.*" import="it.univr.model.*"
+	import="java.util.*"%>
 <%@ include file="headDashboard.jsp" %>
 
     <div class="container-fluid">
@@ -22,50 +25,33 @@
           <div class="table-responsive">
             <table class="table table-hover">
               <thead>
-                <tr>
-                  <th>Data</th>
-                  <th>Ora</th>                  
+                <tr>                 
                   <th>Targa</th>
-                  <th>Latitudine</th>
-                  <th>Longitudine</th>                                     
+                  <th>Posizione inizio rilevamento</th>
+                  <th>Posizione fine rilevamento</th>                                     
                 </tr>
               </thead>
-              <tbody>
+               <tbody>
+              <!-- %String targa=(String)session.getAttribute("targa"); %>-->
+              
+              
+              	<%
+				List<PosizioniBean> listaPosizioni = PositionDAO.getPosizioni((String)session.getAttribute("targa"));
+				%>
+
+				<%
+				for (PosizioniBean pos : listaPosizioni) {
+				%>
+				
                 <tr>
-                  <td>21/06/2015</td>
-                  <td>12:50:15</td>  
-                  <td>AB123CD</td>
-                  <td>21.9</td>
-                  <td>12.33</td>                                 
+                
+                  <td><%=pos.getTarga() %></td>
+                  <td><%=pos.getPosIniziale() %></td>
+                  <td><%=pos.getPosFinale() %></td>
+                                                                
+               
                 </tr>
-                <tr>
-                  <td>10/06/2015</td>
-                  <td>14:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>121.9</td>
-                  <td>52.433</td>                                 
-                </tr>
-                <tr>
-                  <td>21/06/2015</td>
-                  <td>15:45:15</td>  
-                  <td>AB123CD</td>
-                  <td>12.9</td>
-                  <td>18.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>03/06/2015</td>
-                  <td>19:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>31.9</td>
-                  <td>87.4833</td>                                 
-                </tr>
-                <tr>
-                  <td>21/06/2015</td>
-                  <td>12:00:15</td>  
-                  <td>AB123CD</td>
-                  <td>87.9</td>
-                  <td>12.4833</td>                                 
-                </tr>
+                 <%} %>          
                 
               </tbody>
             </table>
