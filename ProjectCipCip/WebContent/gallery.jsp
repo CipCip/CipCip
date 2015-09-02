@@ -23,65 +23,17 @@
 
 
 				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
+					<!--  <a class="thumbnail" href="#"> -->
+					<!--  <img class="img-responsive" src="http://placehold.it/400x300" alt=""> -->
+						<object data="images/samples/Filmato.mp4" type="video/mpeg">
+  							<param name="autostart" value="true">
+  							<param name="loop" value="true">
+  							<param name="src" value="images/samples/Filmato.mp4">
+  							<!-- <embed src="Filmato.mp4" autostart="true" loop="false"></embed> -->
+						</object>
+					
 				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-					<a class="thumbnail" href="#"> <img class="img-responsive"
-						src="http://placehold.it/400x300" alt="">
-					</a>
-				</div>
+	
 			</div>
 		</div>
 	</div>

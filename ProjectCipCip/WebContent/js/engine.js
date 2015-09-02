@@ -89,9 +89,11 @@ if (GBrowserIsCompatible()) {
 	});
 
 	function messSuperamento1() {
+	
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
-			alert("Soglia email superata-invio email")
-			//document.getElementsByClassName("waves-effect waves-light")[1].click();
+		
+			//alert("Soglia email superata-invio email");
+			document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[1].click();
 			//var snd = new Audio("audio/popup.mp3");
 			//snd.play();
 			sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
@@ -102,8 +104,10 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
-			alert("Soglia sms superata-invio sms")
-			//document.getElementsByClassName("waves-effect waves-light")[2].click();
+			//alert("Soglia sms superata-invio sms")
+			
+			document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[2].click();
+			location.href="gallery.jsp";
 			//var snd = new Audio("audio/notifica2.wav");
 			//snd.play();
 		}
@@ -112,7 +116,6 @@ if (GBrowserIsCompatible()) {
 	function start(posiniziale,posfinale,soglia_mail,soglia_sms,speed,nome,email) {
 
 		mail = email;
-		alert(mail)
 		nome = name;
 		sogliaone = soglia_mail;
 		sogliatwo = soglia_sms;

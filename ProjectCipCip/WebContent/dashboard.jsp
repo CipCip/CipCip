@@ -104,10 +104,10 @@
                                                                                                 <script src="js/engine.js" type="text/javascript"> </script>
  
                                                                                                 </span>
-                                                                                                <button class="waves-effect waves-light" data-toggle="toast"
+                                                                                                <button class="btn btn-red waves-button waves-effect waves-light" data-toggle="toast"
                                                                                                         title="E' stata superata la prima soglia. Verrà mandata un'email sull'account di posta registrato."
                                                                                                         hidden="hidden"></button>
-                                                                                                <button class="waves-effect waves-light" data-toggle="toast"
+                                                                                                <button class="btn btn-red waves-button waves-effect waves-light" data-toggle="toast"
                                                                                                         title="ATTENZIONE! PROBABILE FURTO DELL'AUTO! E' stata superata la seconda soglia. Verrà mandato un'SMS immediatamente!"
                                                                                                         hidden="hidden"></button>
                                                                                         </div>
