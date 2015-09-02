@@ -10,6 +10,7 @@
 				<li class="active"><a href="eliminaVeicolo.jsp">Elimina veicolo <span
 						class="sr-only">(current)</span></a></li>
 				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
+				<li><a href="notificheClienti.jsp">Notifiche clienti</a></li>
 			</ul>
 
 		</div>

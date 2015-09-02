@@ -1,11 +1,14 @@
 package it.univr.model;
 
 import it.univr.bean.HelpBean;
+import it.univr.bean.UserBean;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelpDAO {
 	static ResultSet rs = null;
@@ -54,4 +57,56 @@ public class HelpDAO {
     	
     	return help;
     }
+    
+    public static List<HelpBean> getHelp() {
+	 	Statement stmt=null;
+		List<HelpBean> res = new ArrayList<>();
+		
+		String query="select * from help order by email";
+		
+		try {
+			connessione = ConnectionManager.getConnection(); 
+			stmt= connessione.createStatement();
+			rs = stmt.executeQuery(query);
+			
+			while (rs.next())
+				res.add(new HelpBean(rs));
+			} 
+		catch (SQLException e) {
+			System.out.println("Select failed: An Exception has occurred! " + e);
+			
+		}
+		
+		return res;
+	}
+    
+    public static boolean deleteSelection(HelpBean help){
+		 Statement stmt = null;
+		 boolean res=false;
+		 int a = help.getId();
+		 
+		 String eliminaQuery = "delete from help where id='"+a+"'";
+		 try{
+				try {
+					connessione = ConnectionManager.getConnection(); 
+					stmt= connessione.createStatement();
+					stmt.executeUpdate(eliminaQuery);
+					int more = stmt.getUpdateCount();
+					if(more!=0)
+						res=true;
+						
+					
+				} catch (SQLException b1) {
+					System.out.println("Eliminazione fallita " + b1);
+					help.setValid(true);
+				}
+				//rs.close();
+				stmt.close();
+				}
+				catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				return res;
+		 
+	 }
 }

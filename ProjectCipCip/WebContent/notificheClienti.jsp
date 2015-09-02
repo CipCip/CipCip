@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1" import="it.univr.bean.*" import="it.univr.model.*"
+	import="java.util.*"%>
+<%@ include file="headDashboard.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,40 +28,49 @@
 
 
 
+			<div class="table-responsive">
+			 <form action="NotificheClientiServlet.jsp" method="POST" name="formFiltro"> 
+            <table class="table table-hover">
+              <thead>
+                <tr> 
+                  <th>Id</th>                 
+                  <th>Nome</th>                  
+                  <th>Email</th>
+                  <th>Messaggio</th>
+                  <th></th>                                     
+                </tr>
+              </thead>
+              <tbody>
+              
+              	<%
+				List<HelpBean> listaHelp = HelpDAO.getHelp();
+				%>
 
-			<div id="form-main">
-				<div id="form-div">
-					<form  method="POST" action="NotificheCLientiServlet" class="form" id="form1">
-						
-
-						<p class="name">
-							<input name="nome" type="text" required="required"
-								class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
-								placeholder="Nome *" id="nome" />
-						</p>
-						
-						<p class="email">
-							<input name="email" type="email" required="required"
-								class="validate[required,custom[email]] feedback-input" id="email"
-								placeholder="Email privata per la risposta *" />
-
-						<p class="email">
-							<input name="messaggio" type="text"
-								class="feedback-input"
-								id="email" placeholder="Messaggio *" />
-						</p>
-						
-						
-
-						<div class="submit">
-							<input style="margin-bottom: 15px;" type="submit" value="Invia messaggio"
-								id="button-blue" />
-							<div class="ease"></div>
-						</div>
+				<%
+				for (HelpBean help : listaHelp) {
+				%>
+				
+                <tr>
+                  
+                  <td><%=help.getId() %></td>
+                  <td><%=help.getNome() %></td>
+                  <td><%=help.getEmail() %></td>
+                  <td><%=help.getMessaggio() %></td>
+                  <td><input type="radio" name="rdbSelezione" value="<%=help.getId()%>"></td>
+                  <td><input type="submit" name="btnMode" value="MessaggioProcessato"> </td>
+                                               
+               
+                </tr>
+                 <%} %>          
+                
+              </tbody>
+            </table>
+           </form> 
+          </div>
 						
 					
 						
-					</form>
+					
 										
 				</div>								
 			</div>
@@ -68,8 +79,7 @@
 
 
 		</div>
-	</div>
-</div>
+
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
