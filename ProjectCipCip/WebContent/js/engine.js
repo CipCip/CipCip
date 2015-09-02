@@ -92,8 +92,8 @@ if (GBrowserIsCompatible()) {
 	
 		if ( parseFloat(sogliaone) < parseFloat(stepspeed)){
 		
-			//alert("Soglia email superata-invio email");
-			document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[1].click();
+			alert("Soglia email superata-invio email");
+			//document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[1].click();
 			//var snd = new Audio("audio/popup.mp3");
 			//snd.play();
 			sendingMail(mail,marker.getPoint().lat(),marker.getPoint().lng());
@@ -104,9 +104,9 @@ if (GBrowserIsCompatible()) {
 	function messSuperamento2(){
 
 		if (parseFloat(sogliatwo) < parseFloat(stepspeed)){
-			//alert("Soglia sms superata-invio sms")
+			alert("Soglia sms superata-invio sms");
 			
-			document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[2].click();
+			//document.getElementsByClassName("btn btn-red waves-button waves-effect waves-light")[2].click();
 			location.href="gallery.jsp";
 			//var snd = new Audio("audio/notifica2.wav");
 			//snd.play();

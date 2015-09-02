@@ -29,7 +29,7 @@
   							<param name="autostart" value="true">
   							<param name="loop" value="true">
   							<param name="src" value="images/samples/Filmato.mp4">
-  							<!-- <embed src="Filmato.mp4" autostart="true" loop="false"></embed> -->
+  							<embed src="images/samples/Filmato.mp4" autostart="true" loop="true"></embed>
 						</object>
 					
 				</div>

@@ -64,7 +64,7 @@
                                         <li><a href="rimuoviVeicolo.jsp">Rimuovi veicolo</a></li>
                                         <li><a href="avvisi.jsp">Avvisi</a></li>
                                         <li><a href="gallery.jsp">Gallery</a></li>
-                                        <li><a href="#">Help</a></li>
+                                        <li><a href="help.jsp">Help</a></li>
                                 </ul>
                         </div>
                 </div>
@@ -104,12 +104,12 @@
                                                                                                 <script src="js/engine.js" type="text/javascript"> </script>
  
                                                                                                 </span>
-                                                                                                <button class="btn btn-red waves-button waves-effect waves-light" data-toggle="toast"
+                                                                                               <!--   <button class="btn btn-red waves-button waves-effect waves-light" data-toggle="toast"
                                                                                                         title="E' stata superata la prima soglia. Verrà mandata un'email sull'account di posta registrato."
                                                                                                         hidden="hidden"></button>
                                                                                                 <button class="btn btn-red waves-button waves-effect waves-light" data-toggle="toast"
                                                                                                         title="ATTENZIONE! PROBABILE FURTO DELL'AUTO! E' stata superata la seconda soglia. Verrà mandato un'SMS immediatamente!"
-                                                                                                        hidden="hidden"></button>
+                                                                                                        hidden="hidden"></button>-->
                                                                                         </div>
                                        
  

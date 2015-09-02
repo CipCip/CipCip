@@ -42,6 +42,7 @@ public class ImpostazioniServlet extends HttpServlet {
 		car=VeicoloDAO.modifica(car, targaUtente);
 		
 		if(user.isError()==false && car.isError()==false){
+			session.setAttribute("targa", car.getTarga());
 			session.setAttribute("soglia_mail",car.getSoglia_email());
 			session.setAttribute("soglia_sms",car.getSoglia_sms());
 			response.sendRedirect("dashboard.jsp");
