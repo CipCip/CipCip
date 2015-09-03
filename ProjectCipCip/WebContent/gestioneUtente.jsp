@@ -74,6 +74,7 @@
 							<div class="ease"></div>
 							</form>
 						</div>
+						</div>
 
 							
 				</div>								
@@ -84,8 +85,8 @@
 
 
 		</div>
-	</div>
-</div>
+	
+
 
 <!-- Bootstrap core JavaScript
     ================================================== -->

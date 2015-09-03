@@ -29,7 +29,7 @@
 
 
 			<div class="table-responsive">
-			 <form action="NotificheClientiServlet.jsp" method="POST" name="formFiltro"> 
+			 <form action="MessaggioProcessato.jsp" method="POST" name="formFiltro"> 
             <table class="table table-hover">
               <thead>
                 <tr> 
@@ -57,7 +57,11 @@
                   <td><%=help.getEmail() %></td>
                   <td><%=help.getMessaggio() %></td>
                   <td><input type="radio" name="rdbSelezione" value="<%=help.getId()%>"></td>
-                  <td><input type="submit" name="btnMode" value="MessaggioProcessato"> </td>
+                  <td><input type="radio" name="rdbSelezioneNome" value="<%=help.getNome()%>"></td>
+                  <td><input type="radio" name="rdbSelezioneEmail" value="<%=help.getEmail()%>"></td>
+                   
+                  <td> 	
+                  <input type="submit" name="btnMode" value="MessaggioProcessato"> </td>
                                                
                
                 </tr>

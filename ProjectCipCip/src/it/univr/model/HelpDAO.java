@@ -1,7 +1,6 @@
 package it.univr.model;
 
 import it.univr.bean.HelpBean;
-import it.univr.bean.UserBean;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -80,27 +79,28 @@ public class HelpDAO {
 		return res;
 	}
     
-    public static boolean deleteSelection(HelpBean help){
+    public static boolean deleteSelection(String id){
 		 Statement stmt = null;
 		 boolean res=false;
-		 int a = help.getId();
 		 
-		 String eliminaQuery = "delete from help where id='"+a+"'";
+		 String eliminaQuery = "delete from help where id='"+id+"'";
 		 try{
 				try {
 					connessione = ConnectionManager.getConnection(); 
 					stmt= connessione.createStatement();
 					stmt.executeUpdate(eliminaQuery);
 					int more = stmt.getUpdateCount();
-					if(more!=0)
+					if(more!=0){
 						res=true;
+						
+					}
 						
 					
 				} catch (SQLException b1) {
-					System.out.println("Eliminazione fallita " + b1);
-					help.setValid(true);
+					System.out.println("Eliminazione messaggio cliente fallita " + b1);
+					
 				}
-				//rs.close();
+				
 				stmt.close();
 				}
 				catch (Exception ex) {

@@ -25,7 +25,7 @@ public class ModificaUtenteServlet extends HttpServlet {
 		
 		HttpSession session=request.getSession(true);
 		String emailP=(String)session.getAttribute("rdbSelezione");
-		System.out.println(emailP);
+		
 		
 		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("password"));
