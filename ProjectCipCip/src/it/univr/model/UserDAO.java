@@ -15,13 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 //DAO responsabile delle query
-public class UserDAO {
+public class UserDAO implements UserDAOInterface {
 	
 
     static ResultSet rs = null;
     static Connection connessione = null;
 
-	public static UserBean logIn(UserBean user, VeicoloBean car) {
+	public UserBean logIn(UserBean user, VeicoloBean car) {
 		
 		Statement stmt = null;
 	    
@@ -69,7 +69,7 @@ public class UserDAO {
 	
 }
 		
-	public static UserBean registrazione(UserBean user, VeicoloBean car) {
+	public UserBean registrazione(UserBean user, VeicoloBean car) {
 		Statement stmt = null;
 	
 		String a = user.getEmail();
@@ -133,7 +133,7 @@ public class UserDAO {
 			return user;
 	}
 	
-	public static UserBean modifica(UserBean user, String emailUtente) {
+	public UserBean modifica(UserBean user, String emailUtente) {
 		Statement stmt = null;
 		
 		//String a = user.getEmail();
@@ -171,7 +171,7 @@ public class UserDAO {
 			return user;
 	}
 	 
-	 public static UserBean updateUtente(UserBean user, String emailP){
+	 public UserBean updateUtente(UserBean user, String emailP){
 		 Statement stmt = null;
 			
 			//String a = user.getEmail();
@@ -216,7 +216,7 @@ public class UserDAO {
 		 
 	 }
 	 
-	 public static List<UserBean> getUsers() {
+	 public List<UserBean> getUsers() {
 		 	Statement stmt=null;
 			List<UserBean> res = new ArrayList<>();
 			
@@ -238,7 +238,7 @@ public class UserDAO {
 			return res;
 		}
 	 
-	 public static boolean eliminaUtente(UserBean user){
+	 public boolean eliminaUtente(UserBean user){
 		 Statement stmt = null;
 		 boolean res=false;
 		 String a = user.getEmail();
@@ -273,7 +273,7 @@ public class UserDAO {
 		 
 	 }
 	 
-	 public static UserBean modificaAmministratore(UserBean user, String email){
+	 public UserBean modificaAmministratore(UserBean user, String email){
 		 Statement stmt= null;
 		 ;
 			String b = user.getPassword();

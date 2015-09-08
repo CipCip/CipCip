@@ -7,12 +7,12 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class CipCipDAO {
+public class CipCipDAO implements CipCipDAOInterface {
 	static Connection currentCon = null;
 	static ResultSet rs = null; 
 
 
-	public static CipCipBean invio(CipCipBean cinguetto) throws InterruptedException{
+	public CipCipBean invio(CipCipBean cinguetto) throws InterruptedException{
 
 		Statement stmt = null;
 		String a = cinguetto.getTargaCipCip();

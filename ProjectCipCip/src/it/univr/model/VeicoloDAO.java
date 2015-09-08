@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class VeicoloDAO {
+public class VeicoloDAO implements VeicoloDAOInterface {
 	static ResultSet rs = null;
     static Connection connessione = null;
     
-    public static VeicoloBean inserimento(VeicoloBean car, String targa, String email){
+    public VeicoloBean inserimento(VeicoloBean car, String targa, String email){
     	
     	Statement stmt=null;
     	
@@ -73,7 +73,7 @@ public class VeicoloDAO {
 	
     }
     
-    public static VeicoloBean modifica(VeicoloBean car, String targa) {
+    public VeicoloBean modifica(VeicoloBean car, String targa) {
 		Statement stmt = null;
 		
 		String a = car.getSoglia_email();
@@ -115,7 +115,7 @@ public class VeicoloDAO {
 			return car;
 	}
     
-    public static boolean rimuoviVeicolo(String targaUtente){
+    public boolean rimuoviVeicolo(String targaUtente){
     	Statement stmt=null;
     	boolean res= false;
     
@@ -148,7 +148,7 @@ public class VeicoloDAO {
 			return res;
 	}
     
-    public static VeicoloBean listaVeicolo(VeicoloBean car, String targaUtente){
+    public VeicoloBean listaVeicolo(VeicoloBean car, String targaUtente){
     	
     	Statement stmt=null;
     	
@@ -176,7 +176,7 @@ public class VeicoloDAO {
 			return car;
 	
     }
-    public static VeicoloBean updateVeicolo(VeicoloBean car, String targa){
+    public VeicoloBean updateVeicolo(VeicoloBean car, String targa){
 		 Statement stmt = null;
 			
 			String a = car.getTarga();
@@ -223,7 +223,7 @@ public class VeicoloDAO {
 		 
 	 }
     
-    public static List<VeicoloBean> getCars() {
+    public List<VeicoloBean> getCars() {
 	 	Statement stmt=null;
 		List<VeicoloBean> res = new ArrayList<>();
 		
@@ -244,7 +244,7 @@ public class VeicoloDAO {
 		return res;
 	}
     
-    public static VeicoloBean selezionaVeicolo(UserBean user,VeicoloBean car){
+    public VeicoloBean selezionaVeicolo(UserBean user,VeicoloBean car){
     	Statement stmt=null;
     	
     	
@@ -295,7 +295,7 @@ public class VeicoloDAO {
     	
     }
     
-    public static boolean eliminaVeicolo(VeicoloBean car){
+    public boolean eliminaVeicolo(VeicoloBean car){
 		 Statement stmt = null;
 		 boolean res=false;
 		 String a = car.getTarga();

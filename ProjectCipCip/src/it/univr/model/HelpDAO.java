@@ -9,11 +9,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HelpDAO {
+public class HelpDAO implements HelpDAOInterface {
 	static ResultSet rs = null;
     static Connection connessione = null;
     
-    public static HelpBean inserisciaiuto(HelpBean help){
+    public HelpBean inserisciaiuto(HelpBean help){
     	Statement stmt=null;
     	
     	String a=help.getNome();
@@ -57,7 +57,7 @@ public class HelpDAO {
     	return help;
     }
     
-    public static List<HelpBean> getHelp() {
+    public List<HelpBean> getHelp() {
 	 	Statement stmt=null;
 		List<HelpBean> res = new ArrayList<>();
 		
@@ -79,7 +79,7 @@ public class HelpDAO {
 		return res;
 	}
     
-    public static boolean deleteSelection(String id){
+    public boolean deleteSelection(String id){
 		 Statement stmt = null;
 		 boolean res=false;
 		 
