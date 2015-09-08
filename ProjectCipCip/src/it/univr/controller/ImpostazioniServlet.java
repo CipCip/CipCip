@@ -2,8 +2,9 @@ package it.univr.controller;
 
 import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
-import it.univr.model.UserDAO;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.UserDAOInterface;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
@@ -37,12 +38,13 @@ public class ImpostazioniServlet extends HttpServlet {
 		car.setSoglia_email(request.getParameter("soglia_mail"));
 		//car.setTarga(request.getParameter("targa"));
 		
-		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        UserDAOInterface UserDAO = factory.getUserDAO();
 		user=UserDAO.modifica(user, emailUtente);
+        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
 		car=VeicoloDAO.modifica(car, targaUtente);
 		
 		if(user.isError()==false && car.isError()==false){
-			session.setAttribute("targa", car.getTarga());
 			session.setAttribute("soglia_mail",car.getSoglia_email());
 			session.setAttribute("soglia_sms",car.getSoglia_sms());
 			response.sendRedirect("dashboard.jsp");

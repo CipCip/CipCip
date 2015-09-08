@@ -43,7 +43,7 @@ import java.util.LinkedList;
 			
 			// Genero una velocità random
 			
-			velocita = (float) (20 + Math.random() * 100);
+			velocita = (float) (30 + Math.random() * 100);
 			System.out.println("VELOCITA: "+velocita);
 			
 		}

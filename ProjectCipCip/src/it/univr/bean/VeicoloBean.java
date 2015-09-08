@@ -2,9 +2,6 @@ package it.univr.bean;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
-
-import sun.util.calendar.LocalGregorianCalendar.Date;
 
 public class VeicoloBean {
 	

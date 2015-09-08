@@ -1,7 +1,8 @@
 package it.univr.controller;
 
 import it.univr.bean.VeicoloBean;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
@@ -35,11 +36,11 @@ public class VeicoloServlet extends HttpServlet {
 		car.setSoglia_email(request.getParameter("soglia_mail"));
 		//car.setTarga(request.getParameter("targa"));
 		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
 		car=VeicoloDAO.inserimento(car, targa, email);
 		
 		if(car.isValid()==true){
-			
-			session.setAttribute("targa",car.getTarga());
 			session.setAttribute("marca",car.getMarca());
 			session.setAttribute("modello",car.getModello());
 			session.setAttribute("data_immatricolazione",car.getData_immatricolazione());
@@ -48,9 +49,8 @@ public class VeicoloServlet extends HttpServlet {
 		}
 		if(car.isError())
 			response.sendRedirect("OperazioneNegata.jsp");
-		else
+		else{
 			response.sendRedirect("dashboard.jsp");
-		
 	}
-
+	}
 }

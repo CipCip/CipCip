@@ -32,7 +32,7 @@
 			<div id="form-main">
 			<div id="form-div">
 			<h3>Errore nel logIn</h3>
-			<h3>Torna indietro!</h3>
+			<h3>Scegli il tasto HOME!</h3>
 			</div></div>
 
 </body>

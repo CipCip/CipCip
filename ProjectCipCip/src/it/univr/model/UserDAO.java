@@ -4,12 +4,8 @@ import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +31,7 @@ public class UserDAO implements UserDAOInterface {
 		}
 		
 		String logInQuery="select * from utente u, veicolo v where u.email='" + d
-				+ "' and u.password='" + e + "' and v.targa='" + f + "'";
+				+ "' and u.password='" + e + "' and v.targa='" + f + "' and u.email=v.emailutente";
 		try{
 		try {
 			connessione = ConnectionManager.getConnection(); 

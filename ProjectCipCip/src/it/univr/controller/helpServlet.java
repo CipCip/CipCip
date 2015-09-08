@@ -1,8 +1,11 @@
 package it.univr.controller;
 
 import it.univr.bean.HelpBean;
-import it.univr.model.HelpDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.HelpDAOInterface;
+
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +30,8 @@ public class helpServlet extends HttpServlet {
 		help.setEmail(request.getParameter("email"));
 		help.setMessaggio(request.getParameter("messaggio"));
 			
-		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        HelpDAOInterface HelpDAO = factory.getHelpDAO();
 		help=HelpDAO.inserisciaiuto(help);
 		
 		if(help.isValid()==true){

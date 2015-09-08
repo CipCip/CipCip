@@ -2,13 +2,11 @@ package it.univr.controller;
 
 import it.univr.bean.CipCipBean;
 import it.univr.bean.PosizioniBean;
-import it.univr.model.CipCipDAO;
-import it.univr.model.PositionDAO;
-
-
+import it.univr.model.CipCipDAOInterface;
+import it.univr.model.DAOFactory;
+import it.univr.model.PositionDAOInterface;
 
 import java.io.IOException;
-
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,12 +29,16 @@ public class CipCipServlet extends HttpServlet {
 			CipCipBean cip = new CipCipBean();
 			cip.setTargaCipCip((String) session.getAttribute("targa"));
 			
+			DAOFactory factory = DAOFactory.getDAOFactory();
+	        CipCipDAOInterface CipCipDAO = factory.getCipCipDAO();
 			cip = CipCipDAO.invio(cip);
 			
 			session.setAttribute("speed",cip.getVelocita());
 			//cip = null;
 			
 			PosizioniBean positions = new PosizioniBean();
+			factory = DAOFactory.getDAOFactory();
+	        PositionDAOInterface PositionDAO = factory.getPositionDAO();
 			positions = PositionDAO.positions(positions);
 			
 			session.setAttribute("posiniziale",positions.getPosIniziale());

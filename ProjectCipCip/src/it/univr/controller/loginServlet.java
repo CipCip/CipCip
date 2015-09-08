@@ -1,17 +1,14 @@
 package it.univr.controller;
 
-import it.univr.bean.CipCipBean;
-import it.univr.bean.PosizioniBean;
+
 import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
-import it.univr.model.CipCipDAO;
-import it.univr.model.PositionDAO;
-import it.univr.model.UserDAO;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.UserDAOInterface;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +34,8 @@ public class loginServlet extends HttpServlet {
 		car.setTarga(request.getParameter("targa"));
 		utente.setPassword(request.getParameter("password"));
 		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+		UserDAOInterface UserDAO = factory.getUserDAO();
 		utente=UserDAO.logIn(utente, car);
 		
 		
@@ -50,6 +49,8 @@ public class loginServlet extends HttpServlet {
 			session.setAttribute("targa", car.getTarga());
 			System.out.print(car.getTarga());
 			
+			factory = DAOFactory.getDAOFactory();
+	        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
 			car=VeicoloDAO.selezionaVeicolo(utente,car);
 			
 			session.setAttribute("marca", car.getMarca());

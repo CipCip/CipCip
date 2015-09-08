@@ -2,7 +2,8 @@ package it.univr.controller;
 
 
 import it.univr.bean.VeicoloBean;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
@@ -26,6 +27,8 @@ public class EliminazioneVeicoloServlet extends HttpServlet {
 		
 		car.setTarga(request.getParameter("targa"));
 		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();		
 		boolean res=VeicoloDAO.eliminaVeicolo(car);
 		
 		 if(res==true)

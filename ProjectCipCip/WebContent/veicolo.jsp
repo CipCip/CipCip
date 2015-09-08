@@ -29,9 +29,9 @@
 						<!-- <p class="targa">
 							<input name="targa" type="text" class="feedback-input"
 								minlength="6" maxlength="7" id="targa"
-								placeholder="Conferma targa" />  -->
+								placeholder="Conferma targa" /> 
 
-						</p>
+						</p> -->
 						
 						<p class="marca">
 							<input name="marca" type="text" class="feedback-input" id="marca"

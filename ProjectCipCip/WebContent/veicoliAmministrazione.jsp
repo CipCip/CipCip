@@ -45,6 +45,8 @@
               </thead>
               <tbody>
               <%
+              	DAOFactory factory = DAOFactory.getDAOFactory();
+              	VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
 				List<VeicoloBean> listaVeicoli = VeicoloDAO.getCars();
 				%>
 

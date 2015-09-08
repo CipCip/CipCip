@@ -1,7 +1,7 @@
 package it.univr.controller;
 
-import it.univr.bean.VeicoloBean;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
@@ -26,6 +26,9 @@ public class RimuoviVeicoloServlet extends HttpServlet {
 		
 		HttpSession session=request.getSession(true);
 		String targaUtente=(String)session.getAttribute("targa");
+		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
 		boolean rimosso=VeicoloDAO.rimuoviVeicolo(targaUtente);
 		
 		if(rimosso){

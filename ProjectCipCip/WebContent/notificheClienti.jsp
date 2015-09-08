@@ -43,6 +43,8 @@
               <tbody>
               
               	<%
+              	DAOFactory factory = DAOFactory.getDAOFactory();
+                HelpDAOInterface HelpDAO = factory.getHelpDAO();
 				List<HelpBean> listaHelp = HelpDAO.getHelp();
 				%>
 

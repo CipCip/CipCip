@@ -36,6 +36,8 @@
               
               
               	<%
+              	DAOFactory factory = DAOFactory.getDAOFactory();
+                PositionDAOInterface PositionDAO = factory.getPositionDAO();
 				List<PosizioniBean> listaPosizioni = PositionDAO.getPosizioni((String)session.getAttribute("targa"));
 				%>
 

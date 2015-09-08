@@ -1,9 +1,8 @@
 package it.univr.controller;
 
-import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
-import it.univr.model.UserDAO;
-import it.univr.model.VeicoloDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.VeicoloDAOInterface;
 
 import java.io.IOException;
 
@@ -38,8 +37,9 @@ public class CarAmminServlet extends HttpServlet {
 		car.setEmail_utente(request.getParameter("emailutente"));
 		
 		
-		
-		car=VeicoloDAO.updateVeicolo(car, targaP);
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        VeicoloDAOInterface VeicoloDAO = factory.getVeicoloDAO();
+        car=VeicoloDAO.updateVeicolo(car, targaP);
 		
 		if(car.isError()==false)
 			response.sendRedirect("dashboardAmministrazione.jsp");

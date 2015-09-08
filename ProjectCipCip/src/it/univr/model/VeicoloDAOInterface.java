@@ -1,5 +1,7 @@
 package it.univr.model;
 
+import java.util.List;
+
 import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
 
@@ -12,4 +14,5 @@ public interface VeicoloDAOInterface {
 	public VeicoloBean updateVeicolo(VeicoloBean car, String targa);
 	public VeicoloBean selezionaVeicolo(UserBean user,VeicoloBean car);
 	public boolean eliminaVeicolo(VeicoloBean car);
+	public List<VeicoloBean> getCars();
 }

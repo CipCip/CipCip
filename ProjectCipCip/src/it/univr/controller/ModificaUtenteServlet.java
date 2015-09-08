@@ -1,7 +1,8 @@
 package it.univr.controller;
 
 import it.univr.bean.UserBean;
-import it.univr.model.UserDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.UserDAOInterface;
 
 import java.io.IOException;
 
@@ -34,7 +35,8 @@ public class ModificaUtenteServlet extends HttpServlet {
 		user.setCellulare(request.getParameter("cellulare"));
 		
 		
-		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        UserDAOInterface UserDAO = factory.getUserDAO();
 		user=UserDAO.updateUtente(user, emailP);
 		
 		if(user.isError()==false)

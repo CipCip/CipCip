@@ -1,6 +1,7 @@
 package it.univr.controller;
 
-import it.univr.model.HelpDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.HelpDAOInterface;
 
 import java.io.IOException;
 
@@ -25,6 +26,8 @@ public class NotificheClientiServlet extends HttpServlet {
 		
 		System.out.println("ID1: "+id);
 		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        HelpDAOInterface HelpDAO = factory.getHelpDAO();
 		boolean res=HelpDAO.deleteSelection(id);
 		
 		if(res==true)

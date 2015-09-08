@@ -2,7 +2,8 @@ package it.univr.controller;
 
 import it.univr.bean.UserBean;
 import it.univr.bean.VeicoloBean;
-import it.univr.model.UserDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.UserDAOInterface;
 
 import java.io.IOException;
 
@@ -34,7 +35,8 @@ public class registrationServlet extends HttpServlet {
 		
 		user.setAmministratore(0);
 		
-		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        UserDAOInterface UserDAO = factory.getUserDAO();
 		user=UserDAO.registrazione(user, car);
 	
 	

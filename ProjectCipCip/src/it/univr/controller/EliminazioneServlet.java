@@ -1,7 +1,8 @@
 package it.univr.controller;
 
 import it.univr.bean.UserBean;
-import it.univr.model.UserDAO;
+import it.univr.model.DAOFactory;
+import it.univr.model.UserDAOInterface;
 
 import java.io.IOException;
 
@@ -25,6 +26,8 @@ public class EliminazioneServlet extends HttpServlet {
 		
 		user.setEmail(request.getParameter("email"));
 		
+		DAOFactory factory = DAOFactory.getDAOFactory();
+        UserDAOInterface UserDAO = factory.getUserDAO();
 		boolean res=UserDAO.eliminaUtente(user);
 		
 		 if(res==true)

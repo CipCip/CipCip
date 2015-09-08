@@ -43,6 +43,8 @@
               <tbody>
               
               	<%
+              	DAOFactory factory = DAOFactory.getDAOFactory();
+                UserDAOInterface UserDAO = factory.getUserDAO();
 				List<UserBean> listaUtenti = UserDAO.getUsers();
 				%>
 
