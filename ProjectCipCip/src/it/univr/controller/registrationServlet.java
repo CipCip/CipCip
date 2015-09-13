@@ -32,26 +32,24 @@ public class registrationServlet extends HttpServlet {
 		user.setCellulare(request.getParameter("cellulare"));
 		
 		car.setTarga(request.getParameter("targa"));
-		
+		System.out.println("Qui arrivo 1");
 		user.setAmministratore(0);
 		
 		DAOFactory factory = DAOFactory.getDAOFactory();
         UserDAOInterface UserDAO = factory.getUserDAO();
 		user=UserDAO.registrazione(user, car);
 	
-	
-		
+		System.out.println("Qui arrivo 2");
 		if(user.isValid()){
 			HttpSession session=request.getSession(true);
-			
+			System.out.println("Qui arrivo 6");
 			session.setAttribute("email", user.getEmail());
 			session.setAttribute("nome",user.getNome());
 			session.setAttribute("targa", car.getTarga());
-			response.sendRedirect("dashboard.jsp");	}
+			response.sendRedirect("dashboard.jsp");	
+			}
 	
-			
-
-		}
+			}
 		
 		
 		

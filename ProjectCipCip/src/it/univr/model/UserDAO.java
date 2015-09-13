@@ -75,12 +75,12 @@ public class UserDAO implements UserDAOInterface {
 		String e = user.getCellulare();
 		int f = user.getAmministratore();
 		String g=car.getTarga();
-		
+		System.out.println("Qui arrivo 3");
 		if(a.length()==0 || b.length()==0 || c.length()==0 || d.length()==0 || e.length()==0 ){
 			user.setError(true);
 			return user;
 		}
-		
+		System.out.println("Qui arrivo 4");
 		String registrationQueryUser = "insert into utente(email, password, nome, cognome, cellulare, amministratore) "
 				+ "values ('"
 				+ a 
@@ -108,19 +108,22 @@ public class UserDAO implements UserDAOInterface {
 				connessione = ConnectionManager.getConnection(); 
 				stmt= connessione.createStatement();
 				stmt.executeUpdate(registrationQueryUser);
-				//stmt.executeUpdate(registrationQueryCar);
-				//user.setValid(true);
-				//car.setValid(true);
-			
+				
+				int more = stmt.getUpdateCount();
+				if(more!=0){
+					stmt.executeUpdate(registrationQueryCar);
+					user.setValid(true);
+					car.setValid(true);
+				}
 				
 			} catch (SQLException b1) {
-				System.out.println("Non reinserisco l'utente, aggiungo solo un auto riferita " + b1);
+				System.out.println("Non reinserisco l'utente, aggiungo solo un auto riferita ");
 				stmt.executeUpdate(registrationQueryCar);
 				user.setValid(true);
 				car.setValid(true);
-				//user.setError(true);
+				
 			}
-			//rs.close();
+			
 			stmt.close();
 			}
 			catch (Exception ex) {
