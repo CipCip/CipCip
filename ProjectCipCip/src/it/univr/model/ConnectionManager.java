@@ -14,10 +14,20 @@ public class ConnectionManager  {
 		private static Connection connection;
 		private static ConnectionManager instance;
 
-		// Singleton
-		private ConnectionManager(){
-
-		}
+		// Design pattern creazionale SINGLETON
+		
+		//creo una classe privata che auto-istanzia se stessa
+		private ConnectionManager(){}
+		
+		//uso il metodo getIstance() per accedere alla classe e alle variabili in essa incapsulate
+		//ritorna il suo indirizzo
+		public static ConnectionManager getInstance() {
+			if(instance==null)
+				return instance=new ConnectionManager();
+			else
+				return instance;
+			
+		}	
 		
 		public static Connection getConnection(){
 			try {
@@ -38,15 +48,7 @@ public class ConnectionManager  {
 			return connection;
 		}
 
-		public static ConnectionManager getInstance() {
-			if(instance==null)
-				return instance=new ConnectionManager();
-			else
-				return instance;
 			
-		}
-
-		
 
 		public void close() throws SQLException {
 			connection.close();
