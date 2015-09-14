@@ -1,6 +1,6 @@
 package it.univr.model;
 
-
+//tutte le factory implementano un'interfaccia comune
 public class DAOFactoryImplement extends DAOFactory{
 	
 	public PositionDAOInterface getPositionDAO(){

@@ -1,7 +1,11 @@
 package it.univr.model;
 
-//Design pattern creazionale abstract factory
+//Design pattern creazionale ABSTRACT FACTORY
 
+//gestisce la creazione degli oggetti
+//dovrò poi creare un'interfaccia per ogni tipo di classe
+//le classi concrete implementano queste interfacce
+//tutte le factory implementano un interfaccia comune
 public abstract class DAOFactory {
 
 	public abstract PositionDAOInterface getPositionDAO();
