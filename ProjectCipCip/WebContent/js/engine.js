@@ -147,7 +147,7 @@ function sendingMail(a,b,c){
 				       }
 				       ],
 				       'subject': 'ProjectCipCip - Avviso superamento soglia',
-				       'html': 'Salve ' + nome+'; <br/><br/> La soglia per email è stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ProjectCipCip --'
+				       'html': 'Salve; <br/><br/> La soglia per email è stata superata! <br/><br/> Posizione Veicolo:<br/>Latitudine:'+b+'<br/> Longitudine:'+c+'<br/><br/>-- ProjectCipCip --'
 			}
 		}
 	});

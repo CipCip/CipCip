@@ -11,6 +11,7 @@
 						<li><a href="eliminaVeicolo.jsp">Elimina veicolo</a></li>
 				</a></li>
 				<li><a href="impostazioniAmministrazione.jsp">Profilo personale</a></li>
+				<li><a href="notificheClienti.jsp">Notifiche clienti</a></li>
 			</ul>
 
 		</div>

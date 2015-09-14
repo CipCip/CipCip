@@ -40,8 +40,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            
-            <li><input type="submit" name="Logout" value="Logout"></li>
+            <br/>
+            <li><button class="btn btn-red waves-button waves-effect waves-light" type="submit" value="Submit">Logout</button></li>
             
             
           </ul>          
